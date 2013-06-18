@@ -1,0 +1,87 @@
+<project name="Hudson build" basedir=".">
+    <property name="jar.location" value="D:/SVNProjects/hudson_dc_execution/build/hudson_dc.jar"/>
+
+    <!--<property file="build.properties"/>-->
+    <!--<import file="${project.group.core.resources.dir}/task_definitions.xml"/>-->
+    <!---->
+    <!--<taskdef resource="net/sf/antcontrib/antlib.xml"/>-->
+    <!--<classpath>-->
+    <!--<pathelement location="${project.group.core.libs.dir}/ant-contrib.jar"/>-->
+    <!--<fileset dir="build">-->
+    <!--<include name="**/*.jar"/>-->
+    <!--</fileset>-->
+    <!--</classpath>-->
+    <!--</taskdef>-->
+
+    <target name="init">
+        <mkdir dir="${basedir}/bin"/>
+        <!--<revision/>-->
+        <!--<echo message="Build revision: '${build.revision}'"/>-->
+        <!--<tstamp>-->
+        <!--<format property="TODAY" pattern="dd.MM.yyyy hh:mm"/>-->
+        <!--</tstamp>-->
+    </target>
+
+    <target name="build" description="--> Build modules">
+        <!--<foreach list="${module.list}" delimiter=", " param="module.dir" target="build_module"/>-->
+        <jar destfile="${basedir}/build/hudson_dc.jar">
+            <fileset dir="${basedir}/out/production/hudson_dc_execution"/>
+            <fileset dir="${basedir}/config"/>
+            <fileset dir="${basedir}/lib"/>
+        </jar>
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${basedir}/src"
+               destdir="${basedir}/bin"
+               classpathref="build.classpath"
+                />
+    </target>
+
+    <target name="execute_sql_dc">
+        <java classname="main.SQLExecutorMain">
+            <arg value="-h"/>
+            <classpath>
+                <pathelement location="dist/test.jar"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="execute_test_main">
+        <java classname="main.test.MainTest">
+            <arg value="-h"/>
+            <classpath>
+                <pathelement location="hudson_dc_execution.jar"/>
+
+                <!--<pathelement location="${jar.location}"/>-->
+                <!--<pathelement path="${java.class.path}"/>-->
+            </classpath>
+        </java>
+    </target>
+
+    <target name="execute_dql_test_dc">
+        <java classname="main.test.DQLExecutorMainTest">
+            <classpath>
+                <pathelement location="hudson_dc_execution.jar"/>
+            </classpath>
+        </java>
+    </target>
+
+    <!--<target name="execute_dql_dc">-->
+    <!--<java classname="main.SQLExecutorMain>-->
+    <!--<arg value="-h"/>-->
+    <!--<classpath>-->
+    <!--<pathelement location="dist/test.jar"/>-->
+    <!--<pathelement path="${java.class.path}"/>-->
+    <!--</classpath>-->
+    <!--</java>-->
+    <!--</target>-->
+
+    <path id="build.classpath">
+        <fileset dir="${basedir}/lib" includes="*.jar"/>
+        <fileset dir="${basedir}/lib/dfc" includes="*.jar"/>
+        <fileset dir="${basedir}/lib/groovy" includes="*.jar"/>
+    </path>
+
+</project>

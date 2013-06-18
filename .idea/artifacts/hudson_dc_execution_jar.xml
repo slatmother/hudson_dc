@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="hudson_dc_execution:jar">
+    <output-path>$PROJECT_DIR$/build</output-path>
+    <root id="archive" name="hudson_dc_execution.jar">
+      <element id="module-output" name="hudson_dc_execution" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

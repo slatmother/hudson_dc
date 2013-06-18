@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dfc">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/dfc" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/dfc" recursive="false" />
+  </library>
+</component>

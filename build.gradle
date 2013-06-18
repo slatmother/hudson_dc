@@ -1,0 +1,63 @@
+apply plugin: 'java'
+apply plugin: 'base'
+
+repositories {
+  mavenCentral()
+}
+
+//configurations {
+//  jarPath files('hudson_dc_execution.jar')
+//}
+
+repositories {
+  flatDir name: 'localRepository', dirs: 'lib'
+}
+//
+//configurations {
+//  driver
+//}
+
+
+sourceSets {
+  java {
+    srcDir 'src/java'
+//    runtimeClasspath += sourceSets.main.runtimeClasspath
+  }
+
+  resources {
+    srcDir 'src/resources'
+  }
+
+  test {
+    java {
+      srcDir 'test/'
+    }
+
+    resources {
+      srcDir 'src/resources'
+    }
+  }
+}
+
+task testMain(dependsOn: 'classes', type: JavaExec) {
+  main = 'main.test.MainTest'
+  classpath = sourceSets.main.runtimeClasspath
+//  args 'mrhaki'
+//  systemProperty 'simple.message', 'Hello '
+}
+
+task testDQL(dependsOn: 'classes', type: JavaExec) {
+  main = 'main.test.DQLExecutorMainTest'
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+dependencies {
+//  runtime files('config/dfc.properties', 'config/config.properties', 'config/log4j.properties')
+//  runtime fileTree(dir: 'config', include: '*.properties')
+  runtime files('build/hudson_dc_execution.jar', 'hudson_dc_execution.jar')
+  compile group: 'org.codehaus.groovy', name: 'groovy', version: '2.1.3'
+  compile group: 'com.google.guava', name: 'guava', version: '14.0.1'
+  runtime fileTree(dir: 'lib/dfc', include: '*.jar')
+  runtime files('lib/freemarker.jar', 'lib/ojdbc6-11.2.0.1.0.jar')
+  testCompile group: 'junit', name: 'junit', version: '4.+'
+}
