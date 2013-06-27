@@ -18,6 +18,9 @@ import com.documentum.fc.common.IDfAttr;
 import com.documentum.fc.common.IDfLoginInfo;
 
 import java.io.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.*;
 
 /**
@@ -149,35 +152,51 @@ public class Utils {
             int n = col.getValueCount(attrName);
             switch (col.getAttrDataType(attrName)) {
                 case IDfType.DF_INTEGER:
-                    Integer[] intVals = new Integer[n];
+//                    Integer[] intVals = new Integer[n];
+                    ArrayList<Integer> intList = new ArrayList<Integer>(n);
                     for (int i = 0; i < n; i++)
-                        intVals[i] = col.getRepeatingInt(attrName, i);
-                    res = intVals;
+//                        intVals[i] = col.getRepeatingInt(attrName, i);
+                        intList.add(col.getRepeatingInt(attrName, i));
+//                    res = intVals;
+                    res = intList;
                     break;
                 case IDfType.DF_DOUBLE:
-                    Integer[] doubVals = new Integer[n];
+//                    Integer[] doubVals = new Integer[n];
+                    ArrayList<Integer> doubList = new ArrayList<Integer>(n);
                     for (int i = 0; i < n; i++)
-                        doubVals[i] = col.getRepeatingInt(attrName, i);
-                    res = doubVals;
+//                        doubVals[i] = col.getRepeatingInt(attrName, i);
+                        doubList.add(col.getRepeatingInt(attrName, i));
+
+//                    res = doubVals;
+                    res = doubList;
                     break;
                 case IDfType.DF_BOOLEAN:
-                    Boolean[] boolVals = new Boolean[n];
+//                    Boolean[] boolVals = new Boolean[n];
+                    ArrayList<Boolean> boolList = new ArrayList<Boolean>(n);
                     for (int i = 0; i < n; i++)
-                        boolVals[i] = col.getRepeatingBoolean(attrName, i);
-                    res = boolVals;
+//                        boolVals[i] = col.getRepeatingBoolean(attrName, i);
+                        boolList.add(col.getRepeatingBoolean(attrName, i));
+//                    res = boolVals;
+                    res = boolList;
                     break;
                 case IDfType.DF_TIME:
-                    Date[] dateVals = new Date[n];
+//                    Date[] dateVals = new Date[n];
+                    ArrayList<Date> dateList = new ArrayList<Date>(n);
                     for (int i = 0; i < n; i++)
-                        dateVals[i] = col.getRepeatingTime(attrName, i).getDate();
-                    res = dateVals;
+//                        dateVals[i] = col.getRepeatingTime(attrName, i).getDate();
+                        dateList.add(col.getRepeatingTime(attrName, i).getDate());
+//                    res = dateVals;
+                    res = dateList;
                     break;
                 case IDfType.DF_STRING:
                 default:
-                    String[] strVals = new String[n];
+//                    String[] strVals = new String[n];
+                    ArrayList<String> strList = new ArrayList<String>(n);
                     for (int i = 0; i < n; i++)
-                        strVals[i] = col.getRepeatingString(attrName, i);
-                    res = strVals;
+//                        strVals[i] = col.getRepeatingString(attrName, i);
+                        strList.add(col.getRepeatingString(attrName, i));
+//                    res = strVals;
+                    res = strList;
                     break;
             }
         }
@@ -287,5 +306,25 @@ public class Utils {
             if (col != null)
                 col.close();
         }
+    }
+
+    public static void closeResources(ResultSet resultSet) throws SQLException {
+        if (resultSet != null) {
+            Statement st = resultSet.getStatement();
+
+            if (!st.isClosed()) {
+                st.close();
+            }
+        }
+    }
+
+    /**
+     * Проверяет на null и на непустоту строку
+     *
+     * @param value - строковое значение
+     * @return boolean возвращает true, если строка не null и не пуста, иначе false
+     */
+    public static boolean isNotNull(String value) {
+        return (value != null) && (value.trim().length() > 0);
     }
 }

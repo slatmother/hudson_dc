@@ -10,9 +10,11 @@
 */
 package locator;
 
-import dao.DatabaseHelper;
-import dao.DatabaseHelperFactory;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
+import org.apache.log4j.Logger;
 import util.Checker;
+import util.Utils;
 import util.querytemplate.QueryTemplate;
 
 import java.sql.ResultSet;
@@ -31,6 +33,7 @@ import static util.querytemplate.QueryTemplate.queryTemplate;
  * @version 1.0
  */
 public class BuildDCLocator {
+    private static final Logger logger = Logger.getRootLogger();
     public final String HEADLINE = "headline";
     public final String DCNUMBER = "dcnumber";
 
@@ -40,6 +43,7 @@ public class BuildDCLocator {
                     "(select id from entitydef where name = 'DC') " +
                     "and parent_dbid in (select first_value(bb.dbid) over (order by bb.id desc) from build bb where bb.id is not null " +
                     "and bb.project in (select dbid from project where name = '${project}'))) " +
+                    "and (headline like '%dql%' or headline like '%sql%') " +
                     "order by dbid asc",
             false
     );
@@ -51,7 +55,7 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestDAO();
+        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestHelper();
         HashMap<String, String> sqlMap = new HashMap<String, String>();
 
         ResultSet set = cqConnection.executeStatementWithoutCommit(query);
@@ -72,7 +76,7 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestDAO();
+        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestHelper();
         HashMap<String, String> dqlmap = new HashMap<String, String>();
 
         ResultSet set = cqConnection.executeStatementWithoutCommit(query);
@@ -93,12 +97,25 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestDAO();
-        HashMap<String, String> dcMap = new HashMap<String, String>();
+        DatabaseHelper helper = DatabaseHelperFactory.getClearQuestHelper();
+        logger.info("database helper is connected? " + helper.getConnection().isValid(10));
 
-        ResultSet set = cqConnection.executeStatementWithoutCommit(query);
-        while (set.next()) {
-            dcMap.put(set.getString(DCNUMBER), set.getString(HEADLINE));
+        HashMap<String, String> dcMap = new HashMap<String, String>();
+        ResultSet set = null;
+
+        try {
+            logger.info("query \n" + query);
+
+            set = helper.executeStatementWithoutCommit(query);
+            logger.info("resultset rows count " + set.getRow());
+
+            while (set.next()) {
+                logger.info("resultset rows count " + set.getRow());
+
+                dcMap.put(set.getString(DCNUMBER), set.getString(HEADLINE));
+            }
+        } finally {
+            Utils.closeResources(set);
         }
 
         return dcMap;

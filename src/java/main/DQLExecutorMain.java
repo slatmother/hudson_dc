@@ -13,7 +13,6 @@ package main;
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
 import execution.groovy.DSLManager;
-import locator.BuildDCLocator;
 import org.apache.log4j.Logger;
 import transaction.NestedTx;
 import util.Checker;
@@ -21,7 +20,7 @@ import util.Configuration;
 import util.Utils;
 
 import java.io.File;
-import java.util.HashMap;
+import java.io.FilenameFilter;
 
 /**
  * $Id
@@ -34,15 +33,17 @@ import java.util.HashMap;
  */
 public class DQLExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
+    private static final FilenameFilter dcFilter = new FilenameFilter() {
+        public boolean accept(File dir, String name) {
+            return name.endsWith(".groovy");
+        }
+    };
 
     public static void main(String[] args) {
-        BuildDCLocator dcLocator = new BuildDCLocator();
-
         try {
             String user = Configuration.getConfig_properties().getProperty("documentum.user");
             String passwd = Configuration.getConfig_properties().getProperty("documentum.password");
             String docbase = Configuration.getConfig_properties().getProperty("documentum.docbase");
-            String projectName = Configuration.getConfig_properties().getProperty("cq.project.name");
 
             IDfSession session = Utils.getSession(user, passwd, docbase);
             NestedTx tx = NestedTx.beginTx(session);
@@ -50,12 +51,17 @@ public class DQLExecutorMain {
             boolean result = true;
 
             try {
-                HashMap<String, String> dqlmap = dcLocator.getLastBuildDQLDefChanges(projectName);
-                for (String dc : dqlmap.keySet()) {
-                    File scriptFile = new File(dc + ".groovy");
-                    Checker.checkFileExistsOrIsFile(scriptFile);
+                DSLManager dslManager = new DSLManager();
+                File dqlDir = new File("dql");
+                logger.info("Current dir path is " + dqlDir.getAbsolutePath());
+                if (dqlDir.isDirectory()) {
+                    for (File scriptFile : dqlDir.listFiles(dcFilter)) {
+                        logger.info(scriptFile.getName());
 
-                    result &= (Boolean) DSLManager.executeDCScript(session, scriptFile);
+                        Checker.checkFileExistsOrIsFile(scriptFile);
+
+//                        result &= (Boolean) dslManager.executeDCScript(session, scriptFile);
+                    }
                 }
 
                 if (result) {

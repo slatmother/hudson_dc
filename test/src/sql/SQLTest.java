@@ -10,21 +10,24 @@
 */
 package sql;
 
-import dao.DatabaseHelper;
-import dao.DatabaseHelperFactory;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import transaction.SQLTransactionHelper;
 
-import java.math.BigDecimal;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * $Id
  * <p>Title: </p>
  * <p>Description: </p>
  * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
- * <p>Date: 13.06.13</p>
+ * <p>Date: 24.06.13</p>
  *
  * @version 1.0
  */
@@ -32,32 +35,27 @@ public class SQLTest {
     private static final Logger logger = Logger.getRootLogger();
 
     @Test
-    public void test() {
+    public void test() throws SQLException {
+        DatabaseHelper dbHelper = DatabaseHelperFactory.getClearQuestHelper();
+        SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
+
         try {
-            DatabaseHelper projectDatabaseDAO = DatabaseHelperFactory.getProjectDAO();
+            ResultSet set = dbHelper.executeStatementWithoutCommit("select count(*) as c from dc");
+            ResultSetMetaData metaData = set.getMetaData();
+            logger.info("Columns " + metaData.getColumnCount());
+            assertTrue(1 == metaData.getColumnCount());
 
-            SQLTransactionHelper helper = SQLTransactionHelper.beginTransaction(projectDatabaseDAO.getConnection());
-            ResultSet set = projectDatabaseDAO.executeStatementWithoutCommit("select test_id from test_table");
-
-            while(set.next()) {
-                System.out.println(set.getRow() + " " + set.getObject(1));
+            while (set.next()) {
+                logger.info("Row " + set.getRow());
+                assertTrue(1 == set.getRow());
+                logger.info("Count is " + set.getObject(1).toString());
+                assertTrue(Integer.valueOf(set.getObject(1).toString()) > 1000);
             }
 
-            helper.okToCommit();
-            helper.commitOrAbort();
-        } catch (Exception e) {
-            logger.error(e);
+            sqlTxHelper.okToCommit();
+        } finally {
+            sqlTxHelper.commitOrAbort();
+            sqlTxHelper.closeConnection();
         }
     }
-
-    @Test
-    public void testDecimal() {
-        Object big = new BigDecimal(24.5);
-        System.out.println(big.toString());
-        Object doub = 24.5;
-        System.out.println(doub.toString());
-        System.out.println(big.toString().equals(doub.toString()));
-
-    }
-
 }

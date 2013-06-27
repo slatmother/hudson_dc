@@ -10,13 +10,17 @@
 */
 package transaction;
 
-import dao.DatabaseHelper;
-import dao.DatabaseHelperFactory;
-import junit.framework.TestCase;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
 import org.apache.log4j.Logger;
+import org.junit.Test;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import static junit.framework.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 /**
  * $Id
@@ -27,39 +31,140 @@ import java.sql.SQLException;
  *
  * @version 1.0
  */
-public class SQLTransactionHelperTest extends TestCase {
+public class SQLTransactionHelperTest {
     private static final Logger logger = Logger.getRootLogger();
 
     public static final String INSERT_QUERY = "insert into test_table values(2, 'test')";
-    public static final String CHECK_QUERY = "select count(*) as c from test_table";
+    public static final String INSERT_QUERY_WRONG = "insert into test_table values(2, 'test', 5)";
 
-    public void test() {
-        SQLTransactionHelper helper = null;
+    public static final String CHECK_QUERY = "select test_id from test_table where test_id = '2' and test_name = 'test'";
+    public static final String DELETE_QUERY = "delete from test_table where test_id = '2'";
+
+    @Test
+    public void testSuccessCommit() {
+        SQLTransactionHelper txhelper1 = null;
         try {
-            DatabaseHelper project_dao = DatabaseHelperFactory.getProjectDAO();
-            Connection connection = project_dao.getConnection();
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            Connection connection = dbHelper.getConnection();
 
             assertTrue(connection.getMetaData().supportsSavepoints());
 
-            helper = SQLTransactionHelper.beginTransaction(connection);
+            txhelper1 = SQLTransactionHelper.beginTransaction(connection);
 
-            project_dao.executeUpdateWithoutCommit(INSERT_QUERY);
+            dbHelper.executeUpdateWithoutCommit(INSERT_QUERY);
 
-            helper.okToCommit();
+            txhelper1.okToCommit();
         } catch (SQLException e) {
             logger.error(e);
-            e.printStackTrace();
+            assertTrue(false);
         } finally {
-            assertNotNull(helper);
+            assertNotNull(txhelper1);
             try {
-                helper.commitOrAbort();
+                txhelper1.commitOrAbort();
 
-                boolean isClosed = helper.closeConnection();
+                boolean isClosed = txhelper1.closeConnection();
                 assertTrue(isClosed);
             } catch (SQLException e) {
                 logger.error(e);
-                e.printStackTrace();
+                assertTrue(false);
             }
         }
+
+        SQLTransactionHelper txhelper2 = null;
+        try {
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            Connection connection = dbHelper.getConnection();
+
+            assertTrue(connection.getMetaData().supportsSavepoints());
+
+            txhelper2 = SQLTransactionHelper.beginTransaction(connection);
+
+            ResultSet set = dbHelper.executeStatementWithoutCommit(CHECK_QUERY);
+            while (set.next()) {
+                assertTrue(Integer.valueOf(1).equals(set.getRow()));
+                assertTrue(Integer.toString(2).equals(set.getObject("TEST_ID").toString()));
+            }
+
+            dbHelper.executeUpdateWithoutCommit(DELETE_QUERY);
+
+            txhelper2.okToCommit();
+        } catch (SQLException e) {
+            logger.error(e);
+            assertTrue(false);
+        } finally {
+            assertNotNull(txhelper2);
+            try {
+                txhelper2.commitOrAbort();
+
+                boolean isClosed = txhelper2.closeConnection();
+                assertTrue(isClosed);
+            } catch (SQLException e) {
+                logger.error(e);
+                assertTrue(false);
+            }
+        }
+
+    }
+
+    @Test
+    public void testFailedCommit() {
+        SQLTransactionHelper txhelper1 = null;
+        try {
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            Connection connection = dbHelper.getConnection();
+
+            assertTrue(connection.getMetaData().supportsSavepoints());
+
+            txhelper1 = SQLTransactionHelper.beginTransaction(connection);
+
+            dbHelper.executeUpdateWithoutCommit(INSERT_QUERY_WRONG);
+
+            txhelper1.okToCommit();
+        } catch (SQLException e) {
+            logger.error(e);
+        } finally {
+            assertNotNull(txhelper1);
+            try {
+                txhelper1.commitOrAbort();
+
+                boolean isClosed = txhelper1.closeConnection();
+                assertTrue(isClosed);
+            } catch (SQLException e) {
+                logger.error(e);
+                assertTrue(false);
+            }
+        }
+
+        SQLTransactionHelper txhelper2 = null;
+        try {
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            Connection connection = dbHelper.getConnection();
+
+            assertTrue(connection.getMetaData().supportsSavepoints());
+
+            txhelper2 = SQLTransactionHelper.beginTransaction(connection);
+
+            ResultSet set = dbHelper.executeStatementWithoutCommit(CHECK_QUERY);
+            while (set.next()) {
+                assertTrue(Integer.valueOf(0).equals(set.getRow()));
+            }
+
+            txhelper2.okToCommit();
+        } catch (SQLException e) {
+            logger.error(e);
+            assertTrue(false);
+        } finally {
+            assertNotNull(txhelper2);
+            try {
+                txhelper2.commitOrAbort();
+
+                boolean isClosed = txhelper2.closeConnection();
+                assertTrue(isClosed);
+            } catch (SQLException e) {
+                logger.error(e);
+                assertTrue(false);
+            }
+        }
+
     }
 }

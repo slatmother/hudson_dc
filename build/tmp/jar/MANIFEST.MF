@@ -1,2 +1,19 @@
 Manifest-Version: 1.0
+Implementation-Title: hudson-dc-1.0
+Class-Path: lib/freemarker.jar lib/ojdbc6-11.2.0.1.0.jar lib/guava-14.
+ 0.1.jar lib/groovy/freemarker.jar lib/groovy/ojdbc6-11.2.0.1.0.jar li
+ b/groovy/groovy-2.1.3.jar lib/groovy/guava-14.0.1.jar lib/groovy/antl
+ r-2.7.7.jar lib/groovy/asm-4.0.jar lib/groovy/asm-tree-4.0.jar lib/gr
+ oovy/asm-commons-4.0.jar lib/groovy/asm-util-4.0.jar lib/groovy/asm-a
+ nalysis-4.0.jar lib/dfc/All-MB.jar lib/dfc/aspectjrt.jar lib/dfc/bpmu
+ til.jar lib/dfc/castor-1.1-xml.jar lib/dfc/certjFIPS.jar lib/dfc/comm
+ ons-codec-1.3.jar lib/dfc/commons-jxpath-1.2.jar lib/dfc/commons-lang
+ -2.4.jar lib/dfc/configservice-api.jar lib/dfc/configservice-impl.jar
+  lib/dfc/dfc.jar lib/dfc/DmcRecords.jar lib/dfc/dms-client-api.jar li
+ b/dfc/jaxb-api.jar lib/dfc/jaxb-impl.jar lib/dfc/jcifs-krb5-1.3.1.jar
+  lib/dfc/jsafeFIPS.jar lib/dfc/jsr173_api.jar lib/dfc/krbutil.jar lib
+ /dfc/log4j.jar lib/dfc/messageArchive.jar lib/dfc/messageService.jar 
+ lib/dfc/xforms.jar lib/dfc/XformsCommon.jar lib/dfc/xtrim-api.jar lib
+ /dfc/xtrim-server.jar lib/dfc/freemarker.jar lib/dfc/ojdbc6-11.2.0.1.
+ 0.jar lib/dfc/guava-14.0.1.jar 
 

@@ -12,14 +12,14 @@ package execution;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
-import dao.DatabaseHelper;
+import database.DatabaseHelper;
 import org.apache.log4j.Logger;
 import util.Utils;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -36,6 +36,13 @@ import java.util.Set;
 public class DCScriptRunner {
     private static final Logger logger = Logger.getRootLogger();
 
+    /**
+     * @param session
+     * @param query
+     * @param conditionsMap
+     * @return
+     * @throws DfException
+     */
     public static boolean runScriptWithOneRow(IDfSession session, String query, Map<String, Object> conditionsMap) throws DfException {
         Map<String, Object> map = Utils.getFirstRow(session, query);
 
@@ -50,8 +57,15 @@ public class DCScriptRunner {
         return result;
     }
 
-    public static boolean runDQLScript(IDfSession session, String query, List<Map<String, Object>> conditionsMapList) throws DfException {
-        logger.info(query);
+    /**
+     * @param session
+     * @param query
+     * @param conditionsMapList
+     * @return
+     * @throws DfException
+     */
+    public static boolean runScript(IDfSession session, String query, List<Map<String, Object>> conditionsMapList) throws DfException {
+        logger.info("Query to execute is: " + query);
 
         List<Map<String, Object>> rowsList = Utils.getAllRows(session, query);
         boolean result = true;
@@ -61,8 +75,25 @@ public class DCScriptRunner {
                 Map<String, Object> executedMap = rowsList.get(i);
                 Set<Map.Entry<String, Object>> actualEntrySet = executedMap.entrySet();
 
+                List<String> execKeys = new ArrayList<String>(executedMap.keySet());
+                List<Object> execVals = new ArrayList<Object>(executedMap.values());
+                logger.info("Executed keys: " + execKeys);
+                logger.info("Executed vals: " + execVals);
+
                 Map<String, Object> conditionsMap = conditionsMapList.get(i);
-                result = actualEntrySet.containsAll(conditionsMap.entrySet());
+                List<String> condKeys = new ArrayList<String>(conditionsMap.keySet());
+                List<Object> condVals = new ArrayList<Object>(conditionsMap.values());
+
+                logger.info("Conditions keys: " + condKeys);
+                logger.info("Conditions vals: " + condVals);
+
+                result &= execKeys.equals(condKeys);
+                result &= execVals.equals(condVals);
+
+//                for (Map.Entry<String, Object> entry : conditionsMap.entrySet()) {
+//                    logger.info(entry);
+//                    result &= actualEntrySet.contains(entry);
+//                }
             }
         } else {
             result = false;
@@ -71,18 +102,42 @@ public class DCScriptRunner {
         return result;
     }
 
-    public static boolean runDQLScript(IDfSession session, String query, Integer affectedRows) throws DfException {
-        Map<String, Object> map = Utils.getFirstRow(session, query);
+    public static boolean runScript(IDfSession session, String query, Integer affectedRows) throws DfException {
+        logger.info("Query to execute is: " + query);
+        logger.info("Expected num of affected rows is " + affectedRows);
 
-        return affectedRows.equals(map.get("objects_updated")) ||
-                affectedRows.equals(map.get("objects_created")) ||
-                affectedRows.equals(map.get("objects_deleted"));
+        List<Map<String, Object>> rowsList = Utils.getAllRows(session, query);
+
+        Map<String, Object> map = rowsList.get(0);
+        boolean result;
+
+        if (map.containsKey("objects_updated")) {
+            logger.info("Objects updated " + map.get("objects_updated"));
+            result = affectedRows.equals(map.get("objects_updated"));
+        } else if (map.containsKey("objects_deleted")) {
+            logger.info("Objects deleted " + map.get("objects_deleted"));
+            result = affectedRows.equals(map.get("objects_deleted"));
+        } else {
+            logger.info("Is objects created condition? " + map.containsKey("object_created"));
+            logger.info("Objects created " + rowsList.size());
+            result = map.containsKey("object_created") && affectedRows.equals(rowsList.size());
+        }
+
+        logger.info("Result of executing is " + result);
+        return result;
     }
 
-    public static boolean runSQLScript(DatabaseHelper dao, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
-        logger.info(query);
+    /**
+     * @param dbHelper
+     * @param query
+     * @param conditionsMapList
+     * @return
+     * @throws SQLException
+     */
+    public static boolean runScript(DatabaseHelper dbHelper, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
+        logger.info("Query to execute is: " + query);
 
-        ResultSet set = dao.executeStatementWithoutCommit(query);
+        ResultSet set = dbHelper.executeStatementWithoutCommit(query);
         boolean result = true;
 
         try {
@@ -92,7 +147,10 @@ public class DCScriptRunner {
             while (set.next()) {
                 int rowNum = set.getRow();
 
-                if (rowNum == 0) {
+                if (conditionsMapList.get(0).isEmpty()) {
+                    if (!(rowNum == 0)) {
+                        result = false;
+                    }
                     break;
                 }
 
@@ -112,32 +170,37 @@ public class DCScriptRunner {
                 }
             }
         } finally {
-            closeResources(set);
+            Utils.closeResources(set);
         }
 
         return result;
     }
 
-    public static boolean runSQLScript(DatabaseHelper dao, String query, Integer affectedRows) {
-        boolean result;
-        try {
-            int resultInt = dao.executeUpdateWithoutCommit(query);
-            result = (resultInt == affectedRows);
-        } catch (SQLException e) {
-            logger.error(e);
-            result = false;
-        }
+    /**
+     * @param dbHelper
+     * @param query
+     * @param affectedRows
+     * @return
+     * @throws SQLException
+     */
+    public static boolean runScript(DatabaseHelper dbHelper, String query, Integer affected) throws SQLException {
+        logger.info("Query to execute is: " + query);
 
-        return result;
-    }
+        int resultInt = dbHelper.executeUpdateWithoutCommit(query);
 
-    private static void closeResources(ResultSet resultSet) throws SQLException {
-        if (resultSet != null) {
-            Statement st = resultSet.getStatement();
-
-            if (!st.isClosed()) {
-                st.close();
-            }
-        }
+//        if (minVal != null) {
+//            if (maxVal != null) {
+//                if (maxVal.equals(minVal)) {
+//                    return resultInt == minVal;
+//                } else {
+//                    return (minVal < resultInt) && (resultInt < maxVal);
+//                }
+//            } else {
+//                return minVal < resultInt;
+//            }
+//        } else {
+//            return false;
+//        }
+        return resultInt == affected;
     }
 }

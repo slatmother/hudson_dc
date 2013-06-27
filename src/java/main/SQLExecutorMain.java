@@ -10,18 +10,16 @@
 */
 package main;
 
-import dao.DatabaseHelper;
-import dao.DatabaseHelperFactory;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
 import execution.groovy.DSLManager;
-import locator.BuildDCLocator;
 import org.apache.log4j.Logger;
 import transaction.SQLTransactionHelper;
 import util.Checker;
-import util.Configuration;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.sql.SQLException;
-import java.util.HashMap;
 
 /**
  * $Id
@@ -34,37 +32,44 @@ import java.util.HashMap;
  */
 public class SQLExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
+    private static final FilenameFilter dcFilter = new FilenameFilter() {
+        public boolean accept(File dir, String name) {
+            return name.endsWith(".groovy");
+        }
+    };
 
     public static void main(String[] args) {
-        BuildDCLocator dcLocator = new BuildDCLocator();
-        SQLTransactionHelper helper = null;
+        SQLTransactionHelper txHelper = null;
 
         try {
-            String projectName = Configuration.getConfig_properties().getProperty("cq.project.name");
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
 
-            HashMap<String, String> sqlMap = dcLocator.getLastBuildSQLDefChanges(projectName);
-            DatabaseHelper dao = DatabaseHelperFactory.getProjectDAO();
-
-            helper = SQLTransactionHelper.beginTransaction(dao.getConnection());
+            txHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
             boolean result = true;
 
-            for (String dc : sqlMap.keySet()) {
-                File scriptFile = new File(dc + ".groovy");
-                Checker.checkFileExistsOrIsFile(scriptFile);
+            DSLManager dslManager = new DSLManager();
+            File sqlDir = new File("sql");
+            logger.info("Current dir path is " + sqlDir.getAbsolutePath());
+            if (sqlDir.isDirectory()) {
+                for (File scriptFile : sqlDir.listFiles(dcFilter)) {
+                    logger.info(scriptFile.getName());
 
-                result &= (Boolean) DSLManager.executeDCScript(dao, scriptFile);
+                    Checker.checkFileExistsOrIsFile(scriptFile);
+
+//                    result &= (Boolean) dslManager.executeDCScript(dbHelper, scriptFile);
+                }
             }
 
             if (result) {
-                helper.okToCommit();
+                txHelper.okToCommit();
             }
         } catch (Exception ex) {
             logger.error(ex);
         } finally {
             try {
-                if (helper != null) {
-                    helper.commitOrAbort();
-                    helper.closeConnection();
+                if (txHelper != null) {
+                    txHelper.commitOrAbort();
+                    txHelper.closeConnection();
                 }
             } catch (SQLException sqlex) {
                 logger.error(sqlex);

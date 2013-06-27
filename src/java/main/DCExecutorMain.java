@@ -12,15 +12,19 @@ package main;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
 import execution.groovy.DSLManager;
 import locator.BuildDCLocator;
 import org.apache.log4j.Logger;
 import transaction.NestedTx;
+import transaction.SQLTransactionHelper;
 import util.Checker;
 import util.Configuration;
 import util.Utils;
 
 import java.io.File;
+import java.sql.SQLException;
 import java.util.HashMap;
 
 /**
@@ -32,7 +36,6 @@ import java.util.HashMap;
  *
  * @version 1.0
  */
-//TODO: сделать совместное последовательное выполнение DQL,SQL скриптов
 public class DCExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
 
@@ -40,39 +43,54 @@ public class DCExecutorMain {
         BuildDCLocator dcLocator = new BuildDCLocator();
 
         try {
+            String projectName = Configuration.getConfig_properties().getProperty("cq.project.name");
+
             String user = Configuration.getConfig_properties().getProperty("documentum.user");
             String passwd = Configuration.getConfig_properties().getProperty("documentum.password");
             String docbase = Configuration.getConfig_properties().getProperty("documentum.docbase");
-            String projectName = Configuration.getConfig_properties().getProperty("cq.project.name");
 
             IDfSession session = Utils.getSession(user, passwd, docbase);
-            NestedTx tx = NestedTx.beginTx(session);
+            NestedTx dqlTx = NestedTx.beginTx(session);
+
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
 
             boolean result = true;
 
             try {
-                HashMap<String, String> dqlmap = dcLocator.getLastBuildDQLDefChanges(projectName);
-                for (String dc : dqlmap.keySet()) {
+                HashMap<String, String> dcMap = dcLocator.getAllBuildDefChanges(projectName);
+                DSLManager dslManager = new DSLManager();
+
+                for (String dc : dcMap.keySet()) {
+                    String headline = dcMap.get(dc);
+
                     File scriptFile = new File(dc + ".groovy");
                     Checker.checkFileExistsOrIsFile(scriptFile);
 
-                    result &= (Boolean) DSLManager.executeDCScript(session, scriptFile);
+                    if (Utils.isNotNull(headline) && headline.contains("dql")) {
+//                        result &= (Boolean) dslManager.executeDCScript(session, scriptFile);
+
+                    } else if (Utils.isNotNull(headline) && headline.contains("sql")) {
+//                        result &= (Boolean) dslManager.executeDCScript(dbHelper, scriptFile);
+                    }
                 }
-
-
 
                 if (result) {
-                    tx.okToCommit();
+                    dqlTx.okToCommit();
+                    sqlTxHelper.okToCommit();
                 }
-
             } catch (Exception ex) {
                 logger.error(ex);
             } finally {
-                tx.commitOrAbort();
-            }
+                dqlTx.commitOrAbort();
 
+                sqlTxHelper.commitOrAbort();
+                sqlTxHelper.closeConnection();
+            }
         } catch (DfException dfe) {
-            dfe.printStackTrace();
+            logger.error(dfe);
+        } catch (SQLException e) {
+            logger.error(e);
         }
     }
 }

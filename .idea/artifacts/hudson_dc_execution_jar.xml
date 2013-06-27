@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="hudson_dc_execution:jar">
+  <artifact type="jar" name="hudson_dc_execution:jar">
     <output-path>$PROJECT_DIR$/build</output-path>
     <root id="archive" name="hudson_dc_execution.jar">
       <element id="module-output" name="hudson_dc_execution" />

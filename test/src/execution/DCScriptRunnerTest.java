@@ -12,6 +12,7 @@ package execution;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import util.Utils;
 
@@ -33,9 +34,11 @@ import static org.junit.Assert.assertTrue;
  * @version 1.0
  */
 public class DCScriptRunnerTest {
+    public static final Logger log = Logger.getRootLogger();
+
     public static final String QUERY_TEST_1 = "select user_os_name, user_privileges from dm_user where user_name = 'dmowner'";
     public static final String QUERY_TEST_2 = "select user_os_name, user_privileges from dm_user where user_name = '" + Math.random() * 100 + "'";
-    public static final String QUERY_TEST_3 = "select title, owner_name  from dm_job where title = 'Docbase'";
+    public static final String QUERY_TEST_3 = "select title, owner_name  from dm_job where title = 'Docbase' enable(return_top 2)";
     public static final String QUERY_TEST_REPEATING = "select user_os_name, user_privileges from dm_user where user_name = '" + Math.random() * 100 + "'";
 
 
@@ -56,7 +59,8 @@ public class DCScriptRunnerTest {
             assertFalse("Precondition script failed with query_2", preconditionScriptResultQuery2);
 
         } catch (DfException e) {
-            e.printStackTrace();
+            log.error(e);
+            assertTrue(false);
         }
     }
 
@@ -78,11 +82,12 @@ public class DCScriptRunnerTest {
             testList.add(mapQuery1);
             testList.add(mapQuery2);
 
-            boolean preconditionScriptResultQuery1 = DCScriptRunner.runDQLScript(session, QUERY_TEST_3, testList);
+            boolean preconditionScriptResultQuery1 = DCScriptRunner.runScript(session, QUERY_TEST_3, testList);
             assertTrue("Precondition script failed with query_1", preconditionScriptResultQuery1);
 
         } catch (DfException e) {
-            e.printStackTrace();
+            log.error(e);
+            assertTrue(false);
         }
     }
 }

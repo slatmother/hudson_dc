@@ -1,0 +1,17 @@
+precondition {
+  sql "select VIEW_NAME, OWNER from SYS.ALL_VIEWS where view_name = 'DDV_DEPARTMENT_BRANCH' order by OWNER, VIEW_NAME"
+  row "": ""
+}
+
+dc {
+  sql '''insert into test_table '''
+
+  affected 0
+}
+
+postcondition {
+  sql "select VIEW_NAME, OWNER from SYS.ALL_VIEWS where view_name = 'DDV_DEPARTMENT_BRANCH' order by OWNER, VIEW_NAME"
+
+  row "VIEW_NAME": 'DDV_DEPARTMENT_BRANCH', "OWNER": "DBUIO"
+}
+

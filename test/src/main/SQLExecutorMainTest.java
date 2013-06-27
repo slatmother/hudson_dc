@@ -10,65 +10,81 @@
 */
 package main;
 
-import dao.DatabaseHelper;
-import dao.DatabaseHelperFactory;
+import com.documentum.fc.common.DfException;
+import database.DatabaseHelper;
+import database.DatabaseHelperFactory;
 import execution.groovy.DSLManager;
+import execution.groovy.container.DSLContainer;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import transaction.SQLTransactionHelper;
 import util.Checker;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.sql.SQLException;
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * $Id
  * <p>Title: </p>
  * <p>Description: </p>
  * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
- * <p>Date: 14.06.13</p>
+ * <p>Date: 27.06.13</p>
  *
  * @version 1.0
  */
 public class SQLExecutorMainTest {
     private static final Logger logger = Logger.getRootLogger();
+    private static final FilenameFilter dcFilter = new FilenameFilter() {
+        public boolean accept(File dir, String name) {
+            return name.endsWith(".dc");
+        }
+    };
 
     @Test
-    public void test() {
-        SQLTransactionHelper helper = null;
-
+    public void test() throws DfException, SQLException {
         try {
-            HashMap<String, String> sqlMap = new HashMap<String, String>();
-            sqlMap.put("SQL_DC", "sql");
-
-            DatabaseHelper dao = DatabaseHelperFactory.getProjectDAO();
-
-            helper = SQLTransactionHelper.beginTransaction(dao.getConnection());
+            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
+            SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
 
             boolean result = true;
 
-            for (String dc : sqlMap.keySet()) {
-                File scriptFile = new File("D:\\SVNProjects\\hudson_dc_execution\\out\\test\\hudson_dc_execution\\" +dc + ".groovy");
-                Checker.checkFileExistsOrIsFile(scriptFile);
-
-                result &= (Boolean) DSLManager.executeDCScript(dao, scriptFile);
-            }
-
-            if (result) {
-                helper.okToCommit();
-            }
-        } catch (Exception ex) {
-            logger.error(ex);
-        } finally {
             try {
-                if (helper != null) {
-                    helper.commitOrAbort();
-                    helper.closeConnection();
+                DSLManager dslManager = new DSLManager();
+                List<DSLContainer> dcMappingList = new ArrayList<DSLContainer>();
+
+                File sqlDir = new File("./dc/sql");
+                logger.info("Current dir path is " + sqlDir.getAbsolutePath());
+                if (sqlDir.isDirectory()) {
+                    for (File scriptFile : sqlDir.listFiles(dcFilter)) {
+                        logger.info(scriptFile.getName());
+
+                        Checker.checkFileExistsOrIsFile(scriptFile);
+
+                        dcMappingList.add((DSLContainer) dslManager.getDCMappingInst(scriptFile));
+                    }
                 }
-            } catch (SQLException sqlex) {
-                logger.error(sqlex);
+
+                for (DSLContainer container : dcMappingList) {
+                    result &= (Boolean) dslManager.executeDC(dbHelper, container);
+                }
+
+                if (result) {
+                    sqlTxHelper.okToCommit();
+                } else {
+                    for (DSLContainer container : dcMappingList) {
+                        dslManager.rollback(container);
+                    }
+                }
+            } finally {
+                sqlTxHelper.commitOrAbort();
+                sqlTxHelper.closeConnection();
             }
+        } catch (SQLException e) {
+            logger.error(e);
+            throw e;
         }
     }
 }
