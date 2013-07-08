@@ -5,57 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df7c1b5-c288-4f97-a173-103450b17d79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/execution/groovy/dsl/script/DCScBlockTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dc/sql/DC_SQL_1.dc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/main/DQLExecutorMainTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/constants/IConstants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/parser/IStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/parser/RollbackDDLSt.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/parser/RollbackDDLStTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/parser/sql/SQLStatement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/parser/SQLStatementTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/main/Validator.java" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\GroovyDSLContainer.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\container\DSLContainer.groovy" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/locator/BuildDCLocator.java" afterPath="$PROJECT_DIR$/src/java/locator/BuildDCLocator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/locator/BuildDCLocatorTest.java" afterPath="$PROJECT_DIR$/test/src/locator/BuildDCLocatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/util/Checker.java" afterPath="$PROJECT_DIR$/src/java/util/Checker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/util/Configuration.java" afterPath="$PROJECT_DIR$/src/java/util/Configuration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/DCExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/DCExecutorMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/main/DCExecutorMainTest.java" afterPath="$PROJECT_DIR$/test/src/main/DCExecutorMainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/execution/DCScriptRunnerTest.java" afterPath="$PROJECT_DIR$/test/src/execution/DCScriptRunnerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/DQLExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/DQLExecutorMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/execution/groovy/DSLManagerTest.java" afterPath="$PROJECT_DIR$/test/src/execution/groovy/DSLManagerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/SQLExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/SQLExecutorMain.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java" afterPath="$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/sql/SQLTest.java" afterPath="$PROJECT_DIR$/test/src/sql/SQLTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/util/SQLUtils.java" afterPath="$PROJECT_DIR$/src/java/util/SQLUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/util/SQLUtilsTest.java" afterPath="$PROJECT_DIR$/test/src/util/SQLUtilsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/util/Utils.java" afterPath="$PROJECT_DIR$/src/java/util/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/resources/log4j.properties" afterPath="$PROJECT_DIR$/test/resources/log4j.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\dc\dql\DC00003.dc" afterPath="$PROJECT_DIR$/dc/dql/DC_DQL_1.dc" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\dc\sql\DC00002.dc" afterPath="$PROJECT_DIR$/dc/sql/DC_SQL_2.dc" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\dc\sql\DC00004.dc" afterPath="$PROJECT_DIR$/dc/sql/DC_SQL_3.dc" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\database\DatabaseHelper.java" afterPath="$PROJECT_DIR$/src/java/database/DBHelper.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\database\DatabaseHelperFactory.java" afterPath="$PROJECT_DIR$/src/java/database/DBHelperFactory.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\DCScriptRunner.java" afterPath="$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\DSLManager.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\script\DCScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\script\PostScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\script\PrecScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\transaction\SQLTransactionHelper.java" afterPath="$PROJECT_DIR$/src/java/transaction/SQLTx.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\database\DatabaseHelperTest.java" afterPath="$PROJECT_DIR$/test/src/database/DBHelperTest.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\transaction\SQLTransactionHelperTest.java" afterPath="$PROJECT_DIR$/test/src/transaction/SQLTxTest.java" />
     </list>
     <ignored path="hudson_dc_execution.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1341,7 +1293,7 @@
       <file leaf-file-name="DC_SQL_1.dc" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dc/sql/DC_SQL_1.dc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="47" selection-start="292" selection-end="292" vertical-scroll-proportion="0.44084278">
+            <state line="16" column="45" selection-start="292" selection-end="292" vertical-scroll-proportion="0.44084278">
               <folding />
             </state>
           </provider>
@@ -3063,11 +3015,15 @@
       <created>1372337991449</created>
       <updated>1372337991449</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Коммит изменений в структуре скрипта">
+      <created>1373282262376</created>
+      <updated>1373282262376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38842976" sideWeight="0.5531609" order="7" side_tool="false" content_ui="tabs" />
@@ -3292,7 +3248,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dc/sql/DC_SQL_1.dc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="47" selection-start="292" selection-end="292" vertical-scroll-proportion="0.44084278">
+        <state line="16" column="45" selection-start="292" selection-end="292" vertical-scroll-proportion="0.44084278">
           <folding />
         </state>
       </provider>
