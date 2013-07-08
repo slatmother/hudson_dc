@@ -1,6 +1,6 @@
 package execution.groovy.metaclass
 
-import execution.groovy.container.DSLContainer
+import execution.groovy.dsl.container.DSLContainer
 import org.apache.log4j.Logger
 
 /*

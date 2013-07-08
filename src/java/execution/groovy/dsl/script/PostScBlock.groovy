@@ -1,4 +1,6 @@
-package execution.groovy.script
+package execution.groovy.dsl.script
+
+import execution.java.runner.DCScriptRunner
 
 /*
 * $Id
@@ -9,8 +11,7 @@ package execution.groovy.script
 * Данные исходные коды не могут использоваться и быть изменены
 * без официального разрешения компании i-Teco.          
 */
-
-class PrecScBlock {
+class PostScBlock {
   def query
   def rows = []
 
@@ -21,8 +22,7 @@ class PrecScBlock {
     if (rows.size() == 0) {
       rows << Collections.<String, Object> emptyMap()
     }
-
-    validate();
+    return validate()
   }
 
   def sql(String query) {
@@ -38,8 +38,10 @@ class PrecScBlock {
   }
 
   def validate() {
-    def result = true
-    result &= ((query == null) || (query.equals('')))
-    return result;
+    return (query != null) && (query.trim().length() > 0)
+  }
+
+  def execute(session) {
+    return DCScriptRunner.runScript(session, query, rows)
   }
 }

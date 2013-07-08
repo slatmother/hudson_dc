@@ -10,7 +10,8 @@
 */
 package util;
 
-import database.DatabaseHelper;
+import constants.IConstants;
+import database.DBHelper;
 import org.apache.log4j.Logger;
 
 import java.sql.ResultSet;
@@ -29,26 +30,26 @@ import java.util.regex.Pattern;
  */
 public class SQLUtils {
     private static final Logger logger = Logger.getRootLogger();
+    private static final String viewRegex = "(CREATE OR REPLACE (FORCE VIEW|VIEW))";
 
-    public static String constructRollbackQuery(DatabaseHelper dbHelper, String query, String queryType) throws SQLException {
+    public static String constructRollbackQuery(DBHelper dbHelper, String query, String queryType) throws SQLException {
         String rollbackQuery = "";
-        if ("view".equals(queryType)) {
+        if (IConstants.QueryTypes.VIEW.equals(queryType)) {
             Pattern viewPattern = Pattern.compile("(?<=VIEW\\s)(\\w*)(?=\\sAS)");
 
             Matcher m = viewPattern.matcher(query);
             while (m.find()) {
                 String s = m.group(0);
-
                 logger.info("Found match is " + s);
 
-                ResultSet set = dbHelper.executeStatementWithoutCommit("select text from all_views where view_name = '" + s.toUpperCase() + "'");
+                String sqlGetQuery = "select text from all_views where view_name = '" + s.toUpperCase() + "'";
+                logger.info(sqlGetQuery);
 
-                if (set.getRow() != 0) {
-                    while (set.next()) {
-                        rollbackQuery = set.getString(1);
-                    }
+                ResultSet set = dbHelper.executeStatementWithoutCommit(sqlGetQuery);
+                if (set.first()) {
+                    rollbackQuery = "CREATE OR REPLACE FORCE VIEW " + s + " " + set.getString(1);
                 } else {
-                   rollbackQuery = "drop view " + s;
+                    rollbackQuery = "drop view " + s;
                 }
             }
         }
@@ -56,10 +57,16 @@ public class SQLUtils {
     }
 
     public static String checkQueryType(String query) {
-        if (query.contains("CREATE OR REPLACE VIEW")) {
-            return "view";
+        String result = "";
+        Pattern viewPattern = Pattern.compile(viewRegex);
+
+        Matcher m = viewPattern.matcher(query);
+        while (m.find()) {
+            if (Utils.isNotNull(m.group(0))) {
+                result = IConstants.QueryTypes.VIEW;
+            }
         }
 
-        return "";
+        return result;
     }
 }

@@ -1,6 +1,6 @@
 precondition {
   sql "select VIEW_NAME, OWNER from SYS.ALL_VIEWS where view_name = 'DDV_DEPARTMENT_BRANCH' order by OWNER, VIEW_NAME"
-  row "": ""
+  row "":""
 }
 
 dc {
@@ -33,7 +33,7 @@ FROM
 )
 '''
 
-  affected 0
+  condition 0
 }
 
 postcondition {

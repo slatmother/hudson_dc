@@ -1,0 +1,16 @@
+precondition {
+  sql "select test_id, test_name from test_table where test_id = 2"
+}
+
+dc {
+  sql '''insert into test_table values(2, 'test')'''
+
+  condition 1
+}
+
+postcondition {
+  sql "select test_id, test_name from test_table where test_id = 2"
+
+  row "TEST_ID": 2, "TEST_NAME": "test"
+}
+

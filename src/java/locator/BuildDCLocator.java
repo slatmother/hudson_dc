@@ -10,8 +10,8 @@
 */
 package locator;
 
-import database.DatabaseHelper;
-import database.DatabaseHelperFactory;
+import database.DBHelper;
+import database.DBHelperFactory;
 import org.apache.log4j.Logger;
 import util.Checker;
 import util.Utils;
@@ -55,7 +55,7 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestHelper();
+        DBHelper cqConnection = DBHelperFactory.getClearQuestHelper();
         HashMap<String, String> sqlMap = new HashMap<String, String>();
 
         ResultSet set = cqConnection.executeStatementWithoutCommit(query);
@@ -76,7 +76,7 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper cqConnection = DatabaseHelperFactory.getClearQuestHelper();
+        DBHelper cqConnection = DBHelperFactory.getClearQuestHelper();
         HashMap<String, String> dqlmap = new HashMap<String, String>();
 
         ResultSet set = cqConnection.executeStatementWithoutCommit(query);
@@ -97,7 +97,7 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DatabaseHelper helper = DatabaseHelperFactory.getClearQuestHelper();
+        DBHelper helper = DBHelperFactory.getClearQuestHelper();
         logger.info("database helper is connected? " + helper.getConnection().isValid(10));
 
         HashMap<String, String> dcMap = new HashMap<String, String>();

@@ -103,9 +103,9 @@ jar.dependsOn copyDeps
 jar {
   archiveName = "hudson-dc-1.0.jar"
 
-  def manifestClasspath = configurations.runtime.collect { "lib/${it.name}" }.join(' ') + ' '
-  manifestClasspath += configurations.groovyJars.collect { "lib/groovy/${it.name}" }.join(' ') + ' '
-  manifestClasspath += configurations.dfcJars.collect { "lib/dfc/${it.name}" }.join(' ') + ' '
+  def manifestClasspath = configurations.runtime.collect { "${it.name}" }.join(' ') + ' '
+  manifestClasspath += configurations.groovyJars.collect { "groovy/${it.name}" }.join(' ') + ' '
+  manifestClasspath += configurations.dfcJars.collect { "dfc/${it.name}" }.join(' ') + ' '
 
   manifest {
     attributes 'Implementation-Title': 'hudson-dc-1.0', "Class-Path": manifestClasspath

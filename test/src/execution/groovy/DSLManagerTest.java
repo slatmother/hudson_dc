@@ -12,6 +12,7 @@ package execution.groovy;
 
 import com.documentum.fc.client.IDfSession;
 import core.TestConfiguration;
+import execution.groovy.dsl.DSLManager;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import util.Utils;

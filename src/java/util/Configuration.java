@@ -25,11 +25,12 @@ import java.util.Properties;
  * @version 1.0
  */
 public class Configuration {
+    private static final String CONFIG_PROPERTIES_FILE_NAME = "config.properties";
     private static final Properties config_properties = new Properties();
 
     static {
         try {
-            InputStream inputStream = Configuration.class.getClassLoader().getResourceAsStream("config.properties");
+            InputStream inputStream = Configuration.class.getClassLoader().getResourceAsStream(CONFIG_PROPERTIES_FILE_NAME);
             if (inputStream == null) {
                 throw new FileNotFoundException("property file 'config.properties' not found in the classpath");
             }

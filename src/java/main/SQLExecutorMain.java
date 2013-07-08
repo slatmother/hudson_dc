@@ -10,16 +10,19 @@
 */
 package main;
 
-import database.DatabaseHelper;
-import database.DatabaseHelperFactory;
-import execution.groovy.DSLManager;
+import database.DBHelper;
+import database.DBHelperFactory;
+import execution.groovy.dsl.DSLManager;
+import execution.groovy.dsl.container.DSLContainer;
 import org.apache.log4j.Logger;
-import transaction.SQLTransactionHelper;
+import transaction.SQLTx;
 import util.Checker;
 
 import java.io.File;
 import java.io.FilenameFilter;
 import java.sql.SQLException;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * $Id
@@ -34,45 +37,54 @@ public class SQLExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
     private static final FilenameFilter dcFilter = new FilenameFilter() {
         public boolean accept(File dir, String name) {
-            return name.endsWith(".groovy");
+            return name.endsWith(".dc");
         }
     };
 
-    public static void main(String[] args) {
-        SQLTransactionHelper txHelper = null;
+    public static void main(String[] args) throws Exception {
+        SQLTx txHelper = null;
 
         try {
-            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
-
-            txHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
+            DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper();
+            txHelper = SQLTx.beginTransaction(dbHelper.getConnection());
             boolean result = true;
 
             DSLManager dslManager = new DSLManager();
-            File sqlDir = new File("sql");
+            Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
+
+            File sqlDir = new File("./DC/SQL");
             logger.info("Current dir path is " + sqlDir.getAbsolutePath());
             if (sqlDir.isDirectory()) {
                 for (File scriptFile : sqlDir.listFiles(dcFilter)) {
                     logger.info(scriptFile.getName());
 
                     Checker.checkFileExistsOrIsFile(scriptFile);
-
-//                    result &= (Boolean) dslManager.executeDCScript(dbHelper, scriptFile);
+                    dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), dbHelper);
                 }
             }
 
+            for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                result &= (Boolean) dslManager.executeDC(entry.getValue(), entry.getKey());
+            }
+
+            logger.info("Total execution result is " + result);
             if (result) {
                 txHelper.okToCommit();
+            } else {
+                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                    dslManager.rollback(entry.getKey());
+                }
             }
         } catch (Exception ex) {
             logger.error(ex);
+            throw ex;
         } finally {
             try {
                 if (txHelper != null) {
                     txHelper.commitOrAbort();
-                    txHelper.closeConnection();
                 }
             } catch (SQLException sqlex) {
-                logger.error(sqlex);
+                logger.error("Connection close block execution failed. ", sqlex);
             }
         }
     }

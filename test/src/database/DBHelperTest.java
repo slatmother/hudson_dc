@@ -27,17 +27,17 @@ import static org.junit.Assert.assertTrue;
  *
  * @version 1.0
  */
-public class DatabaseHelperTest {
+public class DBHelperTest {
     public static final Logger log = Logger.getRootLogger();
     public static final String TEST_QUERY = "Select 1 from dual";
 
     @Test
     public void test() {
         try {
-            DatabaseHelper cq_dao = DatabaseHelperFactory.getClearQuestHelper();
+            DBHelper cq_dao = DBHelperFactory.getClearQuestHelper();
             assertTrue(cq_dao.getConnection().isValid(10));
 
-            DatabaseHelper project_dao = DatabaseHelperFactory.getCustomProjectHelper();
+            DBHelper project_dao = DBHelperFactory.getCustomProjectHelper();
             assertTrue(project_dao.getConnection().isValid(10));
 
             ResultSet cq_set = cq_dao.executeStatementWithoutCommit(TEST_QUERY);

@@ -1,7 +1,5 @@
 package util;
 
-import com.documentum.fc.common.DfId;
-
 import java.io.File;
 
 /**
@@ -60,38 +58,6 @@ public class Checker {
     }
 
     /**
-     * @param paramName
-     * @param val
-     * @param isVar     true - рапортовать будет как об переменной с именем paramName,
-     *                  false - как о параметре.
-     * @date 24.02.2012 @author a.dunaev (a.dunaev@i-teco.ru)
-     * Проверяет простую корректность идентификатора КонтентСервера
-     * !=null && len==16
-     */
-    public static void checkObjectId(String paramName, String val, boolean isVar) {
-        if (val == null || val.length() != 16)
-            throw new IllegalArgumentException(
-                    String.format("%s %s is null", isVar ? "Variable" : "Parameter", paramName));
-    }
-
-    /**
-     * Проверяет, что переданный id корректен и не пуст !=null && len==16 &&
-     * !='0000000000000000'
-     *
-     * @param paramName
-     * @param val
-     * @param isVar     true - рапортовать будет как об переменной с именем paramName,
-     *                  false - как о параметре
-     * @date 24.02.2012
-     * @author a.dunaev (a.dunaev@i-teco.ru)
-     */
-    public static void checkObjectIdForEmpty(String paramName, String val, boolean isVar) {
-        checkObjectId(paramName, val, isVar);
-        if (DfId.DF_NULLID_STR.equals(val))
-            throw new IllegalArgumentException(String.format("%s %s is null", isVar ? "Variable" : "Parameter", paramName));
-    }
-
-    /**
      * Проверяет, что переданный id корректен и не пуст !=null && len==16 &&
      * !='0000000000000000'
      *
@@ -102,4 +68,7 @@ public class Checker {
         if (!file.exists() || !file.isFile())
             throw new IllegalArgumentException(String.format("File %s %s", file.exists() ? "" : "does not exists", file.isFile() ? "" : "and is not a file"));
     }
+
+
+
 }

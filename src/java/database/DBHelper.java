@@ -13,10 +13,7 @@ package database;
 import oracle.jdbc.pool.OracleDataSource;
 import org.apache.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  * $Id
@@ -27,12 +24,12 @@ import java.sql.Statement;
  *
  * @version 1.0
  */
-public class DatabaseHelper {
+public class DBHelper {
     private static final Logger logger = Logger.getRootLogger();
     private Connection connection;
     private OracleDataSource dataSource;
 
-    public DatabaseHelper(OracleDataSource dataSource) {
+    public DBHelper(OracleDataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -43,22 +40,18 @@ public class DatabaseHelper {
         return connection;
     }
 
-    public Connection establishNewConnection() throws SQLException {
-        return dataSource.getConnection();
-    }
-
     public ResultSet executeStatementWithoutCommit(String query) throws SQLException {
         Connection con = getConnection();
-        Statement st = con.createStatement();
+        PreparedStatement st = con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         return st.executeQuery(query);
     }
 
     public int executeUpdateWithoutCommit(String query) throws SQLException {
-        Statement st = null;
+        PreparedStatement st = null;
         int returnValue = 0;
         try {
             Connection con = getConnection();
-            st = con.createStatement();
+            st = con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
             returnValue = st.executeUpdate(query);
         } finally {
             if (st != null) {

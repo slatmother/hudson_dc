@@ -10,11 +10,11 @@
 */
 package sql;
 
-import database.DatabaseHelper;
-import database.DatabaseHelperFactory;
+import database.DBHelper;
+import database.DBHelperFactory;
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import transaction.SQLTransactionHelper;
+import transaction.SQLTx;
 
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
@@ -36,8 +36,8 @@ public class SQLTest {
 
     @Test
     public void test() throws SQLException {
-        DatabaseHelper dbHelper = DatabaseHelperFactory.getClearQuestHelper();
-        SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
+        DBHelper dbHelper = DBHelperFactory.getClearQuestHelper();
+        SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection());
 
         try {
             ResultSet set = dbHelper.executeStatementWithoutCommit("select count(*) as c from dc");

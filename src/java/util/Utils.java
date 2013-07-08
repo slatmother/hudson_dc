@@ -12,12 +12,9 @@ package util;/*
 import com.documentum.com.DfClientX;
 import com.documentum.com.IDfClientX;
 import com.documentum.fc.client.*;
-import com.documentum.fc.common.DfException;
-import com.documentum.fc.common.DfLoginInfo;
-import com.documentum.fc.common.IDfAttr;
-import com.documentum.fc.common.IDfLoginInfo;
+import com.documentum.fc.common.*;
+import constants.IConstants;
 
-import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -44,55 +41,6 @@ public class Utils {
         loginInfo.setPassword(passwd);
         return client.newSession(docbaseName, loginInfo);
     }
-
-    public static void execQuery(IDfSession session, String dqlQuery) throws DfException {
-        IDfCollection col = null;
-        try {
-            IDfQuery query = new DfQuery();
-            query.setDQL(dqlQuery);
-            col = query.execute(session, IDfQuery.DF_EXEC_QUERY);
-        } finally {
-            close(col);
-        }
-    }
-
-    public static void close(IDfCollection collection) {
-        try {
-            if (collection != null) {
-                // Поиск утечек коллекций
-                //                log.debug("Close collection ### "+collection);
-                collection.close();
-            }
-        } catch (DfException e) {
-            // Тут не нужно пробрасывать эксепшн, просто логируем
-//            LoggerUtils.error(Utils.class, e.getMessage(), null, e);
-        }
-    }
-
-    public static String getQueryFromFile(String fileName) throws IOException {
-        StringBuilder queryBuilder = new StringBuilder();
-
-        File dcFile = new File(fileName + ".dql");
-
-        if (dcFile.exists() && dcFile.isFile()) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(new DataInputStream(new FileInputStream(dcFile))));
-
-            try {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    queryBuilder.append(line).append(" ");
-                }
-            } finally {
-                reader.close();
-            }
-
-        } else {
-            throw new FileNotFoundException("Can't find DC file with filename " + fileName + ".dql");
-        }
-
-        return queryBuilder.toString();
-    }
-
 
     /**
      * dql-запроса возвращает мэп <имя атрибута>-<значение> Все значения
@@ -326,5 +274,33 @@ public class Utils {
      */
     public static boolean isNotNull(String value) {
         return (value != null) && (value.trim().length() > 0);
+    }
+
+    public static int checkAffectedParams(Integer minValue, Integer maxValue) {
+        if (maxValue == null) {
+            return IConstants.AffectedTypes.INFINITY_RANGE;
+        } else if (maxValue.equals(minValue)) {
+            return IConstants.AffectedTypes.VALUE;
+        } else if (maxValue > minValue) {
+            return IConstants.AffectedTypes.RANGE;
+        } else {
+            return IConstants.AffectedTypes.UNDEFINED;
+        }
+    }
+
+    public static String checkDQLQueryReturnedType(Map<String, Object> queryMap) {
+        if (queryMap.containsKey(IConstants.DQLQueryReturnVals.UPDATED)) {
+            return IConstants.DQLQueryReturnVals.UPDATED;
+        } else if (queryMap.containsKey(IConstants.DQLQueryReturnVals.DELETED)) {
+            return IConstants.DQLQueryReturnVals.DELETED;
+        } else if (queryMap.containsKey(IConstants.DQLQueryReturnVals.CREATED)) {
+            return IConstants.DQLQueryReturnVals.CREATED;
+        } else {
+            return "";
+        }
+    }
+
+    public static boolean isNotNullId(String value) {
+        return DfId.isObjectId(value);
     }
 }

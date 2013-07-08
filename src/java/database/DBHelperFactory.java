@@ -24,8 +24,8 @@ import java.sql.SQLException;
  *
  * @version 1.0
  */
-public class DatabaseHelperFactory {
-    public static DatabaseHelper getClearQuestHelper() throws SQLException {
+public class DBHelperFactory {
+    public static DBHelper getClearQuestHelper() throws SQLException {
         String cq_user = Configuration.getConfig_properties().getProperty("cq.db.user");
         String cq_passwd = Configuration.getConfig_properties().getProperty("cq.db.password");
         String cq_url = Configuration.getConfig_properties().getProperty("cq.db.url");
@@ -34,10 +34,10 @@ public class DatabaseHelperFactory {
         dataSource.setUser(cq_user);
         dataSource.setPassword(cq_passwd);
         dataSource.setURL(cq_url);
-        return new DatabaseHelper(dataSource);
+        return new DBHelper(dataSource);
     }
 
-    public static DatabaseHelper getCustomProjectHelper() throws SQLException {
+    public static DBHelper getCustomProjectHelper() throws SQLException {
         String project_db_user = Configuration.getConfig_properties().getProperty("project.db.user");
         String project_db_passwd = Configuration.getConfig_properties().getProperty("project.db.password");
         String project_db_url = Configuration.getConfig_properties().getProperty("project.db.url");
@@ -46,7 +46,7 @@ public class DatabaseHelperFactory {
         dataSource.setUser(project_db_user);
         dataSource.setPassword(project_db_passwd);
         dataSource.setURL(project_db_url);
-        return new DatabaseHelper(dataSource);
+        return new DBHelper(dataSource);
     }
 
 }

@@ -11,13 +11,13 @@
 package main;
 
 import com.documentum.fc.common.DfException;
-import database.DatabaseHelper;
-import database.DatabaseHelperFactory;
-import execution.groovy.DSLManager;
-import execution.groovy.container.DSLContainer;
+import database.DBHelper;
+import database.DBHelperFactory;
+import execution.groovy.dsl.DSLManager;
+import execution.groovy.dsl.container.DSLContainer;
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import transaction.SQLTransactionHelper;
+import transaction.SQLTx;
 import util.Checker;
 
 import java.io.File;
@@ -46,8 +46,8 @@ public class SQLExecutorMainTest {
     @Test
     public void test() throws DfException, SQLException {
         try {
-            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
-            SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
+            DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper();
+            SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection());
 
             boolean result = true;
 
@@ -62,7 +62,6 @@ public class SQLExecutorMainTest {
                         logger.info(scriptFile.getName());
 
                         Checker.checkFileExistsOrIsFile(scriptFile);
-
                         dcMappingList.add((DSLContainer) dslManager.getDCMappingInst(scriptFile));
                     }
                 }

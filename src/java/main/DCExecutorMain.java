@@ -12,13 +12,14 @@ package main;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
-import database.DatabaseHelper;
-import database.DatabaseHelperFactory;
-import execution.groovy.DSLManager;
+import database.DBHelper;
+import database.DBHelperFactory;
+import execution.groovy.dsl.DSLManager;
+import execution.groovy.dsl.container.DSLContainer;
 import locator.BuildDCLocator;
 import org.apache.log4j.Logger;
 import transaction.NestedTx;
-import transaction.SQLTransactionHelper;
+import transaction.SQLTx;
 import util.Checker;
 import util.Configuration;
 import util.Utils;
@@ -26,6 +27,8 @@ import util.Utils;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * $Id
@@ -39,7 +42,7 @@ import java.util.HashMap;
 public class DCExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws DfException, SQLException {
         BuildDCLocator dcLocator = new BuildDCLocator();
 
         try {
@@ -52,10 +55,11 @@ public class DCExecutorMain {
             IDfSession session = Utils.getSession(user, passwd, docbase);
             NestedTx dqlTx = NestedTx.beginTx(session);
 
-            DatabaseHelper dbHelper = DatabaseHelperFactory.getCustomProjectHelper();
-            SQLTransactionHelper sqlTxHelper = SQLTransactionHelper.beginTransaction(dbHelper.getConnection());
+            DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper();
+            SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection());
 
             boolean result = true;
+            Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
 
             try {
                 HashMap<String, String> dcMap = dcLocator.getAllBuildDefChanges(projectName);
@@ -64,33 +68,41 @@ public class DCExecutorMain {
                 for (String dc : dcMap.keySet()) {
                     String headline = dcMap.get(dc);
 
-                    File scriptFile = new File(dc + ".groovy");
-                    Checker.checkFileExistsOrIsFile(scriptFile);
+                    File scriptFile = new File(dc + ".dc");
+                    logger.info(scriptFile.getName());
 
+                    Checker.checkFileExistsOrIsFile(scriptFile);
                     if (Utils.isNotNull(headline) && headline.contains("dql")) {
-//                        result &= (Boolean) dslManager.executeDCScript(session, scriptFile);
+                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), session);
 
                     } else if (Utils.isNotNull(headline) && headline.contains("sql")) {
-//                        result &= (Boolean) dslManager.executeDCScript(dbHelper, scriptFile);
+                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), dbHelper);
                     }
                 }
 
+                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                    result &= (Boolean) dslManager.executeDC(entry.getValue(), entry.getKey());
+                }
+
+                logger.info("Total execution result is " + result);
                 if (result) {
                     dqlTx.okToCommit();
                     sqlTxHelper.okToCommit();
+                } else {
+                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                        dslManager.rollback(entry.getKey());
+                    }
                 }
-            } catch (Exception ex) {
-                logger.error(ex);
             } finally {
                 dqlTx.commitOrAbort();
-
                 sqlTxHelper.commitOrAbort();
-                sqlTxHelper.closeConnection();
             }
         } catch (DfException dfe) {
             logger.error(dfe);
+            throw dfe;
         } catch (SQLException e) {
             logger.error(e);
+            throw e;
         }
     }
 }

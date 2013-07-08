@@ -11,8 +11,8 @@
 package main;
 
 import com.documentum.fc.client.IDfSession;
-import com.documentum.fc.common.DfException;
-import execution.groovy.DSLManager;
+import execution.groovy.dsl.DSLManager;
+import execution.groovy.dsl.container.DSLContainer;
 import org.apache.log4j.Logger;
 import transaction.NestedTx;
 import util.Checker;
@@ -21,6 +21,8 @@ import util.Utils;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * $Id
@@ -35,11 +37,11 @@ public class DQLExecutorMain {
     private static final Logger logger = Logger.getRootLogger();
     private static final FilenameFilter dcFilter = new FilenameFilter() {
         public boolean accept(File dir, String name) {
-            return name.endsWith(".groovy");
+            return name.endsWith(".dc");
         }
     };
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try {
             String user = Configuration.getConfig_properties().getProperty("documentum.user");
             String passwd = Configuration.getConfig_properties().getProperty("documentum.password");
@@ -52,29 +54,37 @@ public class DQLExecutorMain {
 
             try {
                 DSLManager dslManager = new DSLManager();
-                File dqlDir = new File("dql");
+                Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
+
+                File dqlDir = new File("./DC/DQL");
                 logger.info("Current dir path is " + dqlDir.getAbsolutePath());
                 if (dqlDir.isDirectory()) {
                     for (File scriptFile : dqlDir.listFiles(dcFilter)) {
                         logger.info(scriptFile.getName());
 
                         Checker.checkFileExistsOrIsFile(scriptFile);
-
-//                        result &= (Boolean) dslManager.executeDCScript(session, scriptFile);
+                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), session);
                     }
                 }
 
+                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                    result &= (Boolean) dslManager.executeDC(entry.getValue(), entry.getKey());
+                }
+
+                logger.info("Total execution result is " + result);
                 if (result) {
                     tx.okToCommit();
+                } else {
+                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+                        dslManager.rollback(entry.getKey());
+                    }
                 }
-            } catch (Exception ex) {
-                logger.error(ex);
             } finally {
                 tx.commitOrAbort();
             }
-
-        } catch (DfException dfe) {
-            dfe.printStackTrace();
+        } catch (Exception ex) {
+            logger.error(ex);
+            throw ex;
         }
     }
 }

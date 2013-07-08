@@ -12,6 +12,7 @@ package execution;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
+import execution.java.runner.DCScriptRunner;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 import util.Utils;

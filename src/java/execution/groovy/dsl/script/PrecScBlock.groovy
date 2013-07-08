@@ -1,4 +1,6 @@
-package execution.groovy.script
+package execution.groovy.dsl.script
+
+import execution.java.runner.DCScriptRunner
 
 /*
 * $Id
@@ -9,16 +11,20 @@ package execution.groovy.script
 * Данные исходные коды не могут использоваться и быть изменены
 * без официального разрешения компании i-Teco.          
 */
-class DCScBlock {
-  String query
-//  def minVal
-//  def maxVal
 
-  def affected
+class PrecScBlock {
+  String query
+  def rows = []
 
   def init(Closure closure) {
     closure.delegate = this
     closure.call()
+
+    if (!rows) {
+      rows << Collections.<String, Object> emptyMap()
+    }
+
+    validate();
   }
 
   def sql(String query) {
@@ -29,18 +35,15 @@ class DCScBlock {
     this.query = query
   }
 
-//  def condition(Integer minVal, Integer maxVal) {
-//    this.minVal = minVal
-//    this.maxVal = maxVal
-//  }
-
-  def affected(Integer value) {
-    affected = value
+  def row(Map<String, Object> rowMap) {
+    rows << rowMap
   }
 
   def validate() {
-    def result = true
-    result &= ((query == null) || (query.equals('')) && affected >= 0)
-    return result;
+    return (!query)
+  }
+
+  def execute(session) {
+    return DCScriptRunner.runScript(session, query, rows)
   }
 }

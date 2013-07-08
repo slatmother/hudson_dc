@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import java.util.HashMap;
 
 import static junit.framework.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * $Id
@@ -39,7 +40,7 @@ public class BuildDCLocatorTest {
             logger.info(dcMap.keySet());
             logger.info(dcMap.values());
 
-            assertTrue("Map size " + size, size > 0);
+            assumeTrue("Map size " + size, size > 0);
         } catch (Exception e) {
             logger.error(e);
             assertTrue(false);
