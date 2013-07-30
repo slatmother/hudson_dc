@@ -5,46 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0df7c1b5-c288-4f97-a173-103450b17d79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/dc.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/run_dc.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/run_dql.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/run_sql.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/validate.bat" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\database\DatabaseHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\database\DatabaseHelperFactory.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/locator/BuildDCLocator.class" afterPath="$PROJECT_DIR$/build/classes/main/locator/BuildDCLocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/main/DCExecutorMain.class" afterPath="$PROJECT_DIR$/build/classes/main/main/DCExecutorMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/DCScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/DCScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/java/runner/DCScriptRunner.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/java/runner/DCScriptRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/main/DQLExecutorMain.class" afterPath="$PROJECT_DIR$/build/classes/main/main/DQLExecutorMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/container/DSLContainer.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/container/DSLContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/metaclass/DSLDelegatingMetaClass.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/metaclass/DSLDelegatingMetaClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/DSLManager.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/DSLManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/constants/IConstants.class" afterPath="$PROJECT_DIR$/build/classes/main/constants/IConstants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PostScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PostScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PrecScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PrecScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/main/SQLExecutorMain.class" afterPath="$PROJECT_DIR$/build/classes/main/main/SQLExecutorMain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/util/SQLUtils.class" afterPath="$PROJECT_DIR$/build/classes/main/util/SQLUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/main/Validator.class" afterPath="$PROJECT_DIR$/build/classes/main/main/Validator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/hudson-dc-1.0.jar" afterPath="$PROJECT_DIR$/build/libs/hudson-dc-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/DCExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/DCExecutorMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/main/DCExecutorMainTest.java" afterPath="$PROJECT_DIR$/test/src/main/DCExecutorMainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/DQLExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/DQLExecutorMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/main/DQLExecutorMainTest.java" afterPath="$PROJECT_DIR$/test/src/main/DQLExecutorMainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java" afterPath="$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/parser/IStatement.java" afterPath="$PROJECT_DIR$/src/java/parser/IStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/parser/RollbackDDLSt.java" afterPath="$PROJECT_DIR$/src/java/parser/RollbackDDLSt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/SQLExecutorMain.java" afterPath="$PROJECT_DIR$/src/java/main/SQLExecutorMain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java" afterPath="$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/parser/sql/SQLStatement.java" afterPath="$PROJECT_DIR$/src/java/parser/sql/SQLStatement.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/Validator.java" afterPath="$PROJECT_DIR$/src/java/main/Validator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hudson_dc_execution.iws" />
@@ -687,7 +647,7 @@
       <file leaf-file-name="SQLExecutorMainTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="92" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.4">
+            <state line="74" column="50" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.75">
               <folding />
             </state>
           </provider>
@@ -2192,7 +2152,11 @@
       <created>1373282262376</created>
       <updated>1373282262376</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Переход на флешбеки">
+      <created>1375199012512</created>
+      <updated>1375199012512</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2210,6 +2174,7 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2826399" sideWeight="0.33470508" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16212338" sideWeight="0.6280992" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29889807" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29986244" sideWeight="0.45905173" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.294835" sideWeight="0.6712517" order="3" side_tool="false" content_ui="tabs" />
@@ -2225,7 +2190,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45804676" sideWeight="0.32805756" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IntelliJad Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44352618" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29986244" sideWeight="0.45905173" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20731707" sideWeight="0.1969697" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39889959" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2419,7 +2383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/main/SQLExecutorMainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="92" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.4">
+        <state line="74" column="50" selection-start="2396" selection-end="2396" vertical-scroll-proportion="0.75">
           <folding />
         </state>
       </provider>
