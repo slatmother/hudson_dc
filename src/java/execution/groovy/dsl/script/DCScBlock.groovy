@@ -50,9 +50,9 @@ class DCScBlock {
 
 
   def execute(session) {
-    if (needManualRollback) {
-
-    }
+//    if (needManualRollback) {
+//
+//    }
     hasExecuted = DCScriptRunner.runScript(session,
             query,
             min,

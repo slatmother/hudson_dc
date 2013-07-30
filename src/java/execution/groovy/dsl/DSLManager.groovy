@@ -13,15 +13,14 @@ import execution.groovy.metaclass.DSLDelegatingMetaClass
 * без официального разрешения компании i-Teco.          
 */
 class DSLManager {
-
-  def getDCMappingInst(File dc) {
+  def static getDCMappingInst(File dc) {
     DSLDelegatingMetaClass metaClass = new DSLDelegatingMetaClass(Script.class)
     runScript(dc, metaClass)
     metaClass.container.name = dc.name
     return metaClass.container
   }
 
-  def executeDC(session, DSLContainer container) {
+  def static executeDC(session, DSLContainer container) {
     boolean result = false
     if (validate(container)) {
       result = container.execute(session)
@@ -30,15 +29,15 @@ class DSLManager {
     return result
   }
 
-  def validate(DSLContainer container) {
+  def static boolean validate(DSLContainer container) {
     return container.validate()
   }
 
-  def rollback(DSLContainer container) {
-    container.rollback()
-  }
+//  def rollback(DSLContainer container) {
+//    container.rollback()
+//  }
 
-  def runScript(File dc, metaClass) {
+  def static runScript(File dc, metaClass) {
     def groovyshell = new GroovyShell()
 
     def script = groovyshell.parse(dc);

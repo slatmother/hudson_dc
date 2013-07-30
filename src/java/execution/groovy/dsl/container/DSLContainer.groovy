@@ -105,16 +105,17 @@ class DSLContainer {
     return result
   }
 
-  def rollback() {
-    if (dc.hasExecuted && dc.needManualRollback && !dc.statement.rollbackQuery) {
-      logger.info("Mapping with name " + name + " contains auto-commit dc. Rollback is running.")
-      DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper()
-      SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection())
-
-      DCScriptRunner.runScript(dbHelper, dc.statement.rollbackQuery, 0, null)
-
-      sqlTxHelper.okToCommit()
-      sqlTxHelper.commitOrAbort()
-    }
-  }
+//  def rollback() {
+////    if (dc.hasExecuted && dc.needManualRollback && !dc.statement.rollbackQuery) {
+//      if (dc.hasExecuted && dc.needManualRollback) {
+//      logger.info("Mapping with name " + name + " contains auto-commit dc. Rollback is running.")
+//      DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper()
+//      SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection())
+//
+//      DCScriptRunner.runScript(dbHelper, dc.statement.rollbackQuery, 0, null)
+//
+//      sqlTxHelper.okToCommit()
+//      sqlTxHelper.commitOrAbort()
+//    }
+//  }
 }

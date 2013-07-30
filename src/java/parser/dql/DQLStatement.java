@@ -43,8 +43,8 @@ public class DQLStatement implements IStatement {
         return QUERY_TYPE;
     }
 
-    @Override
-    public String getRollbackQuery() {
-        return null;
-    }
+//    @Override
+//    public String getRollbackQuery() {
+//        return null;
+//    }
 }

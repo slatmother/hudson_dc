@@ -53,32 +53,32 @@ public class DQLExecutorMain {
             boolean result = true;
 
             try {
-                DSLManager dslManager = new DSLManager();
                 Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
 
                 File dqlDir = new File("./DC/DQL");
-                logger.info("Current dir path is " + dqlDir.getAbsolutePath());
+//                logger.info("Current dir path is " + dqlDir.getAbsolutePath());
                 if (dqlDir.isDirectory()) {
                     for (File scriptFile : dqlDir.listFiles(dcFilter)) {
                         logger.info(scriptFile.getName());
 
                         Checker.checkFileExistsOrIsFile(scriptFile);
-                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), session);
+                        dcContainerMap.put((DSLContainer) DSLManager.getDCMappingInst(scriptFile), session);
                     }
                 }
 
                 for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                    result &= (Boolean) dslManager.executeDC(entry.getValue(), entry.getKey());
+                    result &= (Boolean) DSLManager.executeDC(entry.getValue(), entry.getKey());
                 }
 
                 logger.info("Total execution result is " + result);
                 if (result) {
                     tx.okToCommit();
-                } else {
-                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                        dslManager.rollback(entry.getKey());
-                    }
                 }
+//                else {
+//                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+//                        dslManager.rollback(entry.getKey());
+//                    }
+//                }
             } finally {
                 tx.commitOrAbort();
             }

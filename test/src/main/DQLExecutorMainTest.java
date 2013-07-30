@@ -76,11 +76,12 @@ public class DQLExecutorMainTest {
                 logger.info("Total execution result is " + result);
                 if (result) {
                     tx.okToCommit();
-                } else {
-                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                        dslManager.rollback(entry.getKey());
-                    }
                 }
+//                else {
+//                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+//                        dslManager.rollback(entry.getKey());
+//                    }
+//                }
             } finally {
                 tx.commitOrAbort();
             }

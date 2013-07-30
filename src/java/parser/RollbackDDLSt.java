@@ -28,6 +28,7 @@ import java.sql.SQLException;
  *
  * @version 1.0
  */
+@Deprecated
 public class RollbackDDLSt {
     private QueryTemplate userSourceTemplate = QueryTemplate.queryTemplate(
             "select 'create or replace '||text as TEXT, line " +

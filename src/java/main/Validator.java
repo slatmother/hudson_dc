@@ -10,6 +10,13 @@
 */
 package main;
 
+import execution.groovy.dsl.DSLManager;
+import execution.groovy.dsl.container.DSLContainer;
+import org.apache.log4j.Logger;
+
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * $Id
  * <p>Title: </p>
@@ -20,7 +27,30 @@ package main;
  * @version 1.0
  */
 public class Validator {
-    public static void main(String[] args) {
+    private static final Logger logger = Logger.getRootLogger();
 
+    public static void main(String[] args) {
+        File dqlFolder = new File("./DC");
+
+        File[] dcArr = dqlFolder.listFiles();
+        boolean dqlResult = true;
+        ArrayList<String> failedDC = new ArrayList<String>();
+
+        if (dcArr != null) {
+            for (File dc : dcArr) {
+                DSLContainer dcContainer = (DSLContainer) DSLManager.getDCMappingInst(dc);
+                boolean dcResult = DSLManager.validate(dcContainer);
+
+                if (!dcResult) {
+                    failedDC.add(dc.getName());
+                }
+                dqlResult &= dcResult;
+            }
+        }
+
+        logger.info("DQL DC validation result is " + dqlResult);
+        if (!dqlResult) {
+            logger.info("Failed dc: " + failedDC);
+        }
     }
 }

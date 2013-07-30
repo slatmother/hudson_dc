@@ -23,6 +23,4 @@ public interface IStatement {
     public String getQuery();
 
     public String getQueryType();
-
-    public String getRollbackQuery();
 }

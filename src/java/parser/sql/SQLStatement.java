@@ -11,7 +11,6 @@
 package parser.sql;
 
 import parser.IStatement;
-import parser.RollbackDDLSt;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -58,9 +57,9 @@ public class SQLStatement implements IStatement {
 
     protected void enquireMetaData() throws SQLException {
         parseQuery();
-        if (isDDLQuery) {
-            constructRollbackQuery();
-        }
+//        if (isDDLQuery) {
+//            constructRollbackQuery();
+//        }
     }
 
     protected void parseQuery() {
@@ -72,38 +71,38 @@ public class SQLStatement implements IStatement {
             ddlType = m1.group(0).toUpperCase();
         }
 
-        Pattern defTypePattern = Pattern.compile("((?i)TABLE|(?i)FUNCTION|(?i)PROCEDURE|(?i)SEQUENCE|VIEW|(?i)TRIGGER)(?=\\s[a-zA-Z])");
-        Matcher m2 = defTypePattern.matcher(query);
-        while (m2.find()) {
-            defType = m2.group(0).toUpperCase();
-        }
-
-        Pattern defNamePattern = Pattern.compile("(?<=(?i)TABLE\\s|(?i)FUNCTION\\s|(?i)PROCEDURE\\s|(?i)SEQUENCE\\s|(?i)VIEW\\s|(?i)TRIGGER\\s)\\w*[\\.|.]?(\\w*)");
-        Matcher m3 = defNamePattern.matcher(query);
-        if (m3.find() && m3.groupCount() > 0) {
-            defName = m3.group(0).toUpperCase();
-            if (defName.contains(".")) {
-                defName = defName.split("\\.")[1];
-            }
-        }
+//        Pattern defTypePattern = Pattern.compile("((?i)TABLE|(?i)FUNCTION|(?i)PROCEDURE|(?i)SEQUENCE|VIEW|(?i)TRIGGER)(?=\\s[a-zA-Z])");
+//        Matcher m2 = defTypePattern.matcher(query);
+//        while (m2.find()) {
+//            defType = m2.group(0).toUpperCase();
+//        }
+//
+//        Pattern defNamePattern = Pattern.compile("(?<=(?i)TABLE\\s|(?i)FUNCTION\\s|(?i)PROCEDURE\\s|(?i)SEQUENCE\\s|(?i)VIEW\\s|(?i)TRIGGER\\s)\\w*[\\.|.]?(\\w*)");
+//        Matcher m3 = defNamePattern.matcher(query);
+//        if (m3.find() && m3.groupCount() > 0) {
+//            defName = m3.group(0).toUpperCase();
+//            if (defName.contains(".")) {
+//                defName = defName.split("\\.")[1];
+//            }
+//        }
 
         if (ddlTypes.contains(ddlType)) {
             isDDLQuery = true;
         }
     }
 
-    protected void constructRollbackQuery() throws SQLException {
-        RollbackDDLSt rollbackDDLSt = RollbackDDLSt.construct(ddlType, defType, defName);
-        rollbackQuery = rollbackDDLSt.getRollbackQuery();
-    }
+//    protected void constructRollbackQuery() throws SQLException {
+//        RollbackDDLSt rollbackDDLSt = RollbackDDLSt.construct(ddlType, defType, defName);
+//        rollbackQuery = rollbackDDLSt.getRollbackQuery();
+//    }
 
     public String getQuery() {
         return query;
     }
 
-    public String getRollbackQuery() {
-        return rollbackQuery;
-    }
+//    public String getRollbackQuery() {
+//        return rollbackQuery;
+//    }
 
     @Override
     public String getQueryType() {

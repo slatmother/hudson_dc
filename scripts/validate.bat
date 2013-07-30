@@ -1,0 +1,1 @@
+java -cp .;./lib/hudson-dc-1.0.jar main.Validator

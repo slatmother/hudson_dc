@@ -72,11 +72,12 @@ public class SQLExecutorMainTest {
 
                 if (result) {
                     sqlTxHelper.okToCommit();
-                } else {
-                    for (DSLContainer container : dcMappingList) {
-                        dslManager.rollback(container);
-                    }
                 }
+//                else {
+//                    for (DSLContainer container : dcMappingList) {
+//                        dslManager.rollback(container);
+//                    }
+//                }
             } finally {
                 sqlTxHelper.commitOrAbort();
                 sqlTxHelper.closeConnection();

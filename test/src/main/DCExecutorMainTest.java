@@ -102,11 +102,12 @@ public class DCExecutorMainTest {
                 if (result) {
                     tx.okToCommit();
                     sqlTxHelper.okToCommit();
-                } else {
-                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                        dslManager.rollback(entry.getKey());
-                    }
                 }
+//                else {
+//                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+//                        dslManager.rollback(entry.getKey());
+//                    }
+//                }
             } finally {
                 tx.commitOrAbort();
                 sqlTxHelper.commitOrAbort();

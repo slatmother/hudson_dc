@@ -71,9 +71,9 @@ public class SQLExecutorMain {
             if (result) {
                 txHelper.okToCommit();
             } else {
-                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                    dslManager.rollback(entry.getKey());
-                }
+//                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+//                    dslManager.rollback(entry.getKey());
+//                }
             }
         } catch (Exception ex) {
             logger.error(ex);
