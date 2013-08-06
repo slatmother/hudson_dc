@@ -10,26 +10,15 @@
 */
 package main;
 
-import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
-import database.DBHelper;
-import database.DBHelperFactory;
-import execution.groovy.dsl.DSLManager;
-import execution.groovy.dsl.container.DSLContainer;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
-import transaction.NestedTx;
-import transaction.SQLTx;
-import util.Checker;
-import util.Configuration;
-import util.Utils;
 
 import java.io.File;
 import java.io.FilenameFilter;
 import java.sql.SQLException;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  * $Id
@@ -47,77 +36,60 @@ public class DCExecutorMainTest {
             return name.endsWith(".dc");
         }
     };
+    private HashMap<String, String> dcMap = new HashMap<String, String>();
 
     @Before
     public void before() {
-
+        dcMap.put("TEST_DQL_1", "dql");
+        dcMap.put("TEST_DQL_2", "dql");
+        dcMap.put("TEST_SQL_1", "sql");
+        dcMap.put("TEST_SQL_2", "sql");
     }
 
     @Test
-    public void test() throws DfException, SQLException {
-        try {
-            String user = Configuration.getConfig_properties().getProperty("documentum.user");
-            String passwd = Configuration.getConfig_properties().getProperty("documentum.password");
-            String docbase = Configuration.getConfig_properties().getProperty("documentum.docbase");
-
-            IDfSession session = Utils.getSession(user, passwd, docbase);
-            NestedTx tx = NestedTx.beginTx(session);
-
-            DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper();
-            SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection());
-
-            boolean result = true;
-
-            try {
-                DSLManager dslManager = new DSLManager();
-                Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
-
-                File dqlDir = new File("./dc/dql");
-                logger.info("Current dir path is " + dqlDir.getAbsolutePath());
-                if (dqlDir.isDirectory()) {
-                    for (File scriptFile : dqlDir.listFiles(dcFilter)) {
-                        logger.info(scriptFile.getName());
-
-                        Checker.checkFileExistsOrIsFile(scriptFile);
-                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), session);
-                    }
-                }
-
-                File sqlDir = new File("./dc/sql");
-                logger.info("Current dir path is " + sqlDir.getAbsolutePath());
-                if (sqlDir.isDirectory()) {
-                    for (File scriptFile : sqlDir.listFiles(dcFilter)) {
-                        logger.info(scriptFile.getName());
-
-                        Checker.checkFileExistsOrIsFile(scriptFile);
-                        dcContainerMap.put((DSLContainer) dslManager.getDCMappingInst(scriptFile), dbHelper);
-                    }
-                }
-
-                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-                    result &= (Boolean) dslManager.executeDC(entry.getValue(), entry.getKey());
-                }
-
-                logger.info("Total execution result is " + result);
-                if (result) {
-                    tx.okToCommit();
-                    sqlTxHelper.okToCommit();
-                }
-//                else {
-//                    for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
-//                        dslManager.rollback(entry.getKey());
+    public void testMain() throws DfException, SQLException {
+//        try {
+//            IDfSession session = Utils.getSessionFromConfig();
+//            JdbcTemplate dbHelper = JdbcTemplateFactory.getProjectDBTemplate();
+//
+//            NestedTx dqlTx = NestedTx.beginTx(session);
+//
+//            boolean result = true;
+//            Map<DSLContainer, Object> dcContainerMap = new LinkedHashMap<DSLContainer, Object>();
+//
+//            try {
+//                for (String dc : dcMap.keySet()) {
+//                    String headline = dcMap.get(dc);
+//
+//                    File scriptFile = new File(dc + ".dc");
+//                    logger.info(scriptFile.getName());
+//
+//                    Checker.checkFileExistsOrIsFile(scriptFile);
+//                    if (Utils.isNotNull(headline) && headline.contains("dql")) {
+//                        dcContainerMap.put((DSLContainer) DSLManager.getDCMappingInst(scriptFile), session);
+//
+//                    } else if (Utils.isNotNull(headline) && headline.contains("sql")) {
+//                        dcContainerMap.put((DSLContainer) DSLManager.getDCMappingInst(scriptFile), dbHelper);
 //                    }
 //                }
-            } finally {
-                tx.commitOrAbort();
-                sqlTxHelper.commitOrAbort();
-            }
-        } catch (DfException dfe) {
-            logger.error(dfe);
-            throw dfe;
-        } catch (SQLException e) {
-            logger.error(e);
-            throw e;
-        }
+//
+//                for (Map.Entry<DSLContainer, Object> entry : dcContainerMap.entrySet()) {
+//                    result &= (Boolean) DSLManager.executeDC(entry.getValue(), entry.getKey());
+//                }
+//
+//                logger.info("Total execution result is " + result);
+//                if (result) {
+//                    dqlTx.okToCommit();
+//                }
+//            } finally {
+//                dqlTx.commitOrAbort();
+//            }
+//        } catch (DfException dfe) {
+//            logger.error(dfe);
+//            throw dfe;
+//        } catch (SQLException e) {
+//            logger.error(e);
+//            throw e;
+//        }
     }
 }

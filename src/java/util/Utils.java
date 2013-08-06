@@ -13,6 +13,7 @@ import com.documentum.com.DfClientX;
 import com.documentum.com.IDfClientX;
 import com.documentum.fc.client.*;
 import com.documentum.fc.common.*;
+import com.sun.istack.NotNull;
 import constants.IConstants;
 
 import java.sql.ResultSet;
@@ -41,6 +42,20 @@ public class Utils {
         loginInfo.setPassword(passwd);
         return client.newSession(docbaseName, loginInfo);
     }
+
+    public static IDfSession getSessionFromConfig() throws DfException {
+        @NotNull String user = Configuration.getConfig_properties().getProperty("documentum.user");
+        @NotNull String passwd = Configuration.getConfig_properties().getProperty("documentum.password");
+        @NotNull String docbase = Configuration.getConfig_properties().getProperty("documentum.docbase");
+
+        IDfClient client = clientX.getLocalClient();
+
+        IDfLoginInfo loginInfo = new DfLoginInfo();
+        loginInfo.setUser(user);
+        loginInfo.setPassword(passwd);
+        return client.newSession(docbase, loginInfo);
+    }
+
 
     /**
      * dql-запроса возвращает мэп <имя атрибута>-<значение> Все значения
@@ -274,6 +289,10 @@ public class Utils {
      */
     public static boolean isNotNull(String value) {
         return (value != null) && (value.trim().length() > 0);
+    }
+
+    public static boolean isNull(String value) {
+        return (value == null) || (value.trim().length() == 0);
     }
 
     public static int checkAffectedParams(Integer minValue, Integer maxValue) {

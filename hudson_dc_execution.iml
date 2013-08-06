@@ -10,15 +10,56 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="dfc" level="project" />
-    <orderEntry type="library" name="groovy" level="project" />
+    <orderEntry type="library" exported="" name="dfc" level="project" />
     <orderEntry type="library" exported="" name="ojdbc6-11.2.0.1.0" level="project" />
     <orderEntry type="library" exported="" name="guava-14.0.1" level="project" />
     <orderEntry type="library" exported="" name="freemarker" level="project" />
-    <orderEntry type="library" scope="TEST" name="log4j" level="project" />
-    <orderEntry type="library" scope="TEST" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" scope="TEST" name="junit-4.11" level="project" />
     <orderEntry type="library" name="spring-jdbc" level="project" />
+    <orderEntry type="library" scope="TEST" name="config" level="project" />
+    <orderEntry type="library" exported="" name="spring-core-3.2.3.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="commons-logging-1.1.1" level="project" />
+    <orderEntry type="library" exported="" name="asm-util-4.0" level="project" />
+    <orderEntry type="library" exported="" name="jaxb-impl" level="project" />
+    <orderEntry type="library" exported="" name="krbutil" level="project" />
+    <orderEntry type="library" exported="" name="jsafeFIPS" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.3" level="project" />
+    <orderEntry type="library" exported="" name="xtrim-api" level="project" />
+    <orderEntry type="library" exported="" name="groovy-2.1.3" level="project" />
+    <orderEntry type="library" exported="" name="aspectjrt" level="project" />
+    <orderEntry type="library" exported="" name="XformsCommon" level="project" />
+    <orderEntry type="library" exported="" name="asm-4.0" level="project" />
+    <orderEntry type="library" exported="" name="jsr173_api" level="project" />
+    <orderEntry type="library" exported="" name="xforms" level="project" />
+    <orderEntry type="library" exported="" name="xtrim-server" level="project" />
+    <orderEntry type="library" exported="" name="commons-lang-2.4" level="project" />
+    <orderEntry type="library" exported="" name="jcifs-krb5-1.3.1" level="project" />
+    <orderEntry type="library" exported="" name="commons-jxpath-1.2" level="project" />
+    <orderEntry type="library" exported="" name="messageService" level="project" />
+    <orderEntry type="library" scope="TEST" name="log4j.properties-log4j" level="project" />
+    <orderEntry type="library" exported="" name="antlr-2.7.7" level="project" />
+    <orderEntry type="library" exported="" name="castor-1.1-xml" level="project" />
+    <orderEntry type="library" exported="" name="asm-commons-4.0" level="project" />
+    <orderEntry type="library" exported="" name="asm-tree-4.0" level="project" />
+    <orderEntry type="library" exported="" name="dms-client-api" level="project" />
+    <orderEntry type="library" exported="" name="configservice-api" level="project" />
+    <orderEntry type="library" exported="" name="bpmutil" level="project" />
+    <orderEntry type="library" exported="" name="All-MB" level="project" />
+    <orderEntry type="library" exported="" name="certjFIPS" level="project" />
+    <orderEntry type="library" exported="" name="jaxb-api" level="project" />
+    <orderEntry type="library" exported="" name="asm-analysis-4.0" level="project" />
+    <orderEntry type="library" exported="" name="DmcRecords" level="project" />
+    <orderEntry type="library" exported="" name="messageArchive" level="project" />
+    <orderEntry type="library" exported="" name="configservice-impl" level="project" />
+    <orderEntry type="library" name="log4j.jar-log4j" level="project" />
+    <orderEntry type="module-library" scope="TEST">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 

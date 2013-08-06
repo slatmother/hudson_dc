@@ -14,6 +14,7 @@ import execution.java.runner.DCScriptRunner
 class PostScBlock {
   def query
   def rows = []
+  def validation_result
 
   def init(Closure closure) {
     closure.delegate = this
@@ -38,7 +39,8 @@ class PostScBlock {
   }
 
   def validate() {
-    return (query != null) && (query.trim().length() > 0)
+    validation_result = (!query)
+    return validation_result
   }
 
   def execute(session) {

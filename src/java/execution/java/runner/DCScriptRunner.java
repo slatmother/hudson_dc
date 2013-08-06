@@ -13,12 +13,12 @@ package execution.java.runner;
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
 import constants.IConstants;
-import database.DBHelper;
 import org.apache.log4j.Logger;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.jdbc.support.rowset.SqlRowSetMetaData;
 import util.Utils;
 
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
@@ -35,27 +35,6 @@ import java.util.Set;
  */
 public class DCScriptRunner {
     private static final Logger logger = Logger.getRootLogger();
-
-    /**
-     * @param session
-     * @param query
-     * @param conditionsMap
-     * @return
-     * @throws DfException
-     */
-    public static boolean runScriptWithOneRow(IDfSession session, String query, Map<String, Object> conditionsMap) throws DfException {
-        Map<String, Object> map = Utils.getFirstRow(session, query);
-
-        Set<Map.Entry<String, Object>> actualEntrySet = map.entrySet();
-
-        boolean result = true;
-
-        for (Map.Entry entry : conditionsMap.entrySet()) {
-            result &= actualEntrySet.contains(entry);
-        }
-
-        return result;
-    }
 
     /**
      * @param session
@@ -133,63 +112,58 @@ public class DCScriptRunner {
     }
 
     /**
-     * @param dbHelper
+     * @param template
      * @param query
      * @param conditionsMapList
      * @return
      * @throws SQLException
      */
-    public static boolean runScript(DBHelper dbHelper, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
+    public static boolean runScript(JdbcTemplate template, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
         logger.info("Query to execute is: " + query);
 
-        ResultSet set = dbHelper.executeStatementWithoutCommit(query);
+        SqlRowSet set = template.queryForRowSet(query);
         boolean result = true;
 
-        try {
-            ResultSetMetaData mdata = set.getMetaData();
-            int columnAmount = mdata.getColumnCount();
+        SqlRowSetMetaData mdata = set.getMetaData();
+        int columnAmount = mdata.getColumnCount();
 
-            if (set.first()) {
-                set.last();
-                int rowNum = set.getRow();
-                result = (rowNum == conditionsMapList.size());
-                set.beforeFirst();
-            } else {
-                if (!conditionsMapList.get(0).isEmpty()) {
-                    result = false;
-                }
+        if (set.first()) {
+            set.last();
+            int rowNum = set.getRow();
+            result = (rowNum == conditionsMapList.size());
+            set.beforeFirst();
+        } else {
+            if (!conditionsMapList.get(0).isEmpty()) {
+                result = false;
             }
-
-            if (result) {
-                while (set.next()) {
-                    int rowNum = set.getRow();
-
-                    Map<String, Object> map = conditionsMapList.get(rowNum - 1);
-
-                    for (int i = 1; i <= columnAmount; i++) {
-                        result &= map.containsKey(mdata.getColumnName(i)) &&
-                                map.get(mdata.getColumnName(i)).toString().equals(set.getObject(i).toString());
-                    }
-                }
-            }
-        } finally {
-            Utils.closeResources(set);
         }
 
+        if (result) {
+            while (set.next()) {
+                int rowNum = set.getRow();
+
+                Map<String, Object> map = conditionsMapList.get(rowNum - 1);
+
+                for (int i = 1; i <= columnAmount; i++) {
+                    result &= map.containsKey(mdata.getColumnName(i)) &&
+                            map.get(mdata.getColumnName(i)).toString().equals(set.getObject(i).toString());
+                }
+            }
+        }
         return result;
     }
 
     /**
-     * @param dbHelper
+     * @param template
      * @param query    //
      *                 * @param affectedRows
      * @return
      * @throws SQLException
      */
-    public static boolean runScript(DBHelper dbHelper, String query, Integer minAffectedValue, Integer maxAffectedValue) throws SQLException {
+    public static boolean runScript(JdbcTemplate template, String query, Integer minAffectedValue, Integer maxAffectedValue) throws SQLException {
         logger.info("Query to execute is: " + query);
 
-        int resultInt = dbHelper.executeUpdateWithoutCommit(query);
+        int resultInt = template.update(query);
         int affectedCase = Utils.checkAffectedParams(minAffectedValue, maxAffectedValue);
 
         switch (affectedCase) {

@@ -11,11 +11,8 @@
 package locator;
 
 import org.apache.log4j.Logger;
-
-import java.util.HashMap;
-
-import static junit.framework.Assert.assertTrue;
-import static org.junit.Assume.assumeTrue;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * $Id
@@ -29,21 +26,28 @@ import static org.junit.Assume.assumeTrue;
 //TODO: исправить этот тест. Gradle не понимает русские символы
 public class BuildDCLocatorTest {
     private static final Logger logger = Logger.getRootLogger();
+    private String projectName;
 
-//    @Test
+
+    @Before
+    public void setUp() throws Exception {
+        projectName = "НН:Архив ДБУиО Documentum";
+    }
+
+    @Test
     public void test() {
-        BuildDCLocator locator = new BuildDCLocator();
-        try {
-            HashMap<String, String> dcMap = locator.getAllBuildDefChanges("НН:Архив ДБУиО Documentum");
-            int size = dcMap.size();
-
-            logger.info(dcMap.keySet());
-            logger.info(dcMap.values());
-
-            assumeTrue("Map size " + size, size > 0);
-        } catch (Exception e) {
-            logger.error(e);
-            assertTrue(false);
-        }
+//        BuildDCLocator locator = new BuildDCLocator();
+//        try {
+//            HashMap<String, String> dcMap = locator.getAllBuildDefChanges(projectName);
+//            int size = dcMap.size();
+//
+//            logger.info(dcMap.keySet());
+//            logger.info(dcMap.values());
+//
+//            assumeTrue("Map size " + size, size > 0);
+//        } catch (Exception e) {
+//            logger.error(e);
+//            assertTrue(false);
+//        }
     }
 }

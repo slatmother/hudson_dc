@@ -1,17 +1,16 @@
 Manifest-Version: 1.0
 Implementation-Title: hudson-dc-1.0
-Class-Path: freemarker.jar ojdbc6-11.2.0.1.0.jar guava-14.0.1.jar groo
- vy/freemarker.jar groovy/ojdbc6-11.2.0.1.0.jar groovy/groovy-2.1.3.ja
- r groovy/guava-14.0.1.jar groovy/antlr-2.7.7.jar groovy/asm-4.0.jar g
- roovy/asm-tree-4.0.jar groovy/asm-commons-4.0.jar groovy/asm-util-4.0
- .jar groovy/asm-analysis-4.0.jar dfc/All-MB.jar dfc/aspectjrt.jar dfc
- /bpmutil.jar dfc/castor-1.1-xml.jar dfc/certjFIPS.jar dfc/commons-cod
- ec-1.3.jar dfc/commons-jxpath-1.2.jar dfc/commons-lang-2.4.jar dfc/co
- nfigservice-api.jar dfc/configservice-impl.jar dfc/dfc.jar dfc/DmcRec
- ords.jar dfc/dms-client-api.jar dfc/jaxb-api.jar dfc/jaxb-impl.jar df
- c/jcifs-krb5-1.3.1.jar dfc/jsafeFIPS.jar dfc/jsr173_api.jar dfc/krbut
- il.jar dfc/log4j.jar dfc/messageArchive.jar dfc/messageService.jar df
- c/xforms.jar dfc/XformsCommon.jar dfc/xtrim-api.jar dfc/xtrim-server.
- jar dfc/freemarker.jar dfc/ojdbc6-11.2.0.1.0.jar dfc/guava-14.0.1.jar
-  
+Class-Path: All-MB.jar aspectjrt.jar bpmutil.jar castor-1.1-xml.jar ce
+ rtjFIPS.jar commons-codec-1.3.jar commons-jxpath-1.2.jar commons-lang
+ -2.4.jar configservice-api.jar configservice-impl.jar dfc.jar DmcReco
+ rds.jar dms-client-api.jar jaxb-api.jar jaxb-impl.jar jcifs-krb5-1.3.
+ 1.jar jsafeFIPS.jar jsr173_api.jar krbutil.jar log4j.jar messageArchi
+ ve.jar messageService.jar xforms.jar XformsCommon.jar xtrim-api.jar x
+ trim-server.jar freemarker.jar ojdbc6-11.2.0.1.0.jar groovy-2.1.3.jar
+  guava-14.0.1.jar spring-jdbc-3.2.3.RELEASE.jar antlr-2.7.7.jar asm-4
+ .0.jar asm-tree-4.0.jar asm-commons-4.0.jar asm-util-4.0.jar asm-anal
+ ysis-4.0.jar commons-logging-1.1.1.jar spring-core-3.2.3.RELEASE.jar 
+ spring-beans-3.2.3.RELEASE.jar aopalliance-1.0.jar spring-tx-3.2.3.RE
+ LEASE.jar 
+Main-Class: main.Main
 

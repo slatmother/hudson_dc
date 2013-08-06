@@ -10,16 +10,8 @@
 */
 package util;
 
-import com.documentum.fc.client.IDfSession;
-import com.documentum.fc.client.IDfSessionManager;
-import com.documentum.fc.common.DfException;
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import util.Utils;
-
-import java.util.Map;
-
-import static junit.framework.Assert.*;
 
 /**
  * $Id
@@ -37,45 +29,45 @@ public class UtilsTest {
 
     @Test
     public void test() {
-        IDfSession session = null;
-        IDfSessionManager manager = null;
-        try {
-            session = Utils.getSession("dmowner", "Dctm6", "dbuio");
-            assertTrue(session.isConnected());
-
-            manager = session.getSessionManager();
-
-            Map<String, Object> map = Utils.getFirstRow(session, TEST_QUERY_1);
-            assertEquals("dmowner", map.get("user_os_name"));
-        } catch (DfException e) {
-            logger.error(e);
-        } finally {
-            if (manager != null) {
-                manager.release(session);
-                assertFalse(session.isConnected());
-            }
-        }
+//        IDfSession session = null;
+//        IDfSessionManager manager = null;
+//        try {
+//            session = Utils.getSession("dmowner", "Dctm6", "dbuio");
+//            assertTrue(session.isConnected());
+//
+//            manager = session.getSessionManager();
+//
+//            Map<String, Object> map = Utils.getFirstRow(session, TEST_QUERY_1);
+//            assertEquals("dmowner", map.get("user_os_name"));
+//        } catch (DfException e) {
+//            logger.error(e);
+//        } finally {
+//            if (manager != null) {
+//                manager.release(session);
+//                assertFalse(session.isConnected());
+//            }
+//        }
     }
 
     @Test
     public void doubleIntegerReturnValueTest() {
-        IDfSession session = null;
-        IDfSessionManager manager = null;
-        try {
-            session = Utils.getSession("dmowner", "Dctm6", "dbuio");
-            assertTrue(session.isConnected());
-
-            manager = session.getSessionManager();
-
-            Map<String, Object> map = Utils.getFirstRow(session, TEST_QUERY_2);
-            assertEquals(1, map.get("c"));
-        } catch (DfException e) {
-            logger.error(e);
-        } finally {
-            if (manager != null) {
-                manager.release(session);
-                assertFalse(session.isConnected());
-            }
-        }
+//        IDfSession session = null;
+//        IDfSessionManager manager = null;
+//        try {
+//            session = Utils.getSession("dmowner", "Dctm6", "dbuio");
+//            assertTrue(session.isConnected());
+//
+//            manager = session.getSessionManager();
+//
+//            Map<String, Object> map = Utils.getFirstRow(session, TEST_QUERY_2);
+//            assertEquals(1, map.get("c"));
+//        } catch (DfException e) {
+//            logger.error(e);
+//        } finally {
+//            if (manager != null) {
+//                manager.release(session);
+//                assertFalse(session.isConnected());
+//            }
+//        }
     }
 }

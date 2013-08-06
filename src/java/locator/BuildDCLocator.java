@@ -10,14 +10,13 @@
 */
 package locator;
 
-import database.DBHelper;
-import database.DBHelperFactory;
+import factory.JdbcTemplateFactory;
 import org.apache.log4j.Logger;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
 import util.Checker;
-import util.Utils;
 import util.querytemplate.QueryTemplate;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -55,10 +54,10 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DBHelper cqConnection = DBHelperFactory.getClearQuestHelper();
+        JdbcTemplate cqTemplate = JdbcTemplateFactory.getClearQuestDBTemplate();
         HashMap<String, String> sqlMap = new HashMap<String, String>();
 
-        ResultSet set = cqConnection.executeStatementWithoutCommit(query);
+        SqlRowSet set = cqTemplate.queryForRowSet(query);
         while (set.next()) {
             String dcHeadline = set.getString(HEADLINE);
             if (dcHeadline.contains("sql")) {
@@ -76,10 +75,10 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DBHelper cqConnection = DBHelperFactory.getClearQuestHelper();
+        JdbcTemplate cqTemplate = JdbcTemplateFactory.getClearQuestDBTemplate();
         HashMap<String, String> dqlmap = new HashMap<String, String>();
 
-        ResultSet set = cqConnection.executeStatementWithoutCommit(query);
+        SqlRowSet set = cqTemplate.queryForRowSet(query);
         while (set.next()) {
             String dcHeadline = set.getString(HEADLINE);
             if (dcHeadline.contains("dql")) {
@@ -97,25 +96,19 @@ public class BuildDCLocator {
                 "project", projectName
         );
 
-        DBHelper helper = DBHelperFactory.getClearQuestHelper();
-        logger.info("database helper is connected? " + helper.getConnection().isValid(10));
+        JdbcTemplate template = JdbcTemplateFactory.getClearQuestDBTemplate();
 
         HashMap<String, String> dcMap = new HashMap<String, String>();
-        ResultSet set = null;
 
-        try {
-            logger.info("query \n" + query);
+        logger.info("query \n" + query);
 
-            set = helper.executeStatementWithoutCommit(query);
+        SqlRowSet set = template.queryForRowSet(query);
+        logger.info("resultset rows count " + set.getRow());
+
+        while (set.next()) {
             logger.info("resultset rows count " + set.getRow());
 
-            while (set.next()) {
-                logger.info("resultset rows count " + set.getRow());
-
-                dcMap.put(set.getString(DCNUMBER), set.getString(HEADLINE));
-            }
-        } finally {
-            Utils.closeResources(set);
+            dcMap.put(set.getString(DCNUMBER), set.getString(HEADLINE));
         }
 
         return dcMap;

@@ -10,19 +10,8 @@
 */
 package execution.groovy;
 
-import com.documentum.fc.client.IDfSession;
-import core.TestConfiguration;
-import execution.groovy.dsl.DSLManager;
 import org.apache.log4j.Logger;
 import org.junit.Test;
-import util.Utils;
-
-import java.io.File;
-import java.util.Properties;
-
-import static junit.framework.Assert.assertFalse;
-import static junit.framework.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
 
 /**
  * $Id
@@ -39,28 +28,6 @@ public class DSLManagerTest {
 
     @Test
     public void test() {
-        try {
-            TestConfiguration configuration = new TestConfiguration();
-            Properties testProp = configuration.readConfig("test.properties");
-            assertFalse(testProp.isEmpty());
 
-            String testDCPath = testProp.getProperty(TEST_DC_PROPERTY_KEY);
-            assertNotNull(testDCPath);
-
-            File scriptFile = new File(testDCPath);
-            assertTrue(scriptFile.exists());
-            assertTrue(scriptFile.isFile());
-
-            IDfSession session = Utils.getSession("dmowner", "Dctm6", "dbuio");
-            assertTrue(session.isConnected());
-
-            DSLManager dslManager = new DSLManager();
-//            boolean result = (Boolean) dslManager.executeDCScript(session, scriptFile);
-//            assertTrue(result);
-
-        } catch (Throwable e) {
-            log.error("Error run test.", e);
-            assertTrue(false);
-        }
     }
 }

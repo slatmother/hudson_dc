@@ -11,20 +11,13 @@
 package main;
 
 import com.documentum.fc.common.DfException;
-import database.DBHelper;
-import database.DBHelperFactory;
-import execution.groovy.dsl.DSLManager;
-import execution.groovy.dsl.container.DSLContainer;
 import org.apache.log4j.Logger;
+import org.junit.Before;
 import org.junit.Test;
-import transaction.SQLTx;
-import util.Checker;
 
 import java.io.File;
 import java.io.FilenameFilter;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * $Id
@@ -43,48 +36,14 @@ public class SQLExecutorMainTest {
         }
     };
 
+    @Before
+    public void setUp() throws Exception {
+
+
+    }
+
     @Test
     public void test() throws DfException, SQLException {
-        try {
-            DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper();
-            SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection());
 
-            boolean result = true;
-
-            try {
-                DSLManager dslManager = new DSLManager();
-                List<DSLContainer> dcMappingList = new ArrayList<DSLContainer>();
-
-                File sqlDir = new File("./dc/sql");
-                logger.info("Current dir path is " + sqlDir.getAbsolutePath());
-                if (sqlDir.isDirectory()) {
-                    for (File scriptFile : sqlDir.listFiles(dcFilter)) {
-                        logger.info(scriptFile.getName());
-
-                        Checker.checkFileExistsOrIsFile(scriptFile);
-                        dcMappingList.add((DSLContainer) dslManager.getDCMappingInst(scriptFile));
-                    }
-                }
-
-                for (DSLContainer container : dcMappingList) {
-                    result &= (Boolean) dslManager.executeDC(dbHelper, container);
-                }
-
-                if (result) {
-                    sqlTxHelper.okToCommit();
-                }
-//                else {
-//                    for (DSLContainer container : dcMappingList) {
-//                        dslManager.rollback(container);
-//                    }
-//                }
-            } finally {
-                sqlTxHelper.commitOrAbort();
-                sqlTxHelper.closeConnection();
-            }
-        } catch (SQLException e) {
-            logger.error(e);
-            throw e;
-        }
     }
 }

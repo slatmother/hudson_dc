@@ -20,7 +20,7 @@ class DSLManager {
     return metaClass.container
   }
 
-  def static executeDC(session, DSLContainer container) {
+  def static executeDC(DSLContainer container, session) {
     boolean result = false
     if (validate(container)) {
       result = container.execute(session)
@@ -32,10 +32,6 @@ class DSLManager {
   def static boolean validate(DSLContainer container) {
     return container.validate()
   }
-
-//  def rollback(DSLContainer container) {
-//    container.rollback()
-//  }
 
   def static runScript(File dc, metaClass) {
     def groovyshell = new GroovyShell()

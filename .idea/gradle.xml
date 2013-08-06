@@ -4,6 +4,7 @@
     <option name="gradleHome" value="D:/SOFT_for_projects/gradle-1.6-all/gradle-1.6" />
     <option name="linkedProjectPath" value="D:\SVNProjects\hudson_dc_execution\build.gradle" />
     <option name="preferLocalInstallationToWrapper" value="true" />
+    <option name="useAutoImport" value="false" />
   </component>
 </project>
 

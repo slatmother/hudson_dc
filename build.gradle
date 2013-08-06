@@ -1,138 +1,86 @@
 apply plugin: 'groovy'
 apply plugin: 'java'
 apply plugin: 'base'
+apply from: "$rootDir/gradle/compile.gradle"
 
 repositories {
   mavenCentral()
 }
 
-configurations {
-  groovyJars.extendsFrom(runtime)
-  dfcJars.extendsFrom(runtime)
-}
-
-//Всегда должны быть вверху. Иначе ошибка "unresolved state"
 dependencies {
-  groovyJars group: 'org.codehaus.groovy', name: 'groovy', version: '2.1.3'
-  runtime group: 'com.google.guava', name: 'guava', version: '14.0.1'
-  dfcJars fileTree(dir: 'lib/dfc', include: '*.jar')
-  runtime files('lib/freemarker.jar', 'lib/ojdbc6-11.2.0.1.0.jar')
-  testRuntime group: 'junit', name: 'junit', version: '4.+'
+  compile group: 'org.codehaus.groovy', name: 'groovy', version: '2.1.3'
+  compile group: 'com.google.guava', name: 'guava', version: '14.0.1'
+  compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.3.RELEASE'
+  compile fileTree(dir: 'lib/dfc', include: '*.jar')
+  compile files('lib/freemarker.jar', 'lib/ojdbc6-11.2.0.1.0.jar')
+  testCompile group: 'junit', name: 'junit', version: '4.+'
 
   testRuntime fileTree(dir: 'test/resources', include: '*.properties')
 }
 
-//repositories {
-//  flatDir name: 'localRepository', dirs: 'lib'
-//}
-//
-//configurations {
-//  driver
-//}
-
-
 sourceSets {
   main {
-//    java {
-//      srcDir 'src/java'
-//      srcDir ''
-//    }
-
-//    groovy.srcDirs = ['src/java/execution/groovy']
     groovy {
       srcDir 'src/java'
     }
-//    groovy.srcDirs = ['src/java']
 
     resources {
       srcDir 'src/resources'
     }
 
-    compileClasspath = project.configurations.compile + configurations.dfcJars + configurations.groovyJars
+    compileClasspath = configurations.compile
+    runtimeClasspath = compileClasspath
   }
 
   test {
-//    java { srcDir '' }
     groovy { srcDir 'test/src' }
 
     resources {
       srcDir 'test/resources'
     }
 
-    runtimeClasspath = main.output + test.output + configurations.testRuntime +
-            main.resources + configurations.dfcJars + configurations.groovyJars
-
-    compileClasspath = main.output + configurations.compile + configurations.testCompile + configurations.testRuntime +
-            configurations.dfcJars + configurations.groovyJars
-
-//      runtimeClasspath = sourceSets.main.output + project.configurations.compile + project.configurations.testCompile +
-//            project.configurations.testRuntime + project.configurations.runtime
+    compileClasspath = main.output + configurations.compile + configurations.testRuntime + configurations.testCompile
+    runtimeClasspath = compileClasspath + test.output
   }
 }
 
-task show << {
-  sourceSets.test.runtimeClasspath.each { println it }
-//  sourceSets.main.runtimeClasspath.each {println it}
-
-//  project.configurations.classpath.each { println it }
-//  sourceSets.main.output.each { println it }
-//  project.configurations.compile.each { println it }
-//  project.configurations.testCompile.each { println it }
-//  project.configurations.testRuntime.each { println it }
+task copyResources(type: Copy) {
+  from {
+    configurations.compile
+  }
+//  into 'build/libs/lib'
+  into '../hudson_dc_build/lib'
 }
 
-task copyDeps(type: Copy) {
+task copylibs(type: Copy, dependsOn: copyResources) {
   from {
-    configurations.runtime
+    configurations.compile
   }
   into 'build/libs/lib'
-
-  from {
-    configurations.groovyJars
-  }
-  into 'build/libs/lib/groovy'
-
-  from {
-    configurations.dfcJars
-  }
-  into 'build/libs/lib/dfc'
+//  into '../hudson_dc_build/lib'
 }
 
-jar.dependsOn copyDeps
 
 jar {
-  archiveName = "hudson-dc-1.0.jar"
+  dependsOn copylibs
+
+  baseName = 'hudson-dc'
+  version = '1.0'
+  extension = 'jar'
+
+//  destinationDir = new File('../hudson_dc_build')
 
   def manifestClasspath = configurations.runtime.collect { "${it.name}" }.join(' ') + ' '
-  manifestClasspath += configurations.groovyJars.collect { "groovy/${it.name}" }.join(' ') + ' '
-  manifestClasspath += configurations.dfcJars.collect { "dfc/${it.name}" }.join(' ') + ' '
 
   manifest {
-    attributes 'Implementation-Title': 'hudson-dc-1.0', "Class-Path": manifestClasspath
+    attributes 'Implementation-Title': 'hudson-dc-1.0',
+            "Class-Path": manifestClasspath,
+            "Main-Class": "main.Main"
   }
 }
 
-//jar {
-//  from configurations.releaseJars.collect { it.isDirectory() ? it : zipTree(it) }
-//  from project.configurations.compile.collect {
-//    it.isDirectory() ? it : zipTree(it)
+//clean.doLast {
+//  sourceSets.each {
+//    ant.delete(dir: it.classesDir)
 //  }
 //}
-
-//from("$projectDir") {
-//    include 'lib/**'
-//  }
-
-task testMain(dependsOn: 'classes', type: JavaExec) {
-  main = 'main.test.MainTest'
-  classpath = sourceSets.main.runtimeClasspath
-//  args 'mrhaki'
-//  systemProperty 'simple.message', 'Hello '
-}
-
-task testDQL(dependsOn: 'classes', type: JavaExec) {
-  main = 'main.test.DQLExecutorMainTest'
-  classpath = sourceSets.main.runtimeClasspath
-}
-
-

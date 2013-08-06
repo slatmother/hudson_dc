@@ -58,11 +58,7 @@ public class Checker {
     }
 
     /**
-     * Проверяет, что переданный id корректен и не пуст !=null && len==16 &&
-     * !='0000000000000000'
      *
-     * @date 24.02.2012
-     * @author a.dunaev (a.dunaev@i-teco.ru)
      */
     public static void checkFileExistsOrIsFile(File file) {
         if (!file.exists() || !file.isFile())
@@ -70,5 +66,9 @@ public class Checker {
     }
 
 
-
+    public static void checkMainArgs(String[] args) {
+        if (args.length == 0) {
+            throw new IllegalArgumentException(String.format("Args length is invalid"));
+        }
+    }
 }

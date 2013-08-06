@@ -22,6 +22,7 @@ import java.sql.SQLException;
  *
  * @version 1.0
  */
+@Deprecated
 public class SQLTx {
     private Connection connection;
     private boolean isOkToCommit = false;

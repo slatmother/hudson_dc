@@ -3,6 +3,7 @@ package execution.groovy.dsl.script
 import execution.java.runner.DCScriptRunner
 import parser.IStatement
 import parser.sql.SQLStatement
+import parser.dql.DQLStatement
 
 /*
 * $Id
@@ -15,44 +16,72 @@ import parser.sql.SQLStatement
 */
 class DCScBlock {
   IStatement statement
-  boolean hasExecuted
-  boolean needManualRollback
   def min
   def max
+  def validation_result
+  String queryType
 
+  /**
+   *
+   * @param closure
+   * @return
+   */
   def init(Closure closure) {
     closure.delegate = this
     closure.call()
   }
 
+  /**
+   *
+   * @param query
+   * @return
+   */
   def sql(String query) {
     if (!statement) {
       statement = SQLStatement.resolve(query)
-      needManualRollback = ((SQLStatement) statement).isDDLQuery()
     }
+
+    queryType = "sql"
   }
 
+  /**
+   *
+   * @param query
+   * @return
+   */
   def dql(String query) {
     if (!statement) {
       statement = DQLStatement.resolve(query)
-      needManualRollback = false
     }
+
+    queryType = "dql"
   }
 
+  /**
+   *
+   * @param map
+   * @return
+   */
   def condition(Map<Integer, Integer> map) {
     this.min = map.min
     this.max = map.max
   }
 
+  /**
+   *
+   * @return
+   */
   def validate() {
-    return (!statement?.queryType) && (!min)
+    validation_result = (!statement?.queryType) && (!min)
+    return validation_result
   }
 
-
+  /**
+   *
+   * @param session
+   * @return
+   */
   def execute(session) {
-//    if (needManualRollback) {
-//
-//    }
     hasExecuted = DCScriptRunner.runScript(session,
             query,
             min,

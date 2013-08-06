@@ -15,6 +15,7 @@ import execution.java.runner.DCScriptRunner
 class PrecScBlock {
   String query
   def rows = []
+  def validation_result
 
   def init(Closure closure) {
     closure.delegate = this
@@ -40,7 +41,8 @@ class PrecScBlock {
   }
 
   def validate() {
-    return (!query)
+    validation_result = (!query)
+    return validation_result
   }
 
   def execute(session) {

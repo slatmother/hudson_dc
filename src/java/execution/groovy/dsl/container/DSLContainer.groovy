@@ -1,13 +1,10 @@
 package execution.groovy.dsl.container
 
-import database.DBHelper
-import database.DBHelperFactory
 import execution.groovy.dsl.script.DCScBlock
 import execution.groovy.dsl.script.PostScBlock
 import execution.groovy.dsl.script.PrecScBlock
 import execution.java.runner.DCScriptRunner
 import org.apache.log4j.Logger
-import transaction.SQLTx
 
 /*
 * $Id
@@ -20,32 +17,48 @@ import transaction.SQLTx
 */
 class DSLContainer {
   def logger = Logger.rootLogger
-  def rollbackQuery
-  def name
-
-  def preconditions = []
   DCScBlock dc = new DCScBlock()
+  def preconditions = []
   def postconditions = []
+  String name
+  String dcQueryType
 
-  boolean isAutoCommitDC = false
-  boolean needManualRollback = false
-
+  /**
+   *
+   * @param closure
+   * @return
+   */
   def precondition(Closure closure) {
     PrecScBlock prec = new PrecScBlock()
     prec.init(closure)
     preconditions << prec
   }
 
+  /**
+   *
+   * @param closure
+   * @return
+   */
   def dc(Closure closure) {
     dc.init(closure)
+    dcQueryType = dc.queryType
   }
 
+  /**
+   *
+   * @param closure
+   * @return
+   */
   def postcondition(Closure closure) {
     PostScBlock post = new PostScBlock()
     post.init(closure)
     postconditions << post
   }
 
+  /**
+   *
+   * @return
+   */
   def validate() {
     boolean result = true;
 
@@ -61,15 +74,20 @@ class DSLContainer {
 
     if (!result) {
       logger.info("Validation failed! Check syntax of" +
-              precondition.validate() ? "" : " precondition " +
-              dc.validate() ? "" : " dc " +
-              postcondition.validate() ? "" : " postcondition " +
+              precondition.validation_result ? "" : " precondition " +
+              dc.validation_result ? "" : " dc " +
+              postcondition.validation_result ? "" : " postcondition " +
               "block"
       )
     }
     return result
   }
 
+  /**
+   *
+   * @param session
+   * @return
+   */
   def execute(session) {
     boolean result = true
     logger.info("Start executing container with name ${name}")
@@ -80,18 +98,7 @@ class DSLContainer {
     }
 
     if (result) {
-      if (dc.needManualRollback) {
-        DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper()
-        SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection())
-
-        result &= dc.execute(dbHelper)
-
-        sqlTxHelper.okToCommit()
-        sqlTxHelper.commitOrAbort()
-      } else {
-        result &= dc.execute(session)
-      }
-
+      result &= dc.execute(session)
       logger.info("DC result is ${result}")
     }
 
@@ -104,18 +111,4 @@ class DSLContainer {
 
     return result
   }
-
-//  def rollback() {
-////    if (dc.hasExecuted && dc.needManualRollback && !dc.statement.rollbackQuery) {
-//      if (dc.hasExecuted && dc.needManualRollback) {
-//      logger.info("Mapping with name " + name + " contains auto-commit dc. Rollback is running.")
-//      DBHelper dbHelper = DBHelperFactory.getCustomProjectHelper()
-//      SQLTx sqlTxHelper = SQLTx.beginTransaction(dbHelper.getConnection())
-//
-//      DCScriptRunner.runScript(dbHelper, dc.statement.rollbackQuery, 0, null)
-//
-//      sqlTxHelper.okToCommit()
-//      sqlTxHelper.commitOrAbort()
-//    }
-//  }
 }

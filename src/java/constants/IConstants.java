@@ -21,10 +21,6 @@ package constants;
  */
 public interface IConstants {
 
-    interface QueryTypes {
-        public static final String VIEW = "view";
-    }
-
     interface AffectedTypes {
         public static final int UNDEFINED = 0;
         public static final int INFINITY_RANGE = 1;
@@ -38,12 +34,23 @@ public interface IConstants {
         public static final String DELETED = "objects_deleted";
     }
 
-    interface SQLRegexp {
-        public static final String CREATE_OR_REPLACE_REGEXP = "(CREATE OR REPLACE (FORCE VIEW|VIEW))";
+    interface MainArgsTypes {
+        public static final String[] DEFAULT_ARGS = {"cq", "all", "run"};
 
-        public static final String VIEW_REGEXP = "(CREATE OR REPLACE (FORCE VIEW|VIEW))";
-        public static final String TRIGGER_REGEXP = "(CREATE OR REPLACE (FORCE TRIGGER|TRIGGER)))";
-        public static final String PROCEDURE_REGEXP = "(CREATE OR REPLACE (FORCE PROCEDURE|PROCEDURE)))";
-        public static final String FUNCTION_REGEXP = "(CREATE OR REPLACE (FORCE FUNCTION|FUNCTION)))";
+        interface Location {
+            public static final String CQ = "cq";
+            public static final String CUSTOM = "custom";
+        }
+
+        interface Type {
+            public static final String DQL = "dql";
+            public static final String SQL = "sql";
+            public static final String ALL = "all";
+        }
+
+        interface Operation {
+            public static final String RUN = "run";
+            public static final String VALIDATE = "validate";
+        }
     }
 }
