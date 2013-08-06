@@ -1,0 +1,8 @@
+allprojects {
+	tasks.withType(Compile) {
+		// задаем кодировку исходных файлов
+	    options.encoding = 'utf-8'
+	    // устанавливаем параметры компиляции общие для всех
+	    options.compilerArgs = ['-Xlint:-options']
+	}
+}

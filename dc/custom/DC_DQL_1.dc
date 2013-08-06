@@ -1,0 +1,28 @@
+precondition {
+  dql "select count(*) as c from ddt_choice where dss_dmtype = 'dm_sysobject' and dss_attr = 'test'"
+  row "c": 0
+}
+
+dc {
+  dql '''create ddt_choice object
+  set dss_dmtype = 'dm_sysobject',
+  set dss_attr = 'test',
+  set dss_label = 'Test',
+
+  set drs_attr_value[0] = 'Test_val_1',
+  set drs_attr_label[0] = '1',
+  set drb_default[0] = false
+
+  set drs_attr_value[1] = 'Test_val_2',
+  set drs_attr_label[1] = '2',
+  set drb_default[1] = false'''
+
+  condition min: 0
+}
+
+postcondition {
+  dql "select drs_attr_value, drs_attr_label from ddt_choice where dss_dmtype = 'dm_sysobject' and dss_attr = 'test' and dss_label = 'Test' order by drs_attr_value"
+
+  row "drs_attr_value": ["Test_val_1"], "drs_attr_label": ["1"]
+  row "drs_attr_value": ["Test_val_2"], "drs_attr_label": ["2"]
+}

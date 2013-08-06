@@ -1,0 +1,44 @@
+precondition {
+  sql "select VIEW_NAME, OWNER from SYS.ALL_VIEWS where view_name = 'DDV_DEPARTMENT_BRANCH' order by OWNER, VIEW_NAME"
+  row "":""
+}
+
+dc {
+  sql '''
+CREATE OR REPLACE FORCE VIEW ddv_department_branch AS (
+SELECT
+  ddt_department.r_object_id AS r_object_id,
+  ddt_department.dss_name AS dss_department,
+  ddt_department.dss_index AS dss_index,
+  ddt_department.dsdt_begin AS dsdt_department_begin,
+  ddt_department.dsdt_end AS dsdt_department_end,
+  ddt_branch.r_object_id AS dsid_branch,
+  ddt_branch.dss_name AS dss_branch,
+  ddt_branch.dss_okpo AS dss_branch_okpo,
+  ddt_branch.dss_ogrn AS dss_branch_ogrn,
+  ddt_branch.dss_inn AS dss_branch_inn,
+  ddt_branch.dss_kpp AS dss_branch_kpp,
+  ddt_branch.dsdt_begin AS dsdt_branch_begin,
+  ddt_branch.dsdt_end AS dsdt_branch_end,
+  ddt_branch.dsid_directory_group AS dsid_directory_group,
+  NVL(ddt_parent_department.r_object_id,ddt_branch.r_object_id) AS dsid_parent_department,
+  NVL(ddt_parent_department.dss_name,ddt_branch.dss_name) AS dss_parent_department
+FROM
+  ddt_department_sp ddt_department JOIN ddt_branch_sp ddt_branch
+\t  ON ddt_department.dsid_directory_group = ddt_branch.dsid_directory_group
+ LEFT JOIN ddt_periodical_relation_sp relation
+\t  ON ddt_department.r_object_id = relation.dsid_child
+ LEFT JOIN ddt_department_sp ddt_parent_department
+\t  ON  relation.dsid_parent  = ddt_parent_department.r_object_id
+)
+'''
+
+  condition min: 0
+}
+
+postcondition {
+  sql "select VIEW_NAME, OWNER from SYS.ALL_VIEWS where view_name = 'DDV_DEPARTMENT_BRANCH' order by OWNER, VIEW_NAME"
+
+  row "VIEW_NAME": 'DDV_DEPARTMENT_BRANCH', "OWNER": "DBUIO"
+}
+
