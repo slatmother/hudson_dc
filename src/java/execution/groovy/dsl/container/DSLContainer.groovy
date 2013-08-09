@@ -31,6 +31,12 @@ class DSLContainer {
   def precondition(Closure closure) {
     PrecScBlock prec = new PrecScBlock()
     prec.init(closure)
+
+    logger.info("Precondition initialization block has run.")
+    logger.info("Precondition properties: " +
+            "\nQuery: " + prec.query +
+            "\nRows: " + prec.rows
+    )
     preconditions << prec
   }
 
@@ -41,6 +47,13 @@ class DSLContainer {
    */
   def dc(Closure closure) {
     dc.init(closure)
+
+    logger.info("DC initialization block has run.")
+    logger.info("DC properties: " +
+            "\nQuery: " + dc.query +
+            "\nMin val: " + dc.min +
+            "\nMax val: " + dc.max
+    )
     dcQueryType = dc.queryType
   }
 
@@ -52,6 +65,13 @@ class DSLContainer {
   def postcondition(Closure closure) {
     PostScBlock post = new PostScBlock()
     post.init(closure)
+
+    logger.info("Postcondition initialization block has run.")
+    logger.info("Postcondition properties: " +
+            "\nQuery: " + post.query +
+            "\nRows: " + post.rows
+    )
+
     postconditions << post
   }
 
@@ -74,9 +94,16 @@ class DSLContainer {
 
     if (!result) {
       logger.info("Validation failed! Check syntax of" +
-              precondition.validation_result ? "" : " precondition " +
+
+              preconditions.each {
+                it.validation_result
+              } ? "" : " precondition " +
+
               dc.validation_result ? "" : " dc " +
-              postcondition.validation_result ? "" : " postcondition " +
+
+              postconditions.each {
+                it.validation_result
+              } ? "" : " postcondition " +
               "block"
       )
     }

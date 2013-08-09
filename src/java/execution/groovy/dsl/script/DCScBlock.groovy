@@ -1,9 +1,6 @@
 package execution.groovy.dsl.script
 
 import execution.java.runner.DCScriptRunner
-import parser.IStatement
-import parser.sql.SQLStatement
-import parser.dql.DQLStatement
 
 /*
 * $Id
@@ -15,7 +12,7 @@ import parser.dql.DQLStatement
 * без официального разрешения компании i-Teco.          
 */
 class DCScBlock {
-  IStatement statement
+  String query
   def min
   def max
   def validation_result
@@ -37,8 +34,8 @@ class DCScBlock {
    * @return
    */
   def sql(String query) {
-    if (!statement) {
-      statement = SQLStatement.resolve(query)
+    if (!this.query) {
+      this.query = query
     }
 
     queryType = "sql"
@@ -50,8 +47,8 @@ class DCScBlock {
    * @return
    */
   def dql(String query) {
-    if (!statement) {
-      statement = DQLStatement.resolve(query)
+    if (!this.query) {
+      this.query = query
     }
 
     queryType = "dql"
@@ -72,7 +69,7 @@ class DCScBlock {
    * @return
    */
   def validate() {
-    validation_result = (!statement?.queryType) && (!min)
+    validation_result = (query != null && !query.isAllWhitespace()) && (min != null)
     return validation_result
   }
 
@@ -82,10 +79,9 @@ class DCScBlock {
    * @return
    */
   def execute(session) {
-    hasExecuted = DCScriptRunner.runScript(session,
+    DCScriptRunner.runScript(session,
             query,
             min,
             max)
-    return hasExecuted
   }
 }

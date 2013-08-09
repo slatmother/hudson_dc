@@ -1,0 +1,1 @@
+java -jar -Dlocation=custom -Dtype=sql -Doperation=run ../lib/hudson-dc-1.0.jar

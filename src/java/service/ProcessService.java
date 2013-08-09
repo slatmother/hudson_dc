@@ -57,24 +57,27 @@ public class ProcessService {
         boolean result = true;
         NestedTx dqlTx = null;
         try {
-            IDfSession session = Utils.getSessionFromConfig();
-            JdbcTemplate dbTemplate = JdbcTemplateFactory.getProjectDBTemplate();
+            IDfSession session = null;
 
-            dqlTx = NestedTx.beginTx(session);
+            if (dcMap.containsValue("dql")) {
+                session = Utils.getSessionFromConfig();
+                dqlTx = NestedTx.beginTx(session);
+            }
+
+            JdbcTemplate dbTemplate = null;
+            if (dcMap.containsValue("sql")) {
+                dbTemplate = JdbcTemplateFactory.getProjectDBTemplate();
+            }
 
             for (Map.Entry<DSLContainer, Object> entry : dcMap.entrySet()) {
-                result &= (Boolean) DSLManager.executeDC(entry.getKey(),
-                        entry.getValue().equals("dql") ?
-                                session
-                                :
-                                dbTemplate);
+                result &= (Boolean) DSLManager.executeDC(entry.getKey(), entry.getValue().equals("dql") ? session : dbTemplate);
             }
 
             logger.info("Total execution result is " + result);
-            if (result) {
+
+            if (result && dqlTx != null) {
                 dqlTx.okToCommit();
             }
-
         } catch (DfException e) {
             logger.error(e);
             throw e;

@@ -13,6 +13,7 @@ package service;
 import constants.IConstants;
 import execution.groovy.dsl.container.DSLContainer;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -30,12 +31,14 @@ public class TypeService {
             return dcMapping;
         }
 
-        for (Map.Entry entry : dcMapping.entrySet()) {
-            if (!entry.getValue().equals(type)) {
-                dcMapping.remove(entry.getKey());
+        Map<DSLContainer, Object> newMap = new HashMap<DSLContainer, Object>();
+
+        for (Map.Entry<DSLContainer, Object> entry : dcMapping.entrySet()) {
+            if (entry.getValue().equals(type)) {
+                newMap.put(entry.getKey(), entry.getValue());
             }
         }
 
-        return dcMapping;
+        return newMap;
     }
 }

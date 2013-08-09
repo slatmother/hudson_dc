@@ -1,1 +1,1 @@
-java -cp .;./lib/hudson-dc-1.0.jar main.Validator
+java -jar ../lib/hudson-dc-1.0.jar -Dlocation=custom -Dtype=all -Doperation=validate

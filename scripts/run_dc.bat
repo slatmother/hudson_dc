@@ -1,1 +1,1 @@
-java -jar ../lib/hudson-dc-1.0.jar -Dlocation=custom -Dtype=all -Doperation=validate
+java -jar ../lib/hudson-dc-1.0.jar -Dlocation=cq -Dtype=all -Doperation=run

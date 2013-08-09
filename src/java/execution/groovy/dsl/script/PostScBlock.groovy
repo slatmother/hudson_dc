@@ -39,7 +39,7 @@ class PostScBlock {
   }
 
   def validate() {
-    validation_result = (!query)
+    validation_result = (query != null && !query.isAllWhitespace())
     return validation_result
   }
 

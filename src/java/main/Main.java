@@ -17,11 +17,10 @@ import org.apache.log4j.Logger;
 import service.LocationService;
 import service.ProcessService;
 import service.TypeService;
-import util.Checker;
 import util.Utils;
 
 import java.sql.SQLException;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -37,27 +36,29 @@ public class Main {
     private static final Logger logger = Logger.getRootLogger();
 
     public static void main(String[] args) throws SQLException, DfException {
-        Checker.checkMainArgs(args);
-
         String location = System.getProperty("location");
         if (Utils.isNull(location)) {
             location = IConstants.MainArgsTypes.Location.CQ;
         }
+        logger.info("Location arg is " + location);
 
         String type = System.getProperty("type");
         if (Utils.isNull(type)) {
             type = IConstants.MainArgsTypes.Type.ALL;
         }
+        logger.info("Type arg is " + type);
+
 
         String operation = System.getProperty("operation");
         if (Utils.isNull(operation)) {
             operation = IConstants.MainArgsTypes.Operation.RUN;
         }
+        logger.info("Operation arg is " + operation);
 
         try {
-            Map<DSLContainer, Object> dcMapping = new HashMap<DSLContainer, Object>();
+            Map<DSLContainer, Object> dcMapping = new LinkedHashMap<DSLContainer, Object>();
             LocationService.performModification(location, dcMapping);
-            TypeService.performModification(type, dcMapping);
+            dcMapping = TypeService.performModification(type, dcMapping);
 
             boolean result = ProcessService.execute(operation, dcMapping);
             logger.info("Result is " + result);

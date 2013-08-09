@@ -70,7 +70,6 @@ public class DCScriptRunner {
 
     public static boolean runScript(IDfSession session, String query, Integer minAffectedValue, Integer maxAffectedValue) throws DfException {
         logger.info("Query to execute is: " + query);
-//        logger.info("Expected num of affected rows is " + affectedRows);
 
         List<Map<String, Object>> rowsList = Utils.getAllRows(session, query);
         Map<String, Object> map = rowsList.get(0);
@@ -126,6 +125,8 @@ public class DCScriptRunner {
 
         SqlRowSetMetaData mdata = set.getMetaData();
         int columnAmount = mdata.getColumnCount();
+        logger.info("Columns: " + columnAmount);
+        logger.info("Map size: " + conditionsMapList.size());
 
         if (set.first()) {
             set.last();
@@ -137,6 +138,8 @@ public class DCScriptRunner {
                 result = false;
             }
         }
+
+        logger.info("Two maps comparison result is " + result);
 
         if (result) {
             while (set.next()) {
@@ -155,8 +158,7 @@ public class DCScriptRunner {
 
     /**
      * @param template
-     * @param query    //
-     *                 * @param affectedRows
+     * @param query
      * @return
      * @throws SQLException
      */

@@ -75,6 +75,7 @@ public class LocationService {
     }
 
     private static Map<DSLContainer, Object> getDCFromCustomFolder(Map<DSLContainer, Object> dcMap) throws DfException, SQLException {
+        logger.info("Start filling dc map from custom folder");
         final FilenameFilter dcFilter = new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.endsWith(".dc");
@@ -82,10 +83,11 @@ public class LocationService {
         };
 
         File customDCDir = new File("./dc/custom");
+        logger.info("Custom folder has path " + customDCDir.getAbsolutePath() + " Exists? "  + customDCDir.exists());
 
         if (customDCDir.isDirectory()) {
             for (File scriptFile : customDCDir.listFiles(dcFilter)) {
-                logger.info(scriptFile.getName());
+                logger.info("DC file name: " + scriptFile.getName());
 
                 Checker.checkFileExistsOrIsFile(scriptFile);
                 DSLContainer container = (DSLContainer) DSLManager.getDCMappingInst(scriptFile);
