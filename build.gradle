@@ -13,7 +13,7 @@ dependencies {
   compile group: 'org.springframework', name: 'spring-jdbc', version: '3.2.3.RELEASE'
   compile fileTree(dir: 'lib/dfc', include: '*.jar')
   compile files('lib/freemarker.jar', 'lib/ojdbc6-11.2.0.1.0.jar')
-  testCompile group: 'junit', name: 'junit', version: '4.+'
+  testCompile group: 'org.testng', name: 'testng', version: '6.8.5'
 
   testRuntime fileTree(dir: 'test/resources', include: '*.properties')
 }

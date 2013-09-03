@@ -50,16 +50,8 @@
     <orderEntry type="library" exported="" name="DmcRecords" level="project" />
     <orderEntry type="library" exported="" name="messageArchive" level="project" />
     <orderEntry type="library" exported="" name="configservice-impl" level="project" />
-    <orderEntry type="library" name="log4j.jar-log4j" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.10.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" exported="" name="log4j.jar-log4j" level="project" />
+    <orderEntry type="library" scope="TEST" name="org.testng:testng:6.8.5" level="project" />
   </component>
 </module>
 

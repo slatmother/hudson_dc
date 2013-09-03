@@ -1,60 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/service/TypeServiceTest.java" />
+    <list default="true" id="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" name="Default" comment="Работоспособность со скриптами">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/test_dc.dc" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\cache.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\cache.properties.lock" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\fileHashes.bin" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\fileSnapshots.bin" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\outputFileStates.bin" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\.gradle\1.6\taskArtifacts\taskArtifacts.bin" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\constants\IConstants$AffectedTypes.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\constants\IConstants$DQLQueryReturnVals.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\constants\IConstants.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\dsl\DSLManager.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\dsl\container\DSLContainer.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\dsl\script\DCScBlock.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\dsl\script\PostScBlock.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\dsl\script\PrecScBlock.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\groovy\metaclass\DSLDelegatingMetaClass.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\execution\java\runner\DCScriptRunner.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\locator\BuildDCLocator.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\parser\IStatement.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\parser\dql\DQLStatement.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\parser\sql\SQLStatement.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\transaction\NestedTx.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\transaction\SQLTx.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\Checker.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\Configuration.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\Utils.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\querytemplate\QueryTemplate$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\querytemplate\QueryTemplate$DQLAwareObjectWrapper.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\querytemplate\QueryTemplate.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\classes\main\util\querytemplate\QueryTemplateException.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\libs\hudson-dc-1.0.jar" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\resources\main\config.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\resources\main\dfc.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\resources\main\log4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\build\tmp\jar\MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\config\config.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\config\dfc.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\config\log4j.properties" afterPath="" />
       <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\logs\hudson_dc.log" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\resources\DC00001.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\resources\DC00002.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\resources\DQL_DC.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\resources\SQL_DC.groovy" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/DCScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/DCScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/java/runner/DCScriptRunner.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/java/runner/DCScriptRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/container/DSLContainer.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/container/DSLContainer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/metaclass/DSLDelegatingMetaClass.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/metaclass/DSLDelegatingMetaClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/DSLManager.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/DSLManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PostScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PostScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PrecScBlock.class" afterPath="$PROJECT_DIR$/build/classes/main/execution/groovy/dsl/script/PrecScBlock.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/hudson-dc-1.0.jar" afterPath="$PROJECT_DIR$/build/libs/hudson-dc-1.0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/1.6/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\IStatement.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\dql\DQLStatement.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\sql\SQLStatement.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/locator/BuildDCLocator.java" afterPath="$PROJECT_DIR$/src/java/locator/BuildDCLocator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java" afterPath="$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/LocationService.java" afterPath="$PROJECT_DIR$/src/java/service/LocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/Main.java" afterPath="$PROJECT_DIR$/src/java/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/ProcessService.java" afterPath="$PROJECT_DIR$/src/java/service/ProcessService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/TypeService.java" afterPath="$PROJECT_DIR$/src/java/service/TypeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_dc.bat" afterPath="$PROJECT_DIR$/scripts/run_dc.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_dql.bat" afterPath="$PROJECT_DIR$/scripts/run_dql.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/run_sql.bat" afterPath="$PROJECT_DIR$/scripts/run_sql.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/validate.bat" afterPath="$PROJECT_DIR$/scripts/validate.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java" afterPath="$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" afterPath="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hudson_dc_execution.iml" afterPath="$PROJECT_DIR$/hudson_dc_execution.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\DCScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DC.groovy" />
+      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\PostScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostDCCondition.groovy" />
+      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\PrecScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PreDCCondition.groovy" />
+      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\DCScriptRunnerTest.java" afterPath="$PROJECT_DIR$/test/src/execution/java/runner/DCScriptRunnerTest.java" />
+      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\groovy\dsl\script\DCScBlockTest.java" afterPath="$PROJECT_DIR$/test/src/execution/groovy/dsl/script/DCTest.java" />
     </list>
     <ignored path="hudson_dc_execution.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376058537868" ignored="false" />
-    <file path="/build.gradle" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375809530230" ignored="false" />
+    <file path="/Dummy.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378203761985" ignored="false" />
+    <file path="/build.gradle" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378128577745" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-main.DCExecutorMainTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356970" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-locator.BuildDCLocatorTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356970" ignored="false" />
-    <file path="$PROJECT_DIR$/build/test-results/TEST-execution.groovy.dsl.script.DCScBlockTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356970" ignored="false" />
+    <file path="$PROJECT_DIR$/build/test-results/TEST-execution.groovy.dsl.script.DCScBlockTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378116079600" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-main.DQLExecutorMainTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356971" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-util.UtilsTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356971" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-factory.JdbcTemplateFactoryTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356971" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-execution.groovy.DSLManagerTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356971" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-execution.groovy.DSLDelegatingMetaClassTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356971" ignored="false" />
-    <file path="/config.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375775982481" ignored="false" />
+    <file path="/config.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377446452622" ignored="false" />
     <file path="/dfc.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375775999551" ignored="false" />
-    <file path="/.gitignore" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375776110243" ignored="false" />
+    <file path="/.gitignore" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378203775726" ignored="false" />
     <file path="/RunnerMain.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375804054020" ignored="false" />
-    <file path="/Checker.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375777379411" ignored="false" />
-    <file path="/IConstants.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375778987723" ignored="false" />
-    <file path="/Utils.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375778976098" ignored="false" />
+    <file path="/Checker.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377431105263" ignored="false" />
+    <file path="/IConstants.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537085547" ignored="false" />
+    <file path="/Utils.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538321786" ignored="false" />
     <file path="/LocationService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375895486104" ignored="false" />
     <file path="/TypeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375878658242" ignored="false" />
     <file path="/DSLContainer.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375895824283" ignored="false" />
@@ -67,7 +91,7 @@
     <file path="/TryTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375808189225" ignored="false" />
     <file path="/DQLExecutorMain.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375808311046" ignored="false" />
     <file path="/DCExecutorMain.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375808325501" ignored="false" />
-    <file path="/Main.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375891237950" ignored="false" />
+    <file path="/Main.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671038769" ignored="false" />
     <file path="/run_dc.bat" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375888952711" ignored="false" />
     <file path="/Validator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375808782208" ignored="false" />
     <file path="/LocationServiceTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375870808472" ignored="false" />
@@ -78,7 +102,7 @@
     <file path="/TypeServiceTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375882757605" ignored="false" />
     <file path="$PROJECT_DIR$/../Tests/src/TestGuava.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375877404698" ignored="false" />
     <file path="/TestGuava.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375877399454" ignored="false" />
-    <file path="$PROJECT_DIR$/../Tests/src/TryGuavaPredicate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375977483033" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryGuavaPredicate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376556995591" ignored="false" />
     <file path="/TryGuavaPredicate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375977430822" ignored="false" />
     <file path="/ProcessorServiceTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375882839274" ignored="false" />
     <file path="/run_dql.bat" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375888913109" ignored="false" />
@@ -88,7 +112,7 @@
     <file path="/Dummy.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375894370870" ignored="false" />
     <file path="/PostScBlock.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375894532588" ignored="false" />
     <file path="/PrecScBlock.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375894567638" ignored="false" />
-    <file path="/a.dummy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375894799857" ignored="false" />
+    <file path="/a.dummy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377433880652" ignored="false" />
     <file path="/DCScriptRunner.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375896033263" ignored="false" />
     <file path="$PROJECT_DIR$/../nn_archive_new/trunk/d-Source/webapp/src/ru/iteco/weboffice/action/SendToRetypizationAction.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375950649295" ignored="false" />
     <file path="$PROJECT_DIR$/../nn_archive_new/trunk/d-Source/webapp/weboffice/config/document/action/ddt_registered_actions.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375950649295" ignored="false" />
@@ -100,6 +124,258 @@
     <file path="$PROJECT_DIR$/../nn_archive_new/trunk/d-Source/integration_archive/src/ru/iteco/scanner/TypedBarcodedDocumentDictionary.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375950649295" ignored="false" />
     <file path="$PROJECT_DIR$/../nn_archive_new/trunk/d-Source/iteco_base/src/ru/iteco/dmlib/util/Utils.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375950649295" ignored="false" />
     <file path="$PROJECT_DIR$/../nn_archive_new/trunk/d-Source/webapp/src/ru/iteco/weboffice/create/FileSelection.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375950649296" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/compiler.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/vcs.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/copyright/profiles_settings.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/modules.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/scopes/scope_settings.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/misc.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/uiDesigner.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/encodings.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847954" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/workspace.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376746263814" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__javax_jms_jms_1_1.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376294658725" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__com_sun_jmx_jmxri_1_2_1.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376294658725" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__log4j_log4j_1_2_15.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__javax_mail_mail_1_4.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376571045660" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__junit_junit_4_11.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__javax_activation_activation_1_1.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376571045660" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/libraries/Maven__com_sun_jdmk_jmxtools_1_2_1.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376294658725" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/.idea/gradle.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Error.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/FolderScanner.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/FolderScanner.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376647270433" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Show.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650495066" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/params/HelpParams.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376295818268" ignored="false" />
+    <file path="/HelpParams.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376298528605" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/params/StopParams.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376295700457" ignored="false" />
+    <file path="/StopParams.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376295699913" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Help.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651347160" ignored="false" />
+    <file path="/Help.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376568047546" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/params/HelpParam.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/params/StopParam.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376559834606" ignored="false" />
+    <file path="/HelpParam.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376567431333" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/main/Main.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671040546" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Exit.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/Scan.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651169491" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Scan.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651231188" ignored="false" />
+    <file path="/Error.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376567818283" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/CopyMatchingFileVisitor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/CopyMatchingFileVisitor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376647250397" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryNIOSynchronization.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376305060480" ignored="false" />
+    <file path="/TryNIOSynchronization.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376305056913" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryThreads.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376311893616" ignored="false" />
+    <file path="/TryThreads.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376311874588" ignored="false" />
+    <file path="/Exit.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376567958618" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryThreadPool.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376660374714" ignored="false" />
+    <file path="/TryThreadPool.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376660373573" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/CreateFiles.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376559425607" ignored="false" />
+    <file path="/CreateFiles.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376313605657" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/sun/nio/fs/WindowsFileSystem.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376317117860" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/sun/nio/fs/WindowsPath.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376317143108" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryFileLock.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376475681827" ignored="false" />
+    <file path="/TryFileLock.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376475670307" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/Operation.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376478933061" ignored="false" />
+    <file path="/Operation.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376566584744" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/OperationHolder.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376498183824" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/ololo.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376476547048" ignored="false" />
+    <file path="/OperationHolder.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376498770737" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TryConcurrentMap.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376478593768" ignored="false" />
+    <file path="/TryConcurrentMap.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376478583149" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/OperationFileHolder.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376498783894" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/operation/Operation.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/operation/OperationFileHolder.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/scanner/operation/OperationFileSingleton.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376498859895" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Stop.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376670795938" ignored="false" />
+    <file path="/Stop.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376670788992" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/validation/Checker.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/fragment.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378116832689" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/resources/log4j.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/resources/byThreadId.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376502332942" ignored="false" />
+    <file path="/byThreadId.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376502327694" ignored="false" />
+    <file path="/log4j.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376916563018" ignored="false" />
+    <file path="/Show.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650492634" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/params/ScanParam.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/ScanParam.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376567339672" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/command/ScanTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650900605" ignored="false" />
+    <file path="/ScanTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650898087" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TestPathResolve.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376557752328" ignored="false" />
+    <file path="/TestPathResolve.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376557572487" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/manager/CommandManager.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671006169" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/command/ExitTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/manager/CommandManagerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671162366" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/CopyMatchingFileVisitorTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376640808603" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/core/ICommand.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/OperationFileHolder.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376566063842" ignored="false" />
+    <file path="/CommandManager.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671006169" ignored="false" />
+    <file path="/ICommand.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376567772604" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/com/documentum/bpm/bpsintegration/DmBPSJMSIntegration.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376568766268" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/README.md" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376570526029" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/pom.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649903703" ignored="false" />
+    <file path="/pom.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377540874043" ignored="false" />
+    <file path="/CopyMatchingFileVisitorTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649666799" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/docs/README.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/CommandManagerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376671162366" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/test/core/ResourceCreator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376643795969" ignored="false" />
+    <file path="/ResourceCreator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376643816186" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/test/core/TestResourceCreator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376645517599" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/scanner/FolderScanerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376643858668" ignored="false" />
+    <file path="/FolderScanerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644779130" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/scanner/FolderScannerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651819499" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/scanner/CopyMatchingFileVisitorTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
+    <file path="/FolderScannerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376648673584" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/apache/log4j/Logger.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644287847" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/apache/log4j/LogManager.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644293175" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/apache/log4j/spi/LoggerRepository.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644321767" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/apache/log4j/spi/NOPLoggerRepository.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644334555" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/apache/log4j/spi/NOPLogger.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376644349356" ignored="false" />
+    <file path="/TestResourceCreator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376645514192" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/src/test/java/test/core/TestResourceManager.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651813592" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/logs/directory_scaner.log" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651457015" ignored="false" />
+    <file path="/TestResourceManager.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376648852276" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/logs/threads/scan_Thread[Thread-0,5,main].log" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376651457015" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/logs/threads/scan_Thread[Thread-1,5,main].log" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650604696" ignored="false" />
+    <file path="$PROJECT_DIR$/../directory_scanner/logs/threads/Thread-2.log" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376650604696" ignored="false" />
+    <file path="$PROJECT_DIR$/../Tests/src/TestGetPost.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376672202681" ignored="false" />
+    <file path="/TestGetPost.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376672189552" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/web/WEB-INF/web.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376750642933" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/web/test.jsp" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376744577610" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/web/index.jsp" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377541211957" ignored="false" />
+    <file path="/index.jsp" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377540595691" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/webapp.iml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376935964993" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/pom.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377540958611" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/service/JSONDataService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376749208677" ignored="false" />
+    <file path="/JSONDataService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376749389710" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/service/EmployeeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376749653922" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/service/TreeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376749968795" ignored="false" />
+    <file path="/TreeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377540517572" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/test/java/TestTreeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377092073627" ignored="false" />
+    <file path="/TestTreeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376910817169" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/TreeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377540534384" ignored="false" />
+    <file path="/DummyFile.xpath" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377000793035" ignored="false" />
+    <file path="/web.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376750642933" ignored="false" />
+    <file path="$PROJECT_DIR$/../suren-core/webapp/src/test/java/service/json/test.json" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376751132739" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/bean/DepartmentBean.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376754436967" ignored="false" />
+    <file path="/DepartmentBean.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376754435847" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/bean/Employee.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537074107" ignored="false" />
+    <file path="/Employee.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537074107" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/bean/Department.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377536241626" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/test/java/ObjectMapperTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377092079523" ignored="false" />
+    <file path="/ObjectMapperTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376899271411" ignored="false" />
+    <file path="/Department.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377536241626" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/web/style/jqtree.css" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376837267223" ignored="false" />
+    <file path="/department_table.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376839978274" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/department_table.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376839979553" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/DC_00001.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376841935576" ignored="false" />
+    <file path="/DC_00001.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376841544210" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/create_employees.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523042099" ignored="false" />
+    <file path="/create_employees.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428641458" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/META-INF/persistence.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376898870878" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/factory/JdbcTemplateFactory.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537114364" ignored="false" />
+    <file path="/JdbcTemplateFactory.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537114364" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/web/js/tree.jquery.js" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376906053632" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/create_departments.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377532793720" ignored="false" />
+    <file path="/create_departments.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377522927015" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/DataProcessor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377090753896" ignored="false" />
+    <file path="/DataProcessor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377090752273" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/springframework/jdbc/core/JdbcTemplate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376915713808" ignored="false" />
+    <file path="/JdbcTemplate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376915724460" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/resources/log4j.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376916563018" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/codehaus/jettison/json/JSONObject.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376937194969" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/InfoService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376995181026" ignored="false" />
+    <file path="/InfoService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376995332104" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/DataService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377090757151" ignored="false" />
+    <file path="/DataService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376997851535" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/.gitignore" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377541656680" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/test/java/DataProcessorTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428485532" ignored="false" />
+    <file path="/DataProcessorTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377001390539" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/EmployeeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377082240294" ignored="false" />
+    <file path="/EmployeeService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377082078337" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/DepartmentService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377089574313" ignored="false" />
+    <file path="/DepartmentService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377088688427" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/EmployeeDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377082817576" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/core/EmployeeDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377163608443" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/DepartmentDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377082828522" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/impl/EmployeeDAOImpl.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377163665793" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/core/DepartmentDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377422798997" ignored="false" />
+    <file path="/EmployeeDAOImpl.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377163631599" ignored="false" />
+    <file path="/EmployeeDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377163564370" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/dao/impl/DepartmentDAOImpl.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377422791580" ignored="false" />
+    <file path="/DepartmentDAOImpl.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377422791580" ignored="false" />
+    <file path="/DepartmentDAO.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377087737387" ignored="false" />
+    <file path="/query.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377088294676" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/resources/query.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377088295116" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/JSONConstr.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377089331357" ignored="false" />
+    <file path="/JSONConstr.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377089076671" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/DataToJSONProcessor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377366722070" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/utils/Queries.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538255864" ignored="false" />
+    <file path="/DataToJSONProcessor.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377366721703" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/test/java/JsonTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377359452503" ignored="false" />
+    <file path="/JsonTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377359435697" ignored="false" />
+    <file path="/queries.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377433047022" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/resources/queries.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377443325720" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/view/departments_and_employees_view.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377424780979" ignored="false" />
+    <file path="/departments_and_employees_view.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377424771058" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/view/relation_path_view.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377365505266" ignored="false" />
+    <file path="/relation_path_view.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377358639980" ignored="false" />
+    <file path="/a.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377358419915" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/constants/IConstants.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537085547" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/service/SearchService.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377363288192" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/codehaus/jettison/json/JSONArray.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377364763806" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/ITransactionScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377424142919" ignored="false" />
+    <file path="/ITransactionScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537326676" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/DepartmentTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428229242" ignored="false" />
+    <file path="/DepartmentTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538373455" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/EmployeeTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377424142919" ignored="false" />
+    <file path="/EmployeeTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377429291414" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/processor/PathRelationTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428462620" ignored="false" />
+    <file path="/PathRelationTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538394439" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/querytemplate/QueryTemplate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377426566736" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/querytemplate/QueryTemplateException.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377426438123" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/JSONConstr.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428485532" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/ITransactionScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428485532" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/DepartmentTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428502820" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/EmployeeTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428502820" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/PathRelationTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428502820" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/core/ITransactionScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377537327478" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/impl/EmployeeTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377440439587" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/impl/PathRelationTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538400219" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/impl/DepartmentTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538378292" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/script/core/AbstractTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428985008" ignored="false" />
+    <file path="/AbstractTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377428962920" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/validation/Checker.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538334907" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/utils/Utils.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538342571" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/springframework/jdbc/core/namedparam/NamedParameterJdbcTemplate.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377432020285" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/intellijad/org/springframework/jdbc/core/namedparam/NamedParameterUtils.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377432374635" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/java/utils/Config.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538224486" ignored="false" />
+    <file path="/Config.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538224486" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/src/main/resources/config.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377446454126" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/emp_fio_trigger.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377522855415" ignored="false" />
+    <file path="db-console:/407079b1/e767ef02-5b29-433a-b473-adc64e9cf372/" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523066036" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/table/department_table.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523137477" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/table/employee_table.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523229383" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/database/Orgstructure.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523301409" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/sequence/id_seq.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523371141" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/trigger/emp_fio.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523420882" ignored="false" />
+    <file path="/emp_fio.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523418514" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/view/relation_path_view.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377523531739" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/database/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534484709" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/data/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534381418" ignored="false" />
+    <file path="/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534656121" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534662443" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/sequence/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534495732" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/table/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534538066" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/trigger/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534557520" ignored="false" />
+    <file path="$PROJECT_DIR$/../orgstructure_tree/webapp/scripts/boost/view/create_all.sql" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377534592414" ignored="false" />
+    <file path="/Queries.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1377538255864" ignored="false" />
+    <file path="/DSLDelegatingMetaClass.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378116404453" ignored="false" />
+    <file path="/DSLContainerTest.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378116491463" ignored="false" />
+    <file path="$PROJECT_DIR$/build/reports/tests/execution.groovy.dsl.script.DCBlockTest.html" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378202458407" ignored="false" />
+    <file path="$PROJECT_DIR$/build/reports/tests/index.html" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378202458407" ignored="false" />
+    <file path="$PROJECT_DIR$/build/test-results/TEST-execution.groovy.dsl.script.DCBlockTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378202458407" ignored="false" />
+    <file path="$PROJECT_DIR$/build/reports/tests/execution.groovy.dsl.script.html" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378202458407" ignored="false" />
+    <file path="/BuildDCLocator.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378202858164" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,44 +390,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/test/src/service/TypeServiceTest.java" line="44" class="service.TypeServiceTest" package="service">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -227,7 +466,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" line="41" class="execution.groovy.dsl.script.PostScBlock" package="execution.groovy.dsl.script">
+      <breakpoint url="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostDCCondition.groovy" line="64" class="execution.groovy.dsl.script.PostScBlock" package="execution.groovy.dsl.script">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -243,6 +482,43 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -255,23 +531,17 @@
       <file leaf-file-name="LocationServiceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/service/LocationServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="54" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1082#1104#0" expanded="true" />
-              </folding>
+            <state line="44" column="39" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeServiceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/service/TypeServiceTest.java">
+      <file leaf-file-name="ProcessService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="49" selection-start="1054" selection-end="1074" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1148#1170#0" expanded="true" />
-              </folding>
+            <state line="76" column="0" selection-start="2515" selection-end="2515" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -279,22 +549,18 @@
       <file leaf-file-name="ProcessServiceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/service/ProcessServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="62" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
+            <state line="41" column="0" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#958#980#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hudson_dc.log" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/hudson_dc.log">
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
+      <file leaf-file-name="LocationService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="283" column="0" selection-start="14669" selection-end="14669" vertical-scroll-proportion="-2.04">
+            <state line="99" column="1" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -303,55 +569,16 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="56" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1706#1728#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DSLContainerTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="13" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
+            <state line="59" column="40" selection-start="1772" selection-end="1772" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DC_DQL_1.dc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dc/custom/DC_DQL_1.dc">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="61" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_dql.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_dql.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="79" selection-start="0" selection-end="79" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="run_sql.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/run_sql.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="46" selection-start="46" selection-end="46" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="validate.bat" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/validate.bat">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="52" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+            <state line="20" column="12" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -360,48 +587,72 @@
       <file leaf-file-name="run_dc.bat" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/run_dc.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="43" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
+            <state line="0" column="55" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JdbcTemplateFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java">
+      <file leaf-file-name="run_dql.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/run_dql.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="64" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/service/TypeService.java">
+      <file leaf-file-name="run_sql.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/run_sql.bat">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validate.bat" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/validate.bat">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DSLContainerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#909#931#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
+      <file leaf-file-name="DCTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/execution/groovy/dsl/script/DCTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="73" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="23" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DCScriptRunner.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java">
+      <file leaf-file-name="JdbcTemplateFactoryTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/factory/JdbcTemplateFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="171" column="58" selection-start="6371" selection-end="6371" vertical-scroll-proportion="0.0">
+            <state line="46" column="13" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_dc.dc" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/resources/test_dc.dc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -410,88 +661,52 @@
       <file leaf-file-name="BuildDCLocator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/locator/BuildDCLocator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="59" selection-start="3979" selection-end="3979" vertical-scroll-proportion="0.0">
+            <state line="48" column="46" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryTemplate.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/util/querytemplate/QueryTemplate.java">
+      <file leaf-file-name="TypeService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/service/TypeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="70" selection-start="4355" selection-end="4355" vertical-scroll-proportion="0.0">
+            <state line="44" column="0" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DC_DQL_2.dc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dc/custom/DC_DQL_2.dc">
+      <file leaf-file-name="JdbcTemplateFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="42" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
+            <state line="38" column="74" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DC_SQL_1.dc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dc/custom/DC_SQL_1.dc">
+      <file leaf-file-name="TestConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/core/TestConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0">
+            <state line="28" column="32" selection-start="649" selection-end="649" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/config.properties">
+      <file leaf-file-name="DC.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DC.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="25" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DC_SQL_2.dc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dc/custom/DC_SQL_2.dc">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="1416" selection-end="1416" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DC_SQL_3.dc" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dc/custom/DC_SQL_3.dc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dfc.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/resources/dfc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="57" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationService.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="63" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.60596025">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DSLManager.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="65" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0">
+            <state line="6" column="19" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -500,52 +715,70 @@
       <file leaf-file-name="DSLContainer.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="12" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-1.76">
+            <state line="85" column="86" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DCScBlock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy">
+      <file leaf-file-name="PostDCCondition.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostDCCondition.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="23" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
+            <state line="13" column="16" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostScBlock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy">
+      <file leaf-file-name="DSLManager.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="57" selection-start="879" selection-end="902" vertical-scroll-proportion="0.0">
+            <state line="17" column="74" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrecScBlock.groovy" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy">
+      <file leaf-file-name="DSLDelegatingMetaClass.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="49" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DQLStatement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java">
+      <file leaf-file-name="config.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/config.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="60" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IStatement.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/parser/IStatement.java">
+      <file leaf-file-name="DCScriptRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="69" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+            <state line="57" column="31" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DCScriptRunnerTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/execution/java/runner/DCScriptRunnerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dfc.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/dfc.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="51" selection-start="476" selection-end="476" vertical-scroll-proportion="0.44084278">
               <folding />
             </state>
           </provider>
@@ -567,20 +800,131 @@
     </option>
   </component>
   <component name="GradleLocalSettings">
+    <option name="availableTasks">
+      <set>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the outputs of this project." />
+          <option name="name" value="assemble" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project." />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+          <option name="name" value="buildDependents" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects it depends on." />
+          <option name="name" value="buildNeeded" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all checks." />
+          <option name="name" value="check" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles binary 'main'." />
+          <option name="name" value="classes" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Deletes the build directory." />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the main Groovy source." />
+          <option name="name" value="compileGroovy" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles source set 'main:java'." />
+          <option name="name" value="compileJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the test Groovy source." />
+          <option name="name" value="compileTestGroovy" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles source set 'test:java'." />
+          <option name="name" value="compileTestJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="copyResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="copylibs" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Groovydoc API documentation for the main source code." />
+          <option name="name" value="groovydoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a jar archive containing the main classes." />
+          <option name="name" value="jar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Javadoc API documentation for the main source code." />
+          <option name="name" value="javadoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes source set 'main:resources'." />
+          <option name="name" value="processResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes source set 'test:resources'." />
+          <option name="name" value="processTestResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Initializes a new Gradle build. [incubating]" />
+          <option name="name" value="setupBuild" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs the unit tests." />
+          <option name="name" value="test" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles binary 'test'." />
+          <option name="name" value="testClasses" />
+        </GradleTaskDescriptor>
+      </set>
+    </option>
     <option name="expandStates">
       <map>
-        <entry key="dependencies/hudson_dc_execution/hudson_dc_execution" value="false" />
+        <entry key="dependencies/hudson_dc_execution/hudson_dc_execution" value="true" />
         <entry key="hudson_dc_execution" value="true" />
-        <entry key="hudson_dc_execution/hudson_dc_execution" value="true" />
+        <entry key="hudson_dc_execution/hudson_dc_execution" value="false" />
+        <entry key="test/dependencies/hudson_dc_execution/hudson_dc_execution" value="false" />
       </map>
     </option>
+    <option name="recentTasks">
+      <list>
+        <GradleTaskDescriptor>
+          <option name="executorId" value="Run" />
+          <option name="name" value="buildNeeded" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="executorId" value="Run" />
+          <option name="name" value="testClasses" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="executorId" value="Run" />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+      </list>
+    </option>
     <option name="userProjectChanges">
+      <GradleAddLibraryDependencyUserChange>
+        <option name="dependencyName" value="org.testng:testng:6.8.5" />
+        <option name="moduleName" value="hudson_dc_execution" />
+      </GradleAddLibraryDependencyUserChange>
       <GradleRemoveLibraryDependencyUserChange>
         <option name="dependencyName" value="aopalliance-1.0" />
         <option name="moduleName" value="hudson_dc_execution" />
       </GradleRemoveLibraryDependencyUserChange>
       <GradleRemoveLibraryDependencyUserChange>
         <option name="dependencyName" value="hamcrest-core-1.3" />
+        <option name="moduleName" value="hudson_dc_execution" />
+      </GradleRemoveLibraryDependencyUserChange>
+      <GradleRemoveLibraryDependencyUserChange>
+        <option name="dependencyName" value="junit-4.10" />
         <option name="moduleName" value="hudson_dc_execution" />
       </GradleRemoveLibraryDependencyUserChange>
       <GradleRemoveLibraryDependencyUserChange>
@@ -604,22 +948,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/src/service/TypeServiceTest.java" />
-        <option value="$PROJECT_DIR$/test/src/service/ProcessorServiceTest.java" />
-        <option value="$PROJECT_DIR$/scripts/run_dql.bat" />
-        <option value="$PROJECT_DIR$/scripts/validate.bat" />
-        <option value="$PROJECT_DIR$/scripts/run_dc.bat" />
-        <option value="$PROJECT_DIR$/src/java/service/ProcessService.java" />
-        <option value="$PROJECT_DIR$/src/java/main/Main.java" />
-        <option value="$PROJECT_DIR$/scripts/run_sql.bat" />
-        <option value="$PROJECT_DIR$/test/src/service/LocationServiceTest.java" />
-        <option value="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" />
-        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy" />
         <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy" />
         <option value="$PROJECT_DIR$/src/java/service/LocationService.java" />
+        <option value="$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java" />
+        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCBlock.groovy" />
+        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy" />
+        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy" />
+        <option value="$PROJECT_DIR$/src/java/execution/groovy/metaclass/DSLDelegatingMetaClass.groovy" />
+        <option value="$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java" />
+        <option value="$PROJECT_DIR$/test/src/execution/java/runner/DCScriptRunnerTest.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" />
         <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy" />
         <option value="$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java" />
+        <option value="$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DC.groovy" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/java/locator/BuildDCLocator.java" />
       </list>
     </option>
   </component>
@@ -653,22 +997,16 @@
       <hideEmptyPackages />
       <abbreviatePackageNames />
       <autoscrollToSource />
-      <autoscrollFromSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="false" />
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="hudson_dc_execution" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -788,6 +1126,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="runner" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1053,80 +1395,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parser" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1361,140 +1629,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="gradle" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1502,61 +1644,38 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="reference.settingsdialog.project.gradle" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.gradle/1.6/taskArtifacts" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="gradle.tool.window.active" value="Tasks" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="D:\SVNProjects\hudson_dc_execution\lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SVNProjects\hudson_dc_execution\test\resources" />
       <recent name="D:\SVNProjects\hudson_dc_execution\dc\custom" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="execution.java.runner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SVNProjects\hudson_dc_execution\gradle" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProcessServiceTest">
-    <configuration default="false" name="LocationServiceTest.testLocation" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="hudson_dc_execution" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.LocationServiceTest" />
-      <option name="METHOD_NAME" value="testLocation" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Groovy.gradle:buildNeeded">
     <configuration default="false" name="LocationServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1582,40 +1701,6 @@
       <envs />
       <patterns />
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="TypeServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="hudson_dc_execution" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.TypeServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1653,6 +1738,51 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="gradle:clean" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="hudson_dc_execution" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="clean" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="gradle:testClasses" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="hudson_dc_execution" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="testClasses" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="gradle:buildNeeded" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="hudson_dc_execution" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="buildNeeded" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -1662,18 +1792,25 @@
       <setting name="debug" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -1702,19 +1839,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1753,18 +1877,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LocationServiceTest.testLocation" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LocationServiceTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TypeServiceTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LocationServiceTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
+      <item index="2" class="java.lang.String" itemvalue="Groovy.gradle:clean" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy.gradle:testClasses" />
+      <item index="4" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LocationServiceTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeServiceTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LocationServiceTest.testLocation" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
+        <item index="1" class="java.lang.String" itemvalue="Groovy.gradle:testClasses" />
+        <item index="2" class="java.lang.String" itemvalue="Groovy.gradle:clean" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LocationServiceTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1787,7 +1913,15 @@
       <created>1375811398509</created>
       <updated>1375811398509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Работоспособность со скриптами">
+      <created>1376058570991</created>
+      <updated>1376058570991</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Небольшое причесывание проекта">
+      <created>1378203787792</created>
+      <updated>1378203787792</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1795,9 +1929,9 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6547455" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32737276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42090786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1809,15 +1943,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25753227" sideWeight="0.6547455" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25681493" sideWeight="0.6726272" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34525448" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1863,7 +1997,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работоспособность со скриптами" />
+    <option name="LAST_COMMIT_MESSAGE" value="Небольшое причесывание проекта" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1880,6 +2014,7 @@
     <MESSAGE value="Коммит перед сборкой для Хадсона" />
     <MESSAGE value="Тесты(1)" />
     <MESSAGE value="Работоспособность со скриптами" />
+    <MESSAGE value="Небольшое причесывание проекта" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1891,126 +2026,107 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/src/service/LocationServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="54" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1082#1104#0" expanded="true" />
-          </folding>
+        <state line="44" column="39" selection-start="1147" selection-end="1147" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/service/TypeServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/test/src/execution/groovy/dsl/script/DCTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="49" selection-start="1054" selection-end="1074" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1148#1170#0" expanded="true" />
-          </folding>
+        <state line="23" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/execution/groovy/dsl/container/DSLContainerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="504" selection-end="504" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/hudson_dc.log">
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="283" column="0" selection-start="14669" selection-end="14669" vertical-scroll-proportion="-2.04">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/service/ProcessServiceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="62" selection-start="1169" selection-end="1169" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#958#980#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dc/custom/DC_DQL_1.dc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/parser/IStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="69" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/parser/dql/DQLStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="60" selection-start="959" selection-end="959" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostScBlock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="57" selection-start="879" selection-end="902" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DCScBlock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="23" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PrecScBlock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="49" selection-start="1015" selection-end="1015" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="73" selection-start="2594" selection-end="2594" vertical-scroll-proportion="0.0">
+        <state line="28" column="0" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy">
+    <entry file="file://$PROJECT_DIR$/gradle/compile.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="65" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="11" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/DC.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/script/PostDCCondition.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/container/DSLContainer.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="12" selection-start="1837" selection-end="1837" vertical-scroll-proportion="-1.76">
+        <state line="85" column="86" selection-start="1972" selection-end="1972" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/execution/groovy/dsl/DSLManager.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="74" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/execution/java/runner/DCScriptRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="171" column="58" selection-start="6371" selection-end="6371" vertical-scroll-proportion="0.0">
+        <state line="57" column="31" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
+    <entry file="file://$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="63" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.60596025">
+        <state line="38" column="74" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/locator/BuildDCLocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="46" selection-start="1695" selection-end="1695" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="19" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="57" selection-start="674" selection-end="674" vertical-scroll-proportion="0.45637584">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/dfc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="51" selection-start="476" selection-end="476" vertical-scroll-proportion="0.44084278">
           <folding />
         </state>
       </provider>
@@ -2034,7 +2150,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Detection</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2082,7 +2198,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>groovy-2.1.3</last-edited>
+          <last-edited>org.testng:testng:6.8.5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
