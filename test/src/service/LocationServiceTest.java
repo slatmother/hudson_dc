@@ -13,7 +13,7 @@ package service;
 import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import constants.IConstants;
-import execution.groovy.dsl.container.DSLContainer;
+import groovy.container.DSLContainer;
 import org.junit.Before;
 import org.junit.Test;
 

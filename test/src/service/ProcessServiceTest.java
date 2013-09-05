@@ -10,12 +10,9 @@
 */
 package service;
 
-import execution.groovy.dsl.container.DSLContainer;
-import org.junit.Before;
-import org.junit.experimental.theories.DataPoints;
-import org.junit.experimental.theories.Theories;
-import org.junit.experimental.theories.Theory;
-import org.junit.runner.RunWith;
+import groovy.container.DSLContainer;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -31,23 +28,30 @@ import static org.junit.Assert.assertTrue;
  *
  * @version 1.0
  */
-@RunWith(Theories.class)
+
 public class ProcessServiceTest {
+
+    @BeforeMethod
+    public void setUp() throws Exception {
+
+
+    }
+
+    @Test
+    public void testName() throws Exception {
+
+
+    }
+
+
     private static final Map<DSLContainer, Object> map = new LinkedHashMap<DSLContainer, Object>();
 
-
-    @DataPoints
     public static Object[][] testData = new Object[][]{
 //            {"run"},
             {"validate"},
     };
 
-    @Before
-    public void setUp() throws Exception {
-        LocationService.performModification("custom", map);
-    }
 
-    @Theory
     public void testExecute(final Object... data) throws Exception {
         boolean result = ProcessService.execute((String) data[0], map);
         assertTrue(result);

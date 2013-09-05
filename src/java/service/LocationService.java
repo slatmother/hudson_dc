@@ -12,9 +12,9 @@ package service;
 
 import com.documentum.fc.common.DfException;
 import constants.IConstants;
-import execution.groovy.dsl.DSLManager;
-import execution.groovy.dsl.container.DSLContainer;
-import locator.BuildDCLocator;
+import groovy.execution.DSLManager;
+import groovy.container.DSLContainer;
+import transaction.script.ClearQuestTrScript;
 import org.apache.log4j.Logger;
 import util.Checker;
 import util.Configuration;
@@ -39,19 +39,33 @@ import java.util.Map;
 public class LocationService {
     private static final Logger logger = Logger.getRootLogger();
 
+    /**
+     *
+     * @param location
+     * @param dcMap
+     * @return
+     * @throws SQLException
+     * @throws DfException
+     */
     public static Map<DSLContainer, Object> performModification(String location, Map<DSLContainer, Object> dcMap) throws SQLException, DfException {
         if (IConstants.MainArgsTypes.Location.CQ.equalsIgnoreCase(location)) {
             return getDCFromClearQuest(dcMap);
         } else if (IConstants.MainArgsTypes.Location.CUSTOM.equalsIgnoreCase(location)) {
             return getDCFromCustomFolder(dcMap);
         } else {
-            return Collections.<DSLContainer, Object>emptyMap();
+            return Collections.emptyMap();
         }
     }
 
-
+    /*
+     *  TODO: hardcode to IConstants
+     * @param dcMap
+     * @return
+     * @throws DfException
+     * @throws SQLException
+     */
     private static Map<DSLContainer, Object> getDCFromClearQuest(Map<DSLContainer, Object> dcMap) throws DfException, SQLException {
-        BuildDCLocator dcLocator = new BuildDCLocator();
+        ClearQuestTrScript dcLocator = new ClearQuestTrScript();
 
         String projectName = Configuration.getConfig_properties().getProperty("cq.project.name");
         HashMap<String, String> dcNameMap = dcLocator.getAllBuildDefChanges(projectName);
@@ -74,8 +88,16 @@ public class LocationService {
         return dcMap;
     }
 
+    /*
+     *  TODO: hardcode to IConstants
+     * @param dcMap
+     * @return
+     * @throws DfException
+     * @throws SQLException
+     */
     private static Map<DSLContainer, Object> getDCFromCustomFolder(Map<DSLContainer, Object> dcMap) throws DfException, SQLException {
         logger.info("Start filling dc map from custom folder");
+
         final FilenameFilter dcFilter = new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.endsWith(".dc");

@@ -1,6 +1,7 @@
-package execution.groovy.dsl.script
+package groovy.script.block
 
-import execution.java.runner.DCScriptRunner
+import groovy.script.core.AbstractBlock
+import transaction.script.ProjectTrScript
 
 /*
 * $Id
@@ -11,22 +12,11 @@ import execution.java.runner.DCScriptRunner
 * Данные исходные коды не могут использоваться и быть изменены
 * без официального разрешения компании i-Teco.          
 */
-class DCScBlock {
-  String query
+class DC extends AbstractBlock {
+  final String name = "DC"
   def min
   def max
-  def validation_result
   String queryType
-
-  /**
-   *
-   * @param closure
-   * @return
-   */
-  def init(Closure closure) {
-    closure.delegate = this
-    closure.call()
-  }
 
   /**
    *
@@ -34,9 +24,7 @@ class DCScBlock {
    * @return
    */
   def sql(String query) {
-    if (!this.query) {
-      this.query = query
-    }
+    super.sql(query)
 
     queryType = "sql"
   }
@@ -47,9 +35,7 @@ class DCScBlock {
    * @return
    */
   def dql(String query) {
-    if (!this.query) {
-      this.query = query
-    }
+    super.sql(query)
 
     queryType = "dql"
   }
@@ -69,8 +55,7 @@ class DCScBlock {
    * @return
    */
   def validate() {
-    validation_result = (query != null && !query.isAllWhitespace()) && (min != null)
-    return validation_result
+    super.validate() && min != null
   }
 
   /**
@@ -79,9 +64,17 @@ class DCScBlock {
    * @return
    */
   def execute(session) {
-    DCScriptRunner.runScript(session,
+    ProjectTrScript.query(session,
             query,
             min,
             max)
+  }
+
+  @Override
+  def info() {
+    name + ":\n" +
+            "Query: " + query +
+            "Min: " + min +
+            "Max: " + max
   }
 }

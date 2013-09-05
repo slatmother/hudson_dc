@@ -12,7 +12,7 @@ package main;
 
 import com.documentum.fc.common.DfException;
 import constants.IConstants;
-import execution.groovy.dsl.container.DSLContainer;
+import groovy.container.DSLContainer;
 import org.apache.log4j.Logger;
 import service.LocationService;
 import service.ProcessService;
@@ -54,6 +54,8 @@ public class Main {
             operation = IConstants.MainArgsTypes.Operation.RUN;
         }
         logger.info("Operation arg is " + operation);
+
+
 
         try {
             Map<DSLContainer, Object> dcMapping = new LinkedHashMap<DSLContainer, Object>();

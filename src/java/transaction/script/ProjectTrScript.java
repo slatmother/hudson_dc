@@ -8,7 +8,7 @@
 * Данные исходные коды не могут использоваться и быть изменены
 * без официального разрешения компании i-Teco.          
 */
-package execution.java.runner;
+package transaction.script;
 
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
@@ -33,7 +33,7 @@ import java.util.Set;
  *
  * @version 1.0
  */
-public class DCScriptRunner {
+public class ProjectTrScript {
     private static final Logger logger = Logger.getRootLogger();
 
     /**
@@ -43,7 +43,7 @@ public class DCScriptRunner {
      * @return
      * @throws DfException
      */
-    public static boolean runScript(IDfSession session, String query, List<Map<String, Object>> conditionsMapList) throws DfException {
+    public static boolean query(IDfSession session, String query, List<Map<String, Object>> conditionsMapList) throws DfException {
         logger.info("Running script. Query to execute is: " + query);
 
         List<Map<String, Object>> rowsList = Utils.getAllRows(session, query);
@@ -55,20 +55,17 @@ public class DCScriptRunner {
                 Set<Map.Entry<String, Object>> actualEntrySet = executedMap.entrySet();
 
                 result &= actualEntrySet.containsAll(conditionsMapList.get(i).entrySet());
-//                for (Map.Entry<String, Object> entry : conditionsMap.entrySet()) {
-//                    logger.info(entry);
-//                    result &= actualEntrySet.contains(entry);
-//                }
             }
         } else {
             result = false;
         }
 
         logger.info("Script execution result is " + result);
+
         return result;
     }
 
-    public static boolean runScript(IDfSession session, String query, Integer minAffectedValue, Integer maxAffectedValue) throws DfException {
+    public static boolean query(IDfSession session, String query, Integer minAffectedValue, Integer maxAffectedValue) throws DfException {
         logger.info("Query to execute is: " + query);
 
         List<Map<String, Object>> rowsList = Utils.getAllRows(session, query);
@@ -117,7 +114,7 @@ public class DCScriptRunner {
      * @return
      * @throws SQLException
      */
-    public static boolean runScript(JdbcTemplate template, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
+    public static boolean query(JdbcTemplate template, String query, List<Map<String, Object>> conditionsMapList) throws SQLException {
         logger.info("Query to execute is: " + query);
 
         SqlRowSet set = template.queryForRowSet(query);
@@ -162,7 +159,7 @@ public class DCScriptRunner {
      * @return
      * @throws SQLException
      */
-    public static boolean runScript(JdbcTemplate template, String query, Integer minAffectedValue, Integer maxAffectedValue) throws SQLException {
+    public static boolean query(JdbcTemplate template, String query, Integer minAffectedValue, Integer maxAffectedValue) throws SQLException {
         logger.info("Query to execute is: " + query);
 
         int resultInt = template.update(query);

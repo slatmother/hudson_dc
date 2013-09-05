@@ -1,8 +1,5 @@
-package execution.groovy.dsl
-
-import execution.groovy.dsl.container.DSLContainer
-import execution.groovy.metaclass.DSLDelegatingMetaClass
-
+package groovy.execution
+import groovy.container.DSLContainer
 /*
 * $Id
 * (C) Copyright 1997 i-Teco, CJSK. All Rights reserved.
@@ -13,27 +10,52 @@ import execution.groovy.metaclass.DSLDelegatingMetaClass
 * без официального разрешения компании i-Teco.          
 */
 class DSLManager {
+  /**
+   *
+   * @param dc
+   * @return
+   */
   def static getDCMappingInst(File dc) {
-    DSLDelegatingMetaClass metaClass = new DSLDelegatingMetaClass(Script.class)
-    runScript(dc, metaClass)
-    metaClass.container.name = dc.name
-    return metaClass.container
+    DSLContainer container = new DSLContainer(Script.class);
+    container.name = dc.name
+
+    runScript(dc, container)
+
+    container
   }
 
+  /**
+   *
+   * @param container
+   * @param session
+   * @return
+   */
   def static executeDC(DSLContainer container, session) {
     boolean result = false
+
     if (validate(container)) {
       result = container.execute(session)
     }
 
-    return result
+    result
   }
 
+  /**
+   *
+   * @param container
+   * @return
+   */
   def static boolean validate(DSLContainer container) {
-    return container.validate()
+    container.validate()
   }
 
-  def static runScript(File dc, metaClass) {
+  /**
+   *
+   * @param dc
+   * @param metaClass
+   * @return
+   */
+  private def static runScript(File dc, metaClass) {
     def groovyshell = new GroovyShell()
 
     def script = groovyshell.parse(dc);

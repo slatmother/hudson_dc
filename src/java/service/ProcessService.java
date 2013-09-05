@@ -13,12 +13,12 @@ package service;
 import com.documentum.fc.client.IDfSession;
 import com.documentum.fc.common.DfException;
 import constants.IConstants;
-import execution.groovy.dsl.DSLManager;
-import execution.groovy.dsl.container.DSLContainer;
+import groovy.execution.DSLManager;
+import groovy.container.DSLContainer;
 import factory.JdbcTemplateFactory;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.JdbcTemplate;
-import transaction.NestedTx;
+import transaction.holder.NestedTx;
 import util.Utils;
 
 import java.sql.SQLException;

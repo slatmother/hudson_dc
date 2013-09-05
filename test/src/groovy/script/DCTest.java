@@ -8,9 +8,9 @@
 * Данные исходные коды не могут использоваться и быть изменены
 * без официального разрешения компании i-Teco.          
 */
-package execution.groovy;
+package groovy.script;
 
-import org.apache.log4j.Logger;
+import groovy.script.block.DC;
 import org.junit.Test;
 
 /**
@@ -18,15 +18,14 @@ import org.junit.Test;
  * <p>Title: </p>
  * <p>Description: </p>
  * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
- * <p>Date: 10.06.13</p>
+ * <p>Date: 28.06.13</p>
  *
  * @version 1.0
  */
-public class DSLDelegatingMetaClassTest {
-    public static final Logger log = Logger.getRootLogger();
-    public static final String TEST_DC_PROPERTY_KEY = "dc.file.path";
-
+public class DCTest {
     @Test
-    public void test() {
+    public void testAffected() {
+        DC dc = new DC();
+
     }
 }

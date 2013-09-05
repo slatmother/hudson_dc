@@ -11,7 +11,7 @@
 package service;
 
 import constants.IConstants;
-import execution.groovy.dsl.container.DSLContainer;
+import groovy.container.DSLContainer;
 
 import java.util.HashMap;
 import java.util.Map;
