@@ -24,7 +24,6 @@
     <orderEntry type="library" exported="" name="jsafeFIPS" level="project" />
     <orderEntry type="library" exported="" name="commons-codec-1.3" level="project" />
     <orderEntry type="library" exported="" name="xtrim-api" level="project" />
-    <orderEntry type="library" exported="" name="groovy-2.1.3" level="project" />
     <orderEntry type="library" exported="" name="aspectjrt" level="project" />
     <orderEntry type="library" exported="" name="XformsCommon" level="project" />
     <orderEntry type="library" exported="" name="asm-4.0" level="project" />
@@ -52,6 +51,7 @@
     <orderEntry type="library" exported="" name="configservice-impl" level="project" />
     <orderEntry type="library" exported="" name="log4j.jar-log4j" level="project" />
     <orderEntry type="library" scope="TEST" name="org.testng:testng:6.8.5" level="project" />
+    <orderEntry type="library" name="org.codehaus.groovy:groovy-all:2.2.0-beta-1" level="project" />
   </component>
 </module>
 

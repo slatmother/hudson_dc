@@ -125,6 +125,7 @@ public class ProjectTrScript {
         logger.info("Columns: " + columnAmount);
         logger.info("Map size: " + conditionsMapList.size());
 
+        //TODO
         if (set.first()) {
             set.last();
             int rowNum = set.getRow();

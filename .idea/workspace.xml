@@ -2,40 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/groovy/script/core/AbstractBlock.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/resources/test.dc" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\container\DSLContainer.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\metaclass\DSLDelegatingMetaClass.groovy" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\dql\DQLStatement.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\sql\SQLStatement.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\DCScriptRunnerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\groovy\DSLDelegatingMetaClassTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\groovy\DSLManagerTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/LocationService.java" afterPath="$PROJECT_DIR$/src/java/service/LocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/service/LocationServiceTest.java" afterPath="$PROJECT_DIR$/test/src/service/LocationServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/Main.java" afterPath="$PROJECT_DIR$/src/java/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/ProcessService.java" afterPath="$PROJECT_DIR$/src/java/service/ProcessService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" afterPath="$PROJECT_DIR$/test/src/service/ProcessServiceTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/TypeService.java" afterPath="$PROJECT_DIR$/src/java/service/TypeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/src/service/TypeServiceTest.java" afterPath="$PROJECT_DIR$/test/src/service/TypeServiceTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/groovy/script/block/DCTest.groovy" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/src/groovy/script/data/DCTestData.groovy" />
+      <change type="DELETED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\groovy\script\DCTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java" afterPath="$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hudson_dc_execution.iml" afterPath="$PROJECT_DIR$/hudson_dc_execution.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\DSLManager.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/execution/DSLManager.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\DCScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\PostScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\groovy\dsl\script\PrecScBlock.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/script/block/PreCondition.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\execution\java\runner\DCScriptRunner.java" afterPath="$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\locator\BuildDCLocator.java" afterPath="$PROJECT_DIR$/src/java/transaction/script/ClearQuestTrScript.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\parser\IStatement.java" afterPath="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\src\java\transaction\NestedTx.java" afterPath="$PROJECT_DIR$/src/java/transaction/holder/NestedTx.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\groovy\dsl\container\DSLContainerTest.java" afterPath="$PROJECT_DIR$/src/java/groovy/script/core/IBlock.groovy" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\execution\groovy\dsl\script\DCScBlockTest.java" afterPath="$PROJECT_DIR$/test/src/groovy/script/DCTest.java" />
-      <change type="MOVED" beforePath="D:\SVNProjects\hudson_dc_execution\test\src\locator\BuildDCLocatorTest.java" afterPath="$PROJECT_DIR$/test/src/locator/ClearQuestTrScriptTest.java" />
     </list>
     <ignored path="hudson_dc_execution.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378381858965" ignored="false" />
+    <file path="/Dummy.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378977844916" ignored="false" />
     <file path="/build.gradle" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378128577745" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-main.DCExecutorMainTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356970" ignored="false" />
     <file path="$PROJECT_DIR$/build/test-results/TEST-locator.BuildDCLocatorTest.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1375714356970" ignored="false" />
@@ -163,7 +140,7 @@
     <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/command/impl/Stop.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376670795938" ignored="false" />
     <file path="/Stop.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376670788992" ignored="false" />
     <file path="$PROJECT_DIR$/../directory_scanner/src/main/java/validation/Checker.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
-    <file path="/fragment.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378223557927" ignored="false" />
+    <file path="/fragment.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378452623600" ignored="false" />
     <file path="$PROJECT_DIR$/../directory_scanner/src/main/resources/log4j.properties" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376649847905" ignored="false" />
     <file path="$PROJECT_DIR$/../directory_scanner/src/main/resources/byThreadId.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376502332942" ignored="false" />
     <file path="/byThreadId.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1376502327694" ignored="false" />
@@ -365,6 +342,17 @@
     <file path="/a.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378374340109" ignored="false" />
     <file path="/sample.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378374355821" ignored="false" />
     <file path="/DSLContainerTestData.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378375012982" ignored="false" />
+    <file path="/DCTestData.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378449916665" ignored="false" />
+    <file path="/DCTest.groovy" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378450177610" ignored="false" />
+    <file path="/ProjectTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378466276643" ignored="false" />
+    <file path="$PROJECT_DIR$/../machine_should_work/src/test.R" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378814322070" ignored="false" />
+    <file path="/test.R" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378814319190" ignored="false" />
+    <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/iteco_dt_dbuio/dar/default.dardef" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378976752333" ignored="false" />
+    <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/iteco_base/dar/default.dardef" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378906012356" ignored="false" />
+    <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/integration_core/src/ru/iteco/integration/jms/RefFSJMSInitialContextModule.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378906221343" ignored="false" />
+    <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/iteco_dt_dbuio/Artifacts/BPM/dwf_jmsinboundsap.process" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378976752333" ignored="false" />
+    <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/iteco_project_lib_dbuio/scripts/DC/afterDAR/manual/DC015311.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378977775487" ignored="false" />
+    <file path="/DC015311.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378977768822" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -379,6 +367,43 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/test/src/service/TypeServiceTest.java" line="38" class="service.TypeServiceTest" package="service">
         <option name="ENABLED" value="true" />
@@ -456,43 +481,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -502,13 +490,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DSLContainerTest.groovy" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LocationServiceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/service/LocationServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="70" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DSLContainerTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="77" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.7517832">
-              <folding>
-                <element signature="e#25#54#0" expanded="true" />
-              </folding>
+            <state line="43" column="46" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessServiceTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/service/ProcessServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="22" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClearQuestTrScriptTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/locator/ClearQuestTrScriptTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="72" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DCTest.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/groovy/script/block/DCTest.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="24" selection-start="473" selection-end="1603" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DCTestData.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/groovy/script/data/DCTestData.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="0" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -516,7 +547,88 @@
       <file leaf-file-name="DSLContainerTestData.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="33" selection-start="3461" selection-end="3461" vertical-scroll-proportion="0.0">
+            <state line="86" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DC.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="50" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JdbcTemplateFactoryTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/factory/JdbcTemplateFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="82" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="51" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostCondition.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="55" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocationService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="38" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.10526316">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProcessService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="47" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestConfiguration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/core/TestConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="53" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectTrScript.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="159" column="67" selection-start="5695" selection-end="5695" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClearQuestTrScript.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ClearQuestTrScript.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="86" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -636,6 +748,10 @@
       <list>
         <GradleTaskDescriptor>
           <option name="executorId" value="Run" />
+          <option name="name" value="check" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="executorId" value="Run" />
           <option name="name" value="buildNeeded" />
         </GradleTaskDescriptor>
         <GradleTaskDescriptor>
@@ -650,11 +766,19 @@
     </option>
     <option name="userProjectChanges">
       <GradleAddLibraryDependencyUserChange>
+        <option name="dependencyName" value="org.codehaus.groovy:groovy-all:2.2.0-beta-1" />
+        <option name="moduleName" value="hudson_dc_execution" />
+      </GradleAddLibraryDependencyUserChange>
+      <GradleAddLibraryDependencyUserChange>
         <option name="dependencyName" value="org.testng:testng:6.8.5" />
         <option name="moduleName" value="hudson_dc_execution" />
       </GradleAddLibraryDependencyUserChange>
       <GradleRemoveLibraryDependencyUserChange>
         <option name="dependencyName" value="aopalliance-1.0" />
+        <option name="moduleName" value="hudson_dc_execution" />
+      </GradleRemoveLibraryDependencyUserChange>
+      <GradleRemoveLibraryDependencyUserChange>
+        <option name="dependencyName" value="groovy-2.1.3" />
         <option name="moduleName" value="hudson_dc_execution" />
       </GradleRemoveLibraryDependencyUserChange>
       <GradleRemoveLibraryDependencyUserChange>
@@ -686,13 +810,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java" />
-        <option value="$PROJECT_DIR$/test/src/execution/groovy/container/test_dc.dc" />
-        <option value="$PROJECT_DIR$/test/src/execution/java/runner/test_dc.dc" />
-        <option value="$PROJECT_DIR$/test/src/execution/groovy/container/DSLContainerTest.java" />
-        <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.java" />
-        <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestG.groovy" />
-        <option value="$PROJECT_DIR$/test/resources/test.dc" />
         <option value="$PROJECT_DIR$/test/src/service/TypeServiceTest.java" />
         <option value="$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy" />
         <option value="$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy" />
@@ -700,8 +817,15 @@
         <option value="$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy" />
         <option value="$PROJECT_DIR$/test/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.java" />
-        <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy" />
         <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy" />
+        <option value="$PROJECT_DIR$/test/src/groovy/script/DCTest.java" />
+        <option value="$PROJECT_DIR$/test/src/groovy/script/DCTestG.groovy" />
+        <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/test/src/groovy/script/DCTest.groovy" />
+        <option value="$PROJECT_DIR$/test/src/groovy/script/DCTestData.groovy" />
+        <option value="$PROJECT_DIR$/test/src/groovy/script/block/PreConditionTest.groovy" />
+        <option value="$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java" />
       </list>
     </option>
   </component>
@@ -774,54 +898,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="locator" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -844,10 +920,6 @@
               <option name="myItemId" value="groovy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -862,76 +934,6 @@
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="container" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -944,10 +946,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -966,110 +964,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="querytemplate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transaction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transaction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="transaction" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="holder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1092,262 +986,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="block" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groovy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="container" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="factory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="constants" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="logs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hudson_dc_execution" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1359,7 +997,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -1388,73 +1026,14 @@
       <recent name="D:\SVNProjects\hudson_dc_execution\dc\custom" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="groovy.script.block" />
       <recent name="execution.java.runner" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SVNProjects\hudson_dc_execution\gradle" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DSLContainerTest.testContainerAsMetaClass">
-    <configuration default="false" name="ProcessServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="hudson_dc_execution" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.ProcessServiceTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="gradle:clean" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="hudson_dc_execution" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="clean" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="false" name="gradle:testClasses" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="hudson_dc_execution" />
-      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="testClasses" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" enabled="false" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.DCTest">
     <configuration default="false" name="gradle:buildNeeded" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
       <module name="hudson_dc_execution" />
       <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
@@ -1506,6 +1085,89 @@
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DCTest.test" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="groovy.script.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="hudson_dc_execution" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="groovy.script" />
+      <option name="MAIN_CLASS_NAME" value="groovy.script.block.DCTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="gradle:check" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
+      <module name="hudson_dc_execution" />
+      <setting name="path" value="file://$PROJECT_DIR$/build.gradle" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="check" />
+      <setting name="workDir" value="file://$PROJECT_DIR$" />
+      <setting name="debug" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method>
+        <option name="Make" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="DCTest" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="groovy.script.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="hudson_dc_execution" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="groovy.script" />
+      <option name="MAIN_CLASS_NAME" value="groovy.script.block.DCTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1610,19 +1272,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy.gradle:clean" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy.gradle:testClasses" />
-      <item index="3" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.DSLContainerTest.testContainerAsMetaClass" />
+      <item index="0" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.DSLContainerTest.testContainerAsMetaClass" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.DCTest.test" />
+      <item index="3" class="java.lang.String" itemvalue="Groovy.gradle:check" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.DCTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.DSLContainerTest.testContainerAsMetaClass" />
-        <item index="1" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
-        <item index="2" class="java.lang.String" itemvalue="Groovy.gradle:testClasses" />
-        <item index="3" class="java.lang.String" itemvalue="Groovy.gradle:clean" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ProcessServiceTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.DCTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.DCTest.test" />
+        <item index="2" class="java.lang.String" itemvalue="Groovy.gradle:check" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.DSLContainerTest.testContainerAsMetaClass" />
+        <item index="4" class="java.lang.String" itemvalue="Groovy.gradle:buildNeeded" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1657,7 +1319,11 @@
       <created>1378204430562</created>
       <updated>1378204430562</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Немного тестов">
+      <created>1378381885465</created>
+      <updated>1378381885465</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1665,9 +1331,8 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.6547455" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2998565" sideWeight="0.5213205" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32737276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42090786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1676,18 +1341,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964131" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.3810179" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.61898214" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2374462" sideWeight="0.5213205" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4786795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32737276" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1762,53 +1428,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/script/core/AbstractBlock.groovy">
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+        <state line="43" column="46" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+        <state line="86" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="55" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#26#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="45" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0">
+        <state line="32" column="51" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/Checker.java">
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/script/data/DCTestData.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/util/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="602" selection-end="602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/script/core/IBlock.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+        <state line="88" column="0" selection-start="2234" selection-end="2234" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1816,69 +1459,84 @@
     <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="55" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#29#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/execution/DSLManager.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="4" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/config.properties">
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/script/block/DCTest.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="54" column="24" selection-start="473" selection-end="1603" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="50" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="47" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/service/LocationServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="70" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/service/ProcessServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="22" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/locator/ClearQuestTrScriptTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="72" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/factory/JdbcTemplateFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="82" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/core/TestConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="53" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1735" selection-end="1735" vertical-scroll-proportion="0.0">
+        <state line="159" column="67" selection-start="5695" selection-end="5695" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/transaction/SQLTx.java">
+    <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ClearQuestTrScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="556" selection-end="556" vertical-scroll-proportion="0.0">
+        <state line="45" column="86" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/dfc.properties">
+    <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+        <state line="90" column="38" selection-start="2835" selection-end="2835" vertical-scroll-proportion="0.10526316">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PreCondition.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="69" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#29#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="33" selection-start="3461" selection-end="3461" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="77" selection-start="1123" selection-end="1123" vertical-scroll-proportion="0.7517832">
-          <folding>
-            <element signature="e#25#54#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1901,7 +1559,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Detection</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1949,7 +1607,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.testng:testng:6.8.5</last-edited>
+          <last-edited>org.codehaus.groovy:groovy-all:2.2.0-beta-1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
