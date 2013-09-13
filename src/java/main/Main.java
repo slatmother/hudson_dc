@@ -36,6 +36,7 @@ public class Main {
     private static final Logger logger = Logger.getRootLogger();
 
     public static void main(String[] args) throws SQLException, DfException {
+        //Проверка вхожных параметров
         String location = System.getProperty("location");
         if (Utils.isNull(location)) {
             location = IConstants.MainArgsTypes.Location.CQ;
@@ -59,7 +60,9 @@ public class Main {
 
         try {
             Map<DSLContainer, Object> dcMapping = new LinkedHashMap<DSLContainer, Object>();
+            //Модификация мапы по локейшену
             LocationService.performModification(location, dcMapping);
+            //Модификация по типу ДС
             dcMapping = TypeService.performModification(type, dcMapping);
 
             boolean result = ProcessService.execute(operation, dcMapping);

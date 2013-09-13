@@ -6,22 +6,33 @@ import groovy.script.block.PreCondition
 import groovy.script.core.AbstractBlock
 import org.apache.log4j.Logger
 
-/*
-* $Id
-* (C) Copyright 1997 i-Teco, CJSK. All Rights reserved.
-* i-Teco PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
-*
-* Эксклюзивные права 1997 i-Teco, ЗАО.
-* Данные исходные коды не могут использоваться и быть изменены
-* без официального разрешения компании i-Teco.          
-*/
+/**
+ * $Id
+ * <p>Title: Класс - контейнер для распарсенных DC</p>
+ * <p>Description:
+ * Также является потомком DelegatingMetaClass.
+ * При исполнении скрипта, перехватывает вызов метода и перенаправляет на себя.
+ * Далее инициируются конкретные классы-блоки скрипта.
+ *
+ * </p>
+ * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
+ * <p>Date: 13.05.13</p>
+ *
+ * @version 1.0
+ */
 class DSLContainer extends DelegatingMetaClass {
   private final def logger = Logger.rootLogger
 
   def blocs = []
 
   String name
+  /**
+   * Тип запроса в DC
+   */
   String dcQueryType
+  /**
+   * Скрипт может содержать только один! блок ДС
+   */
   private boolean containsDCBlock = false
 
 
@@ -35,7 +46,7 @@ class DSLContainer extends DelegatingMetaClass {
   }
 
   /**
-   *
+   * Метод precondition из скрипта
    * @param closure
    * @return
    */
@@ -86,7 +97,7 @@ class DSLContainer extends DelegatingMetaClass {
   }
 
   /**
-   *
+   * Валидация блоков.
    * @return
    */
   def validate() {
@@ -104,7 +115,7 @@ class DSLContainer extends DelegatingMetaClass {
   }
 
   /**
-   *
+   * Исполнение ДС.
    * @param session
    * @return
    */

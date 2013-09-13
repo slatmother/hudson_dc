@@ -29,8 +29,10 @@ import java.util.Map;
 
 /**
  * $Id
- * <p>Title: </p>
- * <p>Description: </p>
+ * <p>Title: Класс-сервис по местоположению ДС</p>
+ * <p>Description:
+ * Подгружает список ДС из местоположения в зависимости от переданных параметров
+ * </p>
  * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
  * <p>Date: 06.08.13</p>
  *
@@ -40,7 +42,6 @@ public class LocationService {
     private static final Logger logger = Logger.getRootLogger();
 
     /**
-     *
      * @param location
      * @param dcMap
      * @return
@@ -58,6 +59,7 @@ public class LocationService {
     }
 
     /*
+    * Выгрузка из CQ
      *  TODO: hardcode to IConstants
      * @param dcMap
      * @return
@@ -89,6 +91,7 @@ public class LocationService {
     }
 
     /*
+    * Выгрузка из кастомной папки
      *  TODO: hardcode to IConstants
      * @param dcMap
      * @return
@@ -105,7 +108,7 @@ public class LocationService {
         };
 
         File customDCDir = new File("./dc/custom");
-        logger.info("Custom folder has path " + customDCDir.getAbsolutePath() + " Exists? "  + customDCDir.exists());
+        logger.info("Custom folder has path " + customDCDir.getAbsolutePath() + " Exists? " + customDCDir.exists());
 
         if (customDCDir.isDirectory()) {
             for (File scriptFile : customDCDir.listFiles(dcFilter)) {

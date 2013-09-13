@@ -18,7 +18,7 @@ import java.sql.SQLException;
 
 /**
  * $Id
- * <p>Title: </p>
+ * <p>Title: Фабрика соединений с базой</p>
  * <p>Description: </p>
  * <p>Author: g.alexeev (g.alexeev@i-teco.ru)</p>
  * <p>Date: 13.05.13</p>
