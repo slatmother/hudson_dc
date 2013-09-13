@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/script/block/DC.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/groovy/execution/DSLManager.groovy" afterPath="$PROJECT_DIR$/src/java/groovy/execution/DSLManager.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java" afterPath="$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/service/LocationService.java" afterPath="$PROJECT_DIR$/src/java/service/LocationService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/main/Main.java" afterPath="$PROJECT_DIR$/src/java/main/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="hudson_dc_execution.iws" />
@@ -355,6 +350,7 @@
     <file path="/DC015311.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378977768822" ignored="false" />
     <file path="$PROJECT_DIR$/../nn_archive_dbuio/trunk/d-Source/documentum/integration_dbuio/nn_dbuio_examples/integration_examples/Перемещение по М-11.xml" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1378991303190" ignored="false" />
     <file path="/ClearQuestTrScript.java" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1379069785532" ignored="false" />
+    <file path="/README.txt" changelist="74f7b2d1-bfbf-4361-b6a3-ea551d7f99c0" time="1379071665215" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -495,7 +491,7 @@
       <file leaf-file-name="LocationServiceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/service/LocationServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="70" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+            <state line="52" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -504,7 +500,7 @@
       <file leaf-file-name="DSLContainerTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="46" selection-start="1422" selection-end="1422" vertical-scroll-proportion="0.0">
+            <state line="13" column="6" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -513,7 +509,7 @@
       <file leaf-file-name="ProcessServiceTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/service/ProcessServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="22" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+            <state line="52" column="0" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -522,7 +518,7 @@
       <file leaf-file-name="ClearQuestTrScriptTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/locator/ClearQuestTrScriptTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="72" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
+            <state line="45" column="2" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -531,7 +527,7 @@
       <file leaf-file-name="DCTest.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/groovy/script/block/DCTest.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="24" selection-start="473" selection-end="1603" vertical-scroll-proportion="0.0">
+            <state line="54" column="0" selection-start="473" selection-end="1603" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -549,7 +545,7 @@
       <file leaf-file-name="DSLContainerTestData.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="0" selection-start="2970" selection-end="2970" vertical-scroll-proportion="0.0">
+            <state line="33" column="42" selection-start="540" selection-end="1115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -567,7 +563,7 @@
       <file leaf-file-name="AbstractBlock.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/groovy/script/core/AbstractBlock.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -576,7 +572,7 @@
       <file leaf-file-name="JdbcTemplateFactoryTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/factory/JdbcTemplateFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="82" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
+            <state line="53" column="0" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -585,7 +581,7 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="51" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+            <state line="32" column="3" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -594,7 +590,7 @@
       <file leaf-file-name="PostCondition.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="57" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+            <state line="27" column="5" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -603,7 +599,7 @@
       <file leaf-file-name="PreCondition.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PreCondition.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="54" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+            <state line="35" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -612,7 +608,7 @@
       <file leaf-file-name="LocationService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="78" selection-start="4151" selection-end="4151" vertical-scroll-proportion="0.0">
+            <state line="122" column="21" selection-start="4151" selection-end="4151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -621,7 +617,7 @@
       <file leaf-file-name="TypeService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/service/TypeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="39" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
+            <state line="44" column="0" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -657,7 +653,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="26" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
+            <state line="77" column="1" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -666,7 +662,7 @@
       <file leaf-file-name="ProcessService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="87" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+            <state line="49" column="72" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -675,16 +671,43 @@
       <file leaf-file-name="TestConfiguration.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/src/core/TestConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="53" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
+            <state line="47" column="0" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectTrScript.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ProjectTrScript.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="46" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.3536">
+            <state line="63" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="0" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/util/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="61" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="45" selection-start="558" selection-end="558" vertical-scroll-proportion="0.6612642">
               <folding />
             </state>
           </provider>
@@ -875,7 +898,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/src/groovy/script/DCTest.java" />
         <option value="$PROJECT_DIR$/test/src/groovy/script/DCTestG.groovy" />
         <option value="$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -891,6 +913,7 @@
         <option value="$PROJECT_DIR$/src/java/service/LocationService.java" />
         <option value="$PROJECT_DIR$/src/java/service/ProcessService.java" />
         <option value="$PROJECT_DIR$/src/java/transaction/script/ClearQuestTrScript.java" />
+        <option value="$PROJECT_DIR$/docs/README.txt" />
       </list>
     </option>
   </component>
@@ -985,6 +1008,66 @@
               <option name="myItemId" value="groovy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="groovy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="container" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1029,6 +1112,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="querytemplate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1303,6 +1416,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="constants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hudson_dc_execution" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1644,7 +1771,11 @@
       <created>1378991071431</created>
       <updated>1378991071431</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="немного комментариев">
+      <created>1379069832863</created>
+      <updated>1379069832863</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1750,41 +1881,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/src/locator/ClearQuestTrScriptTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="72" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/factory/JdbcTemplateFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="82" selection-start="1480" selection-end="1480" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/core/TestConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="53" selection-start="1214" selection-end="1214" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/factory/JdbcTemplateFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="469" selection-end="645" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/groovy/container/DSLContainer.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="6" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/groovy/execution/DSLManager.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="63" selection-end="240" vertical-scroll-proportion="0.0">
@@ -1801,49 +1897,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/groovy/script/core/AbstractBlock.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PostCondition.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="57" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+        <state line="27" column="5" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/groovy/script/block/PreCondition.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="54" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
+        <state line="35" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="26" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
+        <state line="77" column="1" selection-start="2293" selection-end="2293" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/service/LocationService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="78" selection-start="4151" selection-end="4151" vertical-scroll-proportion="0.0">
+        <state line="122" column="21" selection-start="4151" selection-end="4151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/service/ProcessService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="87" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+        <state line="49" column="72" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/service/TypeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="39" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
+        <state line="44" column="0" selection-start="1166" selection-end="1166" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1857,7 +1953,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/transaction/script/ProjectTrScript.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="46" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.3536">
+        <state line="63" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/util/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="61" selection-start="1322" selection-end="1322" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTestData.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="42" selection-start="540" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/groovy/container/DSLContainerTest.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="45" selection-start="558" selection-end="558" vertical-scroll-proportion="0.6612642">
           <folding />
         </state>
       </provider>
